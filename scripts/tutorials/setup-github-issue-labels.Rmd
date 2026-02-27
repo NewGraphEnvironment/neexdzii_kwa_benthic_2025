@@ -1,0 +1,150 @@
+---
+title: "Add custom labels to a new repo"
+date: "Created: 2024-04-27 | Updated: `r format(Sys.Date(), '%Y-%m-%d')`"
+output: 
+  html_document:
+    code_folding: "hide"
+params:
+  evaluate: TRUE
+---
+
+```{r setup}
+knitr::opts_chunk$set(
+  echo=TRUE, 
+  include = TRUE,
+  message=FALSE, 
+  warning=FALSE, 
+  dpi=60, 
+  out.width = "100%", 
+  # note the use of a param here! We only want to run the script once so we will turn this off after we do that.
+  eval = params$evaluate)
+options(scipen=999)
+options(knitr.kable.NA = '--')
+options(knitr.kable.NAN = '--')
+```
+
+Here is a bit of tutorial file name setup. We use these to define the input and output files for the script.
+```{r name-outputs}
+file_in <- 'scripts/tutorials/setup-github-issue-labels.Rmd'
+# This assumes we use the same name and directory for the html output file as the Rmd input file
+file_out <- paste0(
+  basename(
+    tools::file_path_sans_ext(file_in)
+  ), 
+  '.html'
+)
+```
+
+
+First we make a list of the labels we want:
+
+```{r name-issue-labels}
+# make a list of our custom labels to add
+issue_labels <- c(
+  "high priority",
+  "moderate priority",
+  "low priority",
+  "data management",
+  "photos",
+  "documentation"
+)
+```
+
+
+<br>
+
+Let's have a look at those:
+
+`r cat(knitr::combine_words(issue_labels, before = "- ", after = "\n", sep = "\n", , and = ""))`
+
+<br>
+
+
+Sweet - now define our repo specific params. We could do this n hte `yaml` header of this document but
+that would mean that we could not run the script chunk by chunk (or I don't know how anyway).
+```{r name-repo-params}
+repo_owner <- "NewGraphEnvironment"
+repo_name <- "mybookdown-template"
+
+```
+
+<br>
+
+Make an issue in our repo to add our custom labels and capture the output returned from the request as `o`.
+```{r post1}
+o <- gh::gh(
+  endpoint = "POST /repos/{owner}/{repo}/issues",
+  title = "Set up custom labels for this repo",
+  body = "This is a remotely triggered issue to add custom labels to this repo.",
+  owner = repo_owner,
+  repo = repo_name
+)
+
+```
+
+<br>
+
+
+Add the list of labels to the repo. Reference the issue number grabbed from the captured output of the request
+that made the issue.
+```{r post2}
+# add them to the repo
+gh::gh(
+  endpoint = "POST /repos/{owner}/{repo}/issues/{issue_number}/labels",
+  owner = repo_owner,
+  repo = repo_name,
+  issue_number = o$number,
+  labels = issue_labels
+)
+
+```
+
+<br>
+
+Now we can see the labels have been added to the repo so add a new comment on it then close the issue.
+
+<br>
+
+**DANGER DAN - We cannot do these things in one API request because the endpoints are different.** If we post a
+`body` to the `POST /repos/{owner}/{repo}/issues/{issue_number}` endpoint while we are closing the `state`, 
+it will edit the very first comment!! Not something we want to do!!  If we did want to
+change the initial comment we should probably capture what it was, ~~strikethrough~~ it, and then add a new comment. That is a journey for another time.
+
+<br>
+
+Seperately we:
+
+  1. add a comment
+
+
+
+```{r post3}
+gh::gh(
+  endpoint = "POST /repos/{owner}/{repo}/issues/{issue_number}/comments",
+  owner = repo_owner,
+  repo = repo_name,
+  body = "got er done!",
+  issue_number = o$number
+)
+```
+
+<br>
+
+  2. close the issue.
+```{r post4}
+gh::gh(
+  endpoint = "POST /repos/{owner}/{repo}/issues/{issue_number}",
+  owner = repo_owner,
+  repo = repo_name,
+  state = "closed",
+  issue_number = o$number
+)
+```
+
+Banger. We are done.  In order to render this document to html, we need to run the following code IN THE CONSOLE.  There are `environment` things in play when inside of a bookdown project that I do not 
+quite understand so that is how I am doing it for now.
+
+```{r render, eval = FALSE}
+rmarkdown::render(input = file_in, output_file = file_out)
+```
+

@@ -1,0 +1,7 @@
+
+
+# Methods
+
+## Open Source Reporting Framework
+
+This report is produced using open-source tools (R, bookdown) with full version control via git, enabling iterative updates. All code, data, and revision history are publicly accessible in the [project repository](`r params$repo_url`), with ongoing tasks tracked via GitHub [issues](`r paste0(params$repo_url, 'issues')`) and version history maintained in the [project changelog](`r paste0(params$repo_url, 'blob/main/NEWS.md')`).

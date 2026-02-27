@@ -1,0 +1,14 @@
+.Rproj.user
+.Rhistory
+.RData
+_publish.R
+_book
+_bookdown_files
+rsconnect
+
+# renv - if adopted by downstream repos
+renv/
+
+*/~$*
+
+docs/
