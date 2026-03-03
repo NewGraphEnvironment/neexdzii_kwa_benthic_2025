@@ -1,81 +1,24 @@
 
+
+
 # Introduction {#intro}
-## Figure nameing and rendering
 
-To auto name figures and store them in an organized fashion we do the following
-
-  - make setup chunk for each chapter (at beginning of chapter)  
-  - name a target directory in fig after the chapter
-
-```{r setup-0020-background}
+```{r setup-0100-intro}
 knitr::opts_chunk$set(fig.path = "fig/0100-intro/", dev = "png")
 ```
 
-Then when we make a plot  (Figure \@ref(fig:plot-got-lost))  we don't need to explicitly save it, name it or read it back in with that name for it to render when served online.  Stored in a rational place with a meaningful name for easy recovery. Another gotcha is that we need to set the caption for the plot with `fig.cap=` to have the cross referencing work.
-
-
-```{r plot-got-lost, fig.cap=my_caption}
-
-my_caption <- "Example of plot figure generated with knitr opts chunk."
-ggplot2::ggplot(data = mtcars, ggplot2::aes(x = mpg, y = hp)) +
-  ggplot2::geom_point()
-
-```
-
-
-```{r eval = TRUE}
-
-knitr::include_graphics("fig/0100-intro/Screenshot 2025-03-14 at 12.50.06 PM.png")
-
-```
-
-## Conditional Formating for pdf vs gitbook 
-
-`r if(identical(params$gitbook_on, FALSE))knitr::asis_output(paste0("This report is available as pdf and as an online interactive report at ", params$report_url, ". We recommend viewing online as the web-hosted html version contains more features and is more easily navigable."))`
-
-`r if(identical(params$gitbook_on, FALSE)){knitr::asis_output("<br>")}`
-
-## Line Breaks {-}
-Here is an example of how to insert an empty line between paragraphs. We do it using two blank lines...
-
-This is the paragraph that follows the empty line.
-
-Additionally, writers should investigate the impacts of different header levels (ex. First level (#) or Second level
-(##) or third (###)) as well as before and after figures/tables on spacing before and after the headers so we produce as
-professional looking documents as possible.  There are idiosyncrasies with what happens for each above and below so that
-should be tested by building the documents in both formats (`html` and `pdf`) and viewing the output. Here is a test
-with a second level header with no empty line above and no empty line below.
-## Header with no number {-}
-
-It negates the header... wow.
-
-If we put blank lines above the header however...
-
-## Another numbered Header
-No spacing or `<br>` above this line.  
-
-Here is a `knitr::kable` with a cross reference to Table \@ref(tab:nice-tab).
-```{r nice-tab, eval = TRUE}
-knitr::kable(
-  head(iris, 10), caption = 'Here is a nice kable!',
-  booktabs = TRUE
-)
-```
-This is what happens with multiple empty lines but no `<br>` inserted directly after a figure...
-
-
-```{r kable-example, eval = T}
-knitr::kable(
-  head(iris, 20),
-  caption = 'Here is another kable example.',
-  booktabs = TRUE
-)
-```
+The Neexdzii Kwa (Upper Bulkley River) is an 8th order stream draining approximately 2,320 km^2^ of the Nechako Plateau in a generally northwesterly direction from Bulkley Lake to the confluence with the Wedzin Kwa (Morice River) near Houston (Figure \@ref(fig:map-study-area)). Highway 16 and the CN Railway parallel the river through an agricultural valley with the towns of Topley and Houston along its length. Below Houston, the combined system becomes the lower Wedzin Kwa (Bulkley River), flowing north through Smithers and Witset to the Skeena River at Hazelton. Together with the Upper Wedzin Kwa (Morice River), these three sub-regions form the Wedzin Kwa — a combined watershed of approximately 7,800 km^2^ within Wet'suwet'en territory. Despite its name, the Neexdzii Kwa is a tributary to the much larger Wedzin Kwa, contributing on average less than a third of flow volumes at their confluence. Colonial naming designated "Bulkley River" as the mainstem from Houston to Hazelton; a more accurate colonial name for the system would have been the Morice River, with the Upper Bulkley considered a tributary. Using Wet'suwet'en place names communicates a more accurate interpretation of the geography.
 
 <br>
 
-But if we put a `<br>` below the figure with blank lines either side of our text we are good to go.
+Benthic invertebrate communities are widely used as indicators of stream ecosystem health because they integrate water quality conditions over time, reflect habitat integrity, and respond predictably to disturbance [@rosenberg_resh1993Introductionfreshwater; @reynoldson_etal1997referencecondition]. The Canadian Aquatic Biomonitoring Network (CABIN) protocol provides a standardized framework for sampling and assessing benthic communities across Canada [@environmentcanada2012Canadianaquatic].
 
-Test.
+<br>
 
+This report presents a benthic invertebrate community assessment of three mainstem sites on the Neexdzii Kwa, sampled in triplicate during the 2025 field season. Analysis includes community composition, diversity metrics, functional feeding group analysis, and multivariate ordination to characterize aquatic ecosystem health and detect differences among sites. This work is a companion to the Neexdzii Kwa restoration planning report [@irvine_schick2026NeexdziiKwah], which summarizes key findings from this assessment in the context of broader watershed restoration objectives.
+
+
+```{r map-study-area, fig.cap = "Study area — the Neexdzii Kwa (Upper Bulkley River) within the broader Wedzin Kwa (Bulkley-Morice) watershed in northwestern British Columbia.", eval = TRUE, echo = FALSE}
+knitr::include_graphics("fig/map_study-area.png")
+```
 

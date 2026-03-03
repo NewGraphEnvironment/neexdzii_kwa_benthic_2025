@@ -1,0 +1,16 @@
+
+# (PART) Results {-}
+
+# Community Composition and Diversity
+
+```{r setup-0400-results}
+knitr::opts_chunk$set(fig.path = "fig/0400-results/", dev = "png")
+```
+
+<!-- Taxonomic summary: total taxa, major orders.
+     Density calculations.
+     Diversity indices: Shannon, Simpson, richness, evenness.
+     EPT richness and relative abundance.
+     Functional feeding group composition.
+     Hilsenhoff Biotic Index. -->
+

@@ -1,63 +1,110 @@
-# mybookdown-template
+# Neexdzii Kwa Benthic 2025
 
-Template repository for creating bookdown-based reports at New Graph Environment.
+## Company Vision
 
-## Repository Context
+**New Graph Environment** - With integrity, using sound science and open communication, we build productive relationships between First Nations, regulators, non-profits, proponents, scientists, and stewardship groups. Our value-added deliverables include open-source, collaborative GIS environments and interactive online reporting.
 
-**Repository:** NewGraphEnvironment/mybookdown-template
-**Type:** Bookdown template (R Markdown → HTML/PDF reports)
-**Purpose:** Upstream template for all bookdown reporting projects
-**SRED Tracking:** https://github.com/NewGraphEnvironment/sred-2025-2026/issues/3
+We are biologists and computer programmers that facilitate aquatic ecosystem restoration with an emphasis on inclusive engagement and knowledge sharing.
+
+## Project Overview
+
+Standalone benthic invertebrate community assessment for the Neexdzii Kwa (Upper Bulkley River), 2025 field season. Companion report to `restoration_wedzin_kwa_2024` — the restoration planning report will cite this for detailed benthic analysis and summarize key findings.
+
+**Client:** Office of the Wet'suwet'en
+
+**Lab:** Cordillera Consulting Inc. (Summerland, BC) — subsampling and taxonomic identification from kick-net samples.
+
+**Sampling design:** Three mainstem sites, triplicate kick-net samples per site, CABIN wadeable streams protocol.
 
 ## Repository Relationships
 
-**Downstream repos** (inherit from this template):
-- `fish_passage_template_reporting` - Fish passage-specific template
-- `nrp-nutrient-loading-2025` - Nutrient loading project
-- `restoration_wedzin_kwa_2024` - Restoration planning
+| Repo | Relationship |
+|------|--------------|
+| `mybookdown-template` | Upstream bookdown template |
+| `restoration_wedzin_kwa_2024` | Parent restoration report — cites this for benthic findings |
+| `Sheep` | Reference: Cordillera Excel parsing, taxonomy resolution, vegan community analysis |
+| `sred-2025-2026` | SRED tracking — cross-reference issues |
 
-**Changes here propagate downstream** - improvements to this template should be considered for downstream adoption.
+## SRED Tracking
 
-## Architecture
+R&D activities tracked in `sred-2025-2026` repository (PRIVATE).
 
-- `index.Rmd` - Main document with YAML config, params, setup chunks
-- `0100-intro.Rmd`, `0200-background.Rmd`, `0300-methods.Rmd` - Chapter files (numbered for order)
-- `scripts/` - R setup scripts (packages, functions, static imports)
-- `scripts/setup_docs.R` - Build helper (clean, password, build targets)
-- `.github/workflows/bookdown-build.yml` - GA build and deploy to GitHub Pages
-- `password_protect/` - Landing page for password-protected deployments
-- `docs/` - Rendered output (gitignored, built by CI)
-- `fig/` - Figures and images
-- `data/` - Project data
-- `scripts/packages.R` - Package loading (must match workflow install list)
-
-## Key Workflows
-
-**Local build:**
-```r
-Rscript scripts/setup_docs.R build
+**Cross-Linking:**
+```
+Relates to NewGraphEnvironment/sred-2025-2026#<issue>
+Relates to NewGraphEnvironment/neexdzii_kwa_benthic_2025#<issue>
 ```
 
-**GitHub Actions:** Push to `main` → auto-build → deploy to GitHub Pages (RSPM binaries)
+## Planning Files Management
 
-**Password-protected mode:** Set `password_protected: TRUE` and `password_dir` in index.Rmd params
+Complex tasks use planning-with-files (PWF) approach for R&D documentation:
+- **Active work:** `planning/active/` — Current task_plan.md, findings.md, progress.md
+- **Completed work:** `planning/archive/YYYY-MM-issue-N-description/` — Preserved for SRED claims and knowledge transfer
+- **Workflow:** See `planning/README.md` for full details
 
-**Params:** Defined in `index.Rmd` YAML frontmatter (NOT external file - needed for YAML parse-time access)
+## Report Structure
 
-## CI Notes
+| File | Content |
+|------|---------|
+| `0100-intro.Rmd` | Introduction — study context, connection to restoration report |
+| `0200-background.Rmd` | Background — watershed, CABIN protocol, previous work |
+| `0300-methods.Rmd` | Methods — sampling design, lab processing, analysis approach |
+| `0400-results.Rmd` | Results — community composition, diversity metrics, FFG, HBI |
+| `0500-results-ordination.Rmd` | Results — NMDS, envfit, indicator species, PERMANOVA |
+| `0600-discussion.Rmd` | Discussion and recommendations |
+| `2000-references.Rmd` | Auto-generated bibliography |
+| `2100-session-info.Rmd` | Reproducibility |
 
-- RSPM provides pre-built Linux binaries for fast builds
-- No renv in template - uses `install.packages()` with RSPM (always latest, always fast)
-- Downstream repos can adopt renv if reproducibility needed (see #76 for setup guide)
+## Data Pipeline
 
-## Open Questions
+Three-stage architecture:
 
-- Centralized GitHub Actions workflows (tracked in sred-2025-2026#11)
-- fpr#129: Global variable defaults need getOption() pattern for CI builds
+```
+Email (Cordillera Excel workbook)
+  ↓ manual save
+data/raw/cordillera_*.xlsx (version-controlled)
+  ↓ scripts/prep_benthic.R
+data/processed/benthic_counts_tidy.csv
+data/processed/benthic_metrics.csv
+  ↓ read by chapters
+Report output
+```
 
----
+**Prep script pattern:** Use STEP comments with trailing dashes for RStudio outline. Verification blocks with cat() output at each stage. See `nrp-nutrient-loading-2025/scripts/prep_fert.R` for canonical example.
 
-<!-- BEGIN SOUL CONVENTIONS — DO NOT EDIT BELOW THIS LINE -->
+## Key Technical Patterns
+
+### Cordillera Excel Parsing
+
+Reference: `Sheep/R/01b_load_invert.R`. Cordillera exports vary by year — expect pivot structures, transposed layouts, or flat "Subsample - Flat" sheets. Key patterns:
+- Extract sheet-specific metadata (site, date, replicate)
+- Adjust counts by percent_sampled where applicable
+- Standardize taxonomy strings (strip rank prefixes, maturity labels, special chars)
+
+### Taxonomy Resolution (taxize)
+
+Resolution chain: `gnr_resolve()` → `tol_resolve()` → `get_ids()` → `classification()`. Known edge cases from Sheep:
+- `Neoleptophlebia` → `Paraleptophlebia` (genus not in ITIS)
+- `Oribatei` → `Oribatida`
+- `Oligochaeta` → `Clitellata`
+- Cf. names kept as-is when no alternative exists
+- Runtime: ~15 min for `get_ids()` step
+
+### FFG and Tolerance Values
+
+Sources: SAFIT database (primary) and EPA Appendix B (Barbour et al.) for fallback. Fallback chain: SAFIT ffg → Barbour primary → Barbour secondary → Cordillera's original. Standardize abbreviations: GC→CG, FC→CF, PR→P.
+
+### Community Analysis (vegan)
+
+Reference: `Sheep/R/functions.R`. Key functions to adapt:
+- `make_matrix()` — long → wide species matrix
+- `metaMDS(k=3, trymax=999)` with fixed seed for reproducibility
+- `envfit()` for environmental correlation
+- `indicspecies::multipatt()` with IndVal.g
+- `RVAideMemoire::pairwise.perm.manova()` for pairwise PERMANOVA
+- `betadisper()` for multivariate dispersion
+
+<\!-- BEGIN SOUL CONVENTIONS — DO NOT EDIT BELOW THIS LINE -->
 
 # Agent Teams Orchestration
 

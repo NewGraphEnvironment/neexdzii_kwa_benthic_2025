@@ -1,0 +1,13 @@
+
+
+# Discussion
+
+```{r setup-0600-discussion}
+knitr::opts_chunk$set(fig.path = "fig/0600-discussion/", dev = "png")
+```
+
+<!-- Interpretation of community patterns in context of watershed condition.
+     Comparison to reference conditions and other Upper Bulkley studies.
+     Implications for restoration planning (link to restoration_wedzin_kwa_2024).
+     Recommendations for future monitoring. -->
+

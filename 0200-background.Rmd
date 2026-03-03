@@ -1,44 +1,18 @@
 
 
+
+
 # Background
 
-
-## Project Location
-
-Here is how we insert a figure and we can reference it like this - Figure \@ref(fig:overview-map). The caption is in the 
-chunk header as `fig.cap`.
-
-```{r overview-map, fig.cap = 'Overview map of Study Areas',eval=T}
-knitr::include_graphics("fig/nge-icon_name.png")
+```{r setup-0200-background}
+knitr::opts_chunk$set(fig.path = "fig/0200-background/", dev = "png")
 ```
 
-<br>
+## Wet'suwet'en Governance
 
-Here is how we do multiple figures in one chunk - side by each (like toasts). We reference it like this -
-Figure \@ref(fig:fig-multi).
+The Wedzin Kwa watershed lies within the Yintah of the Wet'suwet'en people, who have governed these lands and waters through their hereditary chief system for thousands of years. The Wet'suwet'en are a matrilineal society organized into five clans — Gilseyhu (Big Frog), Laksilyu (Small Frog), Tsayu (Beaver), Gitdumden (Wolf/Bear), and Laksamshu (Fireweed) — with thirteen house groups (*yikh*) managing 38 distinct territories. Inuk Nu'at'en (Wet'suwet'en law) governing the harvesting of fish and management of the Yintahk (Land) are founded on values developed over thousands of years of social, subsistence, and environmental dynamics [@officeofthewetsuweten2013WetsuwetenTitle; @morin2016NiwhtsideniHibiiten]. The Delgamuukw-Gisday'wa Supreme Court decision (1997) affirmed that Wet'suwet'en Aboriginal title had not been extinguished, and the Office of the Wet'suwet'en continues to assert governance over watershed management and fisheries within their territories [@harris2011Yinkadinii].
 
-```{r fig-multi, fig.cap = 'Multiple figures or photos side by each.', fig.show="hold", out.width= c("49.5%","1%","49.5%")}
-knitr::include_graphics("data/TimePhoto_20220814_112459.jpg")
-knitr::include_graphics("fig/pixel.png")
-knitr::include_graphics("data/TimePhoto_20220814_112923.jpg")
-```
+## Land Use and Water Quality
 
-<br>
-
-Here is how we conditionally include chunk output based on the `params$gitbook_on` parameter. If this is the gitbook version, 
-the image will NOT be included. If this is the pdf version, this double image will not be included.  We do this to make the pdf version read nicely and not be a million pages long due to individual photos taking up a half a page each.
-
-
-```{r fig-multi-conditional, fig.cap = 'Multiple figures or photos side by each.  Turned on conditionally with the eval parameter in the rmarkdown chunk to run only when the pdf version of the document is built.', fig.show="hold", out.width= c("49.5%","1%","49.5%"), eval=identical(params$gitbook_on, FALSE)}
-knitr::include_graphics("data/TimePhoto_20220814_112459.jpg")
-knitr::include_graphics("fig/pixel.png")
-knitr::include_graphics("data/TimePhoto_20220814_112923.jpg")
-```
-
-<br>
-
-Let's add a reference here so that we can test if our system of pulling from Zotero as per https://github.com/NewGraphEnvironment/mybookdown-template/issues/49
-is going to work @bramblett_etal2002SeasonalUse
-`r if(params$gitbook_on){knitr::asis_output("<br>")} else knitr::asis_output("<br><br><br><br>")`
-
+The Neexdzii Kwa has experienced intensive land-use transformation including agriculture, forestry, and linear infrastructure development, and has been noted as containing some of the most intense land use in the Skeena Basin [@gottesfeld_rabnett2007SkeenaFish]. Water quality has been the focus of multiple studies, including assessments of mine discharge impacts [@nijman1996Waterquality], nutrient and periphyton monitoring [@remington_donas2000Nutrientsalgae], and broader water quality analyses [@oliver2020Analysis2017; @westcott2022UpperBulkleya]. @remington_donas2000Nutrientsalgae noted that the watershed has easily erodible glacial-fluvial and glacial-lacustrine soils with unusually high soluble phosphorus concentrations compared to other Skeena watershed streams, making it vulnerable to eutrophication from nitrogen loading linked to septic systems, agriculture, and livestock. They recommended a long-term monitoring strategy incorporating water quality, periphyton, and benthic invertebrate bioassessment to track changes over time and assess restoration success.
 

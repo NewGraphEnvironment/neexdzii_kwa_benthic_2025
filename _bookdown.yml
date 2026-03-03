@@ -1,7 +1,6 @@
-book_filename: "mybookdown_template"
+book_filename: "neexdzii_kwa_benthic_2025"
 language:
   ui:
     chapter_name: ""
 delete_merged_file: TRUE
 output_dir: "docs"
-

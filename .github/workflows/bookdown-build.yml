@@ -63,9 +63,21 @@ jobs:
             libgl1-mesa-dev \
             libglu1-mesa-dev
 
-      - name: Install bootstrap packages
+      - name: Cache R packages
+        uses: actions/cache@v4
+        with:
+          path: ${{ env.R_LIBS_USER }}
+          key: r-${{ runner.os }}-${{ hashFiles('scripts/packages.R') }}
+          restore-keys: |
+            r-${{ runner.os }}-
+
+      - name: Install R packages
         run: |
-          Rscript -e 'install.packages(c("pak", "yaml", "bookdown", "rmarkdown", "knitr", "desc"))'
+          Rscript -e '
+            install.packages("pak", repos = "https://r-lib.github.io/p/pak/stable/")
+            params <- list(update_packages = TRUE)
+            source("scripts/packages.R")
+          '
 
       - name: Build bookdown site
         run: |

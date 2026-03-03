@@ -4,11 +4,11 @@ bookdown::gitbook:
   config:
     toc:
       before: |
-        <li><a href="./">My Bookdown Template</a></li>
+        <li><a href="./">Neexdzii Kwa Benthic</a></li>
       after: |
-        <li><a href="https://github.com/NewGraphEnvironment/mybookdown-template" target="blank">Scripts and Data</a></li>
+        <li><a href="https://github.com/NewGraphEnvironment/neexdzii_kwa_benthic_2025" target="blank">Scripts and Data</a></li>
       collapse: section
-    download: ["mybookdown_template.pdf", "mybookdown_template.html"]
+    download: ["neexdzii_kwa_benthic_2025.pdf", "neexdzii_kwa_benthic_2025.html"]
     sharing: null
     fontsettings:
       theme: white

@@ -1,0 +1,496 @@
+site,replicate,sample,date,metric,value,is_pct,category
+BUL 01,A,BUL 01 A,3-Oct-25,Species Richness,38,FALSE,Richness
+BUL 01,B,BUL 01 B,3-Oct-25,Species Richness,31,FALSE,Richness
+BUL 01,C,BUL 01 C,3-Oct-25,Species Richness,42,FALSE,Richness
+BUL 04,A,BUL 04 A,2-Oct-25,Species Richness,40,FALSE,Richness
+BUL 04,B,BUL 04 B,2-Oct-25,Species Richness,36,FALSE,Richness
+BUL 04,C,BUL 04 C,2-Oct-25,Species Richness,37,FALSE,Richness
+BUL 05,A,BUL 05 A,28-Sep-25,Species Richness,46,FALSE,Richness
+BUL 05,B,BUL 05 B,2-Oct-25,Species Richness,50,FALSE,Richness
+BUL 05,C,BUL 05 C,2-Oct-25,Species Richness,39,FALSE,Richness
+BUL 01,A,BUL 01 A,3-Oct-25,EPT Richness,17,FALSE,Richness
+BUL 01,B,BUL 01 B,3-Oct-25,EPT Richness,15,FALSE,Richness
+BUL 01,C,BUL 01 C,3-Oct-25,EPT Richness,18,FALSE,Richness
+BUL 04,A,BUL 04 A,2-Oct-25,EPT Richness,16,FALSE,Richness
+BUL 04,B,BUL 04 B,2-Oct-25,EPT Richness,18,FALSE,Richness
+BUL 04,C,BUL 04 C,2-Oct-25,EPT Richness,18,FALSE,Richness
+BUL 05,A,BUL 05 A,28-Sep-25,EPT Richness,24,FALSE,Richness
+BUL 05,B,BUL 05 B,2-Oct-25,EPT Richness,25,FALSE,Richness
+BUL 05,C,BUL 05 C,2-Oct-25,EPT Richness,23,FALSE,Richness
+BUL 01,A,BUL 01 A,3-Oct-25,Ephemeroptera Richness,5,FALSE,Richness
+BUL 01,B,BUL 01 B,3-Oct-25,Ephemeroptera Richness,7,FALSE,Richness
+BUL 01,C,BUL 01 C,3-Oct-25,Ephemeroptera Richness,7,FALSE,Richness
+BUL 04,A,BUL 04 A,2-Oct-25,Ephemeroptera Richness,4,FALSE,Richness
+BUL 04,B,BUL 04 B,2-Oct-25,Ephemeroptera Richness,8,FALSE,Richness
+BUL 04,C,BUL 04 C,2-Oct-25,Ephemeroptera Richness,7,FALSE,Richness
+BUL 05,A,BUL 05 A,28-Sep-25,Ephemeroptera Richness,6,FALSE,Richness
+BUL 05,B,BUL 05 B,2-Oct-25,Ephemeroptera Richness,8,FALSE,Richness
+BUL 05,C,BUL 05 C,2-Oct-25,Ephemeroptera Richness,7,FALSE,Richness
+BUL 01,A,BUL 01 A,3-Oct-25,Plecoptera Richness,6,FALSE,Richness
+BUL 01,B,BUL 01 B,3-Oct-25,Plecoptera Richness,3,FALSE,Richness
+BUL 01,C,BUL 01 C,3-Oct-25,Plecoptera Richness,6,FALSE,Richness
+BUL 04,A,BUL 04 A,2-Oct-25,Plecoptera Richness,7,FALSE,Richness
+BUL 04,B,BUL 04 B,2-Oct-25,Plecoptera Richness,6,FALSE,Richness
+BUL 04,C,BUL 04 C,2-Oct-25,Plecoptera Richness,6,FALSE,Richness
+BUL 05,A,BUL 05 A,28-Sep-25,Plecoptera Richness,10,FALSE,Richness
+BUL 05,B,BUL 05 B,2-Oct-25,Plecoptera Richness,9,FALSE,Richness
+BUL 05,C,BUL 05 C,2-Oct-25,Plecoptera Richness,9,FALSE,Richness
+BUL 01,A,BUL 01 A,3-Oct-25,Trichoptera Richness,6,FALSE,Richness
+BUL 01,B,BUL 01 B,3-Oct-25,Trichoptera Richness,5,FALSE,Richness
+BUL 01,C,BUL 01 C,3-Oct-25,Trichoptera Richness,5,FALSE,Richness
+BUL 04,A,BUL 04 A,2-Oct-25,Trichoptera Richness,5,FALSE,Richness
+BUL 04,B,BUL 04 B,2-Oct-25,Trichoptera Richness,4,FALSE,Richness
+BUL 04,C,BUL 04 C,2-Oct-25,Trichoptera Richness,5,FALSE,Richness
+BUL 05,A,BUL 05 A,28-Sep-25,Trichoptera Richness,8,FALSE,Richness
+BUL 05,B,BUL 05 B,2-Oct-25,Trichoptera Richness,8,FALSE,Richness
+BUL 05,C,BUL 05 C,2-Oct-25,Trichoptera Richness,7,FALSE,Richness
+BUL 01,A,BUL 01 A,3-Oct-25,Chironomidae Richness,8,FALSE,Richness
+BUL 01,B,BUL 01 B,3-Oct-25,Chironomidae Richness,8,FALSE,Richness
+BUL 01,C,BUL 01 C,3-Oct-25,Chironomidae Richness,10,FALSE,Richness
+BUL 04,A,BUL 04 A,2-Oct-25,Chironomidae Richness,11,FALSE,Richness
+BUL 04,B,BUL 04 B,2-Oct-25,Chironomidae Richness,7,FALSE,Richness
+BUL 04,C,BUL 04 C,2-Oct-25,Chironomidae Richness,8,FALSE,Richness
+BUL 05,A,BUL 05 A,28-Sep-25,Chironomidae Richness,6,FALSE,Richness
+BUL 05,B,BUL 05 B,2-Oct-25,Chironomidae Richness,7,FALSE,Richness
+BUL 05,C,BUL 05 C,2-Oct-25,Chironomidae Richness,2,FALSE,Richness
+BUL 01,A,BUL 01 A,3-Oct-25,Oligochaeta Richness,2,FALSE,Richness
+BUL 01,B,BUL 01 B,3-Oct-25,Oligochaeta Richness,2,FALSE,Richness
+BUL 01,C,BUL 01 C,3-Oct-25,Oligochaeta Richness,2,FALSE,Richness
+BUL 04,A,BUL 04 A,2-Oct-25,Oligochaeta Richness,1,FALSE,Richness
+BUL 04,B,BUL 04 B,2-Oct-25,Oligochaeta Richness,1,FALSE,Richness
+BUL 04,C,BUL 04 C,2-Oct-25,Oligochaeta Richness,1,FALSE,Richness
+BUL 05,A,BUL 05 A,28-Sep-25,Oligochaeta Richness,1,FALSE,Richness
+BUL 05,B,BUL 05 B,2-Oct-25,Oligochaeta Richness,2,FALSE,Richness
+BUL 05,C,BUL 05 C,2-Oct-25,Oligochaeta Richness,1,FALSE,Richness
+BUL 01,A,BUL 01 A,3-Oct-25,Non-Chiro. Non-Olig. Richness,28,FALSE,Richness
+BUL 01,B,BUL 01 B,3-Oct-25,Non-Chiro. Non-Olig. Richness,21,FALSE,Richness
+BUL 01,C,BUL 01 C,3-Oct-25,Non-Chiro. Non-Olig. Richness,30,FALSE,Richness
+BUL 04,A,BUL 04 A,2-Oct-25,Non-Chiro. Non-Olig. Richness,28,FALSE,Richness
+BUL 04,B,BUL 04 B,2-Oct-25,Non-Chiro. Non-Olig. Richness,28,FALSE,Richness
+BUL 04,C,BUL 04 C,2-Oct-25,Non-Chiro. Non-Olig. Richness,28,FALSE,Richness
+BUL 05,A,BUL 05 A,28-Sep-25,Non-Chiro. Non-Olig. Richness,39,FALSE,Richness
+BUL 05,B,BUL 05 B,2-Oct-25,Non-Chiro. Non-Olig. Richness,41,FALSE,Richness
+BUL 05,C,BUL 05 C,2-Oct-25,Non-Chiro. Non-Olig. Richness,36,FALSE,Richness
+BUL 01,A,BUL 01 A,3-Oct-25,Corrected Abundance,10480,FALSE,Abundance
+BUL 01,B,BUL 01 B,3-Oct-25,Corrected Abundance,6600,FALSE,Abundance
+BUL 01,C,BUL 01 C,3-Oct-25,Corrected Abundance,12840,FALSE,Abundance
+BUL 04,A,BUL 04 A,2-Oct-25,Corrected Abundance,8720,FALSE,Abundance
+BUL 04,B,BUL 04 B,2-Oct-25,Corrected Abundance,6500,FALSE,Abundance
+BUL 04,C,BUL 04 C,2-Oct-25,Corrected Abundance,5839,FALSE,Abundance
+BUL 05,A,BUL 05 A,28-Sep-25,Corrected Abundance,14680,FALSE,Abundance
+BUL 05,B,BUL 05 B,2-Oct-25,Corrected Abundance,25760,FALSE,Abundance
+BUL 05,C,BUL 05 C,2-Oct-25,Corrected Abundance,21240,FALSE,Abundance
+BUL 01,A,BUL 01 A,3-Oct-25,EPT Abundance,7300,FALSE,Abundance
+BUL 01,B,BUL 01 B,3-Oct-25,EPT Abundance,4200,FALSE,Abundance
+BUL 01,C,BUL 01 C,3-Oct-25,EPT Abundance,7020,FALSE,Abundance
+BUL 04,A,BUL 04 A,2-Oct-25,EPT Abundance,4260,FALSE,Abundance
+BUL 04,B,BUL 04 B,2-Oct-25,EPT Abundance,5360,FALSE,Abundance
+BUL 04,C,BUL 04 C,2-Oct-25,EPT Abundance,4739,FALSE,Abundance
+BUL 05,A,BUL 05 A,28-Sep-25,EPT Abundance,11980,FALSE,Abundance
+BUL 05,B,BUL 05 B,2-Oct-25,EPT Abundance,22000,FALSE,Abundance
+BUL 05,C,BUL 05 C,2-Oct-25,EPT Abundance,18160,FALSE,Abundance
+BUL 01,A,BUL 01 A,3-Oct-25,1st Dominant Abundance,3120,FALSE,Dominance
+BUL 01,B,BUL 01 B,3-Oct-25,1st Dominant Abundance,1040,FALSE,Dominance
+BUL 01,C,BUL 01 C,3-Oct-25,1st Dominant Abundance,1920,FALSE,Dominance
+BUL 04,A,BUL 04 A,2-Oct-25,1st Dominant Abundance,1600,FALSE,Dominance
+BUL 04,B,BUL 04 B,2-Oct-25,1st Dominant Abundance,1380,FALSE,Dominance
+BUL 04,C,BUL 04 C,2-Oct-25,1st Dominant Abundance,1971,FALSE,Dominance
+BUL 05,A,BUL 05 A,28-Sep-25,1st Dominant Abundance,5620,FALSE,Dominance
+BUL 05,B,BUL 05 B,2-Oct-25,1st Dominant Abundance,10300,FALSE,Dominance
+BUL 05,C,BUL 05 C,2-Oct-25,1st Dominant Abundance,9940,FALSE,Dominance
+BUL 01,A,BUL 01 A,3-Oct-25,2nd Dominant Abundance,1000,FALSE,Dominance
+BUL 01,B,BUL 01 B,3-Oct-25,2nd Dominant Abundance,580,FALSE,Dominance
+BUL 01,C,BUL 01 C,3-Oct-25,2nd Dominant Abundance,1320,FALSE,Dominance
+BUL 04,A,BUL 04 A,2-Oct-25,2nd Dominant Abundance,1120,FALSE,Dominance
+BUL 04,B,BUL 04 B,2-Oct-25,2nd Dominant Abundance,1260,FALSE,Dominance
+BUL 04,C,BUL 04 C,2-Oct-25,2nd Dominant Abundance,671,FALSE,Dominance
+BUL 05,A,BUL 05 A,28-Sep-25,2nd Dominant Abundance,1340,FALSE,Dominance
+BUL 05,B,BUL 05 B,2-Oct-25,2nd Dominant Abundance,2500,FALSE,Dominance
+BUL 05,C,BUL 05 C,2-Oct-25,2nd Dominant Abundance,1560,FALSE,Dominance
+BUL 01,A,BUL 01 A,3-Oct-25,3rd Dominant Abundance,940,FALSE,Dominance
+BUL 01,B,BUL 01 B,3-Oct-25,3rd Dominant Abundance,460,FALSE,Dominance
+BUL 01,C,BUL 01 C,3-Oct-25,3rd Dominant Abundance,1080,FALSE,Dominance
+BUL 04,A,BUL 04 A,2-Oct-25,3rd Dominant Abundance,1020,FALSE,Dominance
+BUL 04,B,BUL 04 B,2-Oct-25,3rd Dominant Abundance,440,FALSE,Dominance
+BUL 04,C,BUL 04 C,2-Oct-25,3rd Dominant Abundance,414,FALSE,Dominance
+BUL 05,A,BUL 05 A,28-Sep-25,3rd Dominant Abundance,1100,FALSE,Dominance
+BUL 05,B,BUL 05 B,2-Oct-25,3rd Dominant Abundance,2080,FALSE,Dominance
+BUL 05,C,BUL 05 C,2-Oct-25,3rd Dominant Abundance,1220,FALSE,Dominance
+BUL 01,A,BUL 01 A,3-Oct-25,Percent Dominance,48.28,TRUE,Dominance
+BUL 01,B,BUL 01 B,3-Oct-25,Percent Dominance,31.52,TRUE,Dominance
+BUL 01,C,BUL 01 C,3-Oct-25,Percent Dominance,33.64,TRUE,Dominance
+BUL 04,A,BUL 04 A,2-Oct-25,Percent Dominance,42.89,TRUE,Dominance
+BUL 04,B,BUL 04 B,2-Oct-25,Percent Dominance,47.38,TRUE,Dominance
+BUL 04,C,BUL 04 C,2-Oct-25,Percent Dominance,52.34,TRUE,Dominance
+BUL 05,A,BUL 05 A,28-Sep-25,Percent Dominance,54.9,TRUE,Dominance
+BUL 05,B,BUL 05 B,2-Oct-25,Percent Dominance,57.75,TRUE,Dominance
+BUL 05,C,BUL 05 C,2-Oct-25,Percent Dominance,59.88,TRUE,Dominance
+BUL 01,A,BUL 01 A,3-Oct-25,% Ephemeroptera,21.56,TRUE,Community Composition
+BUL 01,B,BUL 01 B,3-Oct-25,% Ephemeroptera,33.64,TRUE,Community Composition
+BUL 01,C,BUL 01 C,3-Oct-25,% Ephemeroptera,26.48,TRUE,Community Composition
+BUL 04,A,BUL 04 A,2-Oct-25,% Ephemeroptera,30.05,TRUE,Community Composition
+BUL 04,B,BUL 04 B,2-Oct-25,% Ephemeroptera,62.77,TRUE,Community Composition
+BUL 04,C,BUL 04 C,2-Oct-25,% Ephemeroptera,61.12,TRUE,Community Composition
+BUL 05,A,BUL 05 A,28-Sep-25,% Ephemeroptera,27.52,TRUE,Community Composition
+BUL 05,B,BUL 05 B,2-Oct-25,% Ephemeroptera,30.43,TRUE,Community Composition
+BUL 05,C,BUL 05 C,2-Oct-25,% Ephemeroptera,25.33,TRUE,Community Composition
+BUL 01,A,BUL 01 A,3-Oct-25,% Plecoptera,4.96,TRUE,Community Composition
+BUL 01,B,BUL 01 B,3-Oct-25,% Plecoptera,3.64,TRUE,Community Composition
+BUL 01,C,BUL 01 C,3-Oct-25,% Plecoptera,3.74,TRUE,Community Composition
+BUL 04,A,BUL 04 A,2-Oct-25,% Plecoptera,8.49,TRUE,Community Composition
+BUL 04,B,BUL 04 B,2-Oct-25,% Plecoptera,10.15,TRUE,Community Composition
+BUL 04,C,BUL 04 C,2-Oct-25,% Plecoptera,6.35,TRUE,Community Composition
+BUL 05,A,BUL 05 A,28-Sep-25,% Plecoptera,7.9,TRUE,Community Composition
+BUL 05,B,BUL 05 B,2-Oct-25,% Plecoptera,4.74,TRUE,Community Composition
+BUL 05,C,BUL 05 C,2-Oct-25,% Plecoptera,3.2,TRUE,Community Composition
+BUL 01,A,BUL 01 A,3-Oct-25,% Trichoptera,43.13,TRUE,Community Composition
+BUL 01,B,BUL 01 B,3-Oct-25,% Trichoptera,26.36,TRUE,Community Composition
+BUL 01,C,BUL 01 C,3-Oct-25,% Trichoptera,24.45,TRUE,Community Composition
+BUL 04,A,BUL 04 A,2-Oct-25,% Trichoptera,10.32,TRUE,Community Composition
+BUL 04,B,BUL 04 B,2-Oct-25,% Trichoptera,9.54,TRUE,Community Composition
+BUL 04,C,BUL 04 C,2-Oct-25,% Trichoptera,13.68,TRUE,Community Composition
+BUL 05,A,BUL 05 A,28-Sep-25,% Trichoptera,46.19,TRUE,Community Composition
+BUL 05,B,BUL 05 B,2-Oct-25,% Trichoptera,50.23,TRUE,Community Composition
+BUL 05,C,BUL 05 C,2-Oct-25,% Trichoptera,56.97,TRUE,Community Composition
+BUL 01,A,BUL 01 A,3-Oct-25,% EPT,69.66,TRUE,Community Composition
+BUL 01,B,BUL 01 B,3-Oct-25,% EPT,63.64,TRUE,Community Composition
+BUL 01,C,BUL 01 C,3-Oct-25,% EPT,54.67,TRUE,Community Composition
+BUL 04,A,BUL 04 A,2-Oct-25,% EPT,48.85,TRUE,Community Composition
+BUL 04,B,BUL 04 B,2-Oct-25,% EPT,82.46,TRUE,Community Composition
+BUL 04,C,BUL 04 C,2-Oct-25,% EPT,81.16,TRUE,Community Composition
+BUL 05,A,BUL 05 A,28-Sep-25,% EPT,81.61,TRUE,Community Composition
+BUL 05,B,BUL 05 B,2-Oct-25,% EPT,85.4,TRUE,Community Composition
+BUL 05,C,BUL 05 C,2-Oct-25,% EPT,85.5,TRUE,Community Composition
+BUL 01,A,BUL 01 A,3-Oct-25,% Diptera,21.56,TRUE,Community Composition
+BUL 01,B,BUL 01 B,3-Oct-25,% Diptera,20.3,TRUE,Community Composition
+BUL 01,C,BUL 01 C,3-Oct-25,% Diptera,33.33,TRUE,Community Composition
+BUL 04,A,BUL 04 A,2-Oct-25,% Diptera,40.14,TRUE,Community Composition
+BUL 04,B,BUL 04 B,2-Oct-25,% Diptera,7.38,TRUE,Community Composition
+BUL 04,C,BUL 04 C,2-Oct-25,% Diptera,10.77,TRUE,Community Composition
+BUL 05,A,BUL 05 A,28-Sep-25,% Diptera,8.17,TRUE,Community Composition
+BUL 05,B,BUL 05 B,2-Oct-25,% Diptera,3.49,TRUE,Community Composition
+BUL 05,C,BUL 05 C,2-Oct-25,% Diptera,2.45,TRUE,Community Composition
+BUL 01,A,BUL 01 A,3-Oct-25,% Oligochaeta,3.05,TRUE,Community Composition
+BUL 01,B,BUL 01 B,3-Oct-25,% Oligochaeta,9.7,TRUE,Community Composition
+BUL 01,C,BUL 01 C,3-Oct-25,% Oligochaeta,7.48,TRUE,Community Composition
+BUL 04,A,BUL 04 A,2-Oct-25,% Oligochaeta,2.52,TRUE,Community Composition
+BUL 04,B,BUL 04 B,2-Oct-25,% Oligochaeta,3.69,TRUE,Community Composition
+BUL 04,C,BUL 04 C,2-Oct-25,% Oligochaeta,0.24,TRUE,Community Composition
+BUL 05,A,BUL 05 A,28-Sep-25,% Oligochaeta,0.14,TRUE,Community Composition
+BUL 05,B,BUL 05 B,2-Oct-25,% Oligochaeta,0.54,TRUE,Community Composition
+BUL 05,C,BUL 05 C,2-Oct-25,% Oligochaeta,0.19,TRUE,Community Composition
+BUL 01,A,BUL 01 A,3-Oct-25,% Baetidae,0.38,TRUE,Community Composition
+BUL 01,B,BUL 01 B,3-Oct-25,% Baetidae,1.52,TRUE,Community Composition
+BUL 01,C,BUL 01 C,3-Oct-25,% Baetidae,0.47,TRUE,Community Composition
+BUL 04,A,BUL 04 A,2-Oct-25,% Baetidae,0,TRUE,Community Composition
+BUL 04,B,BUL 04 B,2-Oct-25,% Baetidae,3.08,TRUE,Community Composition
+BUL 04,C,BUL 04 C,2-Oct-25,% Baetidae,3.67,TRUE,Community Composition
+BUL 05,A,BUL 05 A,28-Sep-25,% Baetidae,5.45,TRUE,Community Composition
+BUL 05,B,BUL 05 B,2-Oct-25,% Baetidae,3.88,TRUE,Community Composition
+BUL 05,C,BUL 05 C,2-Oct-25,% Baetidae,2.17,TRUE,Community Composition
+BUL 01,A,BUL 01 A,3-Oct-25,% Chironomidae,20.61,TRUE,Community Composition
+BUL 01,B,BUL 01 B,3-Oct-25,% Chironomidae,20.3,TRUE,Community Composition
+BUL 01,C,BUL 01 C,3-Oct-25,% Chironomidae,32.4,TRUE,Community Composition
+BUL 04,A,BUL 04 A,2-Oct-25,% Chironomidae,37.39,TRUE,Community Composition
+BUL 04,B,BUL 04 B,2-Oct-25,% Chironomidae,6.77,TRUE,Community Composition
+BUL 04,C,BUL 04 C,2-Oct-25,% Chironomidae,6.11,TRUE,Community Composition
+BUL 05,A,BUL 05 A,28-Sep-25,% Chironomidae,5.99,TRUE,Community Composition
+BUL 05,B,BUL 05 B,2-Oct-25,% Chironomidae,2.02,TRUE,Community Composition
+BUL 05,C,BUL 05 C,2-Oct-25,% Chironomidae,1.41,TRUE,Community Composition
+BUL 01,A,BUL 01 A,3-Oct-25,% Odonata,0,TRUE,Community Composition
+BUL 01,B,BUL 01 B,3-Oct-25,% Odonata,0,TRUE,Community Composition
+BUL 01,C,BUL 01 C,3-Oct-25,% Odonata,0,TRUE,Community Composition
+BUL 04,A,BUL 04 A,2-Oct-25,% Odonata,0,TRUE,Community Composition
+BUL 04,B,BUL 04 B,2-Oct-25,% Odonata,0.31,TRUE,Community Composition
+BUL 04,C,BUL 04 C,2-Oct-25,% Odonata,0,TRUE,Community Composition
+BUL 05,A,BUL 05 A,28-Sep-25,% Odonata,0,TRUE,Community Composition
+BUL 05,B,BUL 05 B,2-Oct-25,% Odonata,0,TRUE,Community Composition
+BUL 05,C,BUL 05 C,2-Oct-25,% Odonata,0,TRUE,Community Composition
+BUL 01,A,BUL 01 A,3-Oct-25,% Predators,0.31,TRUE,FFG
+BUL 01,B,BUL 01 B,3-Oct-25,% Predators,0.38,TRUE,FFG
+BUL 01,C,BUL 01 C,3-Oct-25,% Predators,0.35,TRUE,FFG
+BUL 04,A,BUL 04 A,2-Oct-25,% Predators,0.71,TRUE,FFG
+BUL 04,B,BUL 04 B,2-Oct-25,% Predators,0.68,TRUE,FFG
+BUL 04,C,BUL 04 C,2-Oct-25,% Predators,0.99,TRUE,FFG
+BUL 05,A,BUL 05 A,28-Sep-25,% Predators,0.95,TRUE,FFG
+BUL 05,B,BUL 05 B,2-Oct-25,% Predators,0.7,TRUE,FFG
+BUL 05,C,BUL 05 C,2-Oct-25,% Predators,0.68,TRUE,FFG
+BUL 01,A,BUL 01 A,3-Oct-25,% Shredder-Herbivores,0.12,TRUE,FFG
+BUL 01,B,BUL 01 B,3-Oct-25,% Shredder-Herbivores,0.08,TRUE,FFG
+BUL 01,C,BUL 01 C,3-Oct-25,% Shredder-Herbivores,0.09,TRUE,FFG
+BUL 04,A,BUL 04 A,2-Oct-25,% Shredder-Herbivores,0.15,TRUE,FFG
+BUL 04,B,BUL 04 B,2-Oct-25,% Shredder-Herbivores,0.31,TRUE,FFG
+BUL 04,C,BUL 04 C,2-Oct-25,% Shredder-Herbivores,0.84,TRUE,FFG
+BUL 05,A,BUL 05 A,28-Sep-25,% Shredder-Herbivores,1.94,TRUE,FFG
+BUL 05,B,BUL 05 B,2-Oct-25,% Shredder-Herbivores,2.03,TRUE,FFG
+BUL 05,C,BUL 05 C,2-Oct-25,% Shredder-Herbivores,2.36,TRUE,FFG
+BUL 01,A,BUL 01 A,3-Oct-25,% Collector-Gatherers,1.98,TRUE,FFG
+BUL 01,B,BUL 01 B,3-Oct-25,% Collector-Gatherers,2.53,TRUE,FFG
+BUL 01,C,BUL 01 C,3-Oct-25,% Collector-Gatherers,2.8,TRUE,FFG
+BUL 04,A,BUL 04 A,2-Oct-25,% Collector-Gatherers,2.96,TRUE,FFG
+BUL 04,B,BUL 04 B,2-Oct-25,% Collector-Gatherers,3.08,TRUE,FFG
+BUL 04,C,BUL 04 C,2-Oct-25,% Collector-Gatherers,4.33,TRUE,FFG
+BUL 05,A,BUL 05 A,28-Sep-25,% Collector-Gatherers,1.08,TRUE,FFG
+BUL 05,B,BUL 05 B,2-Oct-25,% Collector-Gatherers,0.97,TRUE,FFG
+BUL 05,C,BUL 05 C,2-Oct-25,% Collector-Gatherers,0.89,TRUE,FFG
+BUL 01,A,BUL 01 A,3-Oct-25,% Scrapers,0.39,TRUE,FFG
+BUL 01,B,BUL 01 B,3-Oct-25,% Scrapers,0.61,TRUE,FFG
+BUL 01,C,BUL 01 C,3-Oct-25,% Scrapers,0.36,TRUE,FFG
+BUL 04,A,BUL 04 A,2-Oct-25,% Scrapers,0.45,TRUE,FFG
+BUL 04,B,BUL 04 B,2-Oct-25,% Scrapers,0.62,TRUE,FFG
+BUL 04,C,BUL 04 C,2-Oct-25,% Scrapers,0.57,TRUE,FFG
+BUL 05,A,BUL 05 A,28-Sep-25,% Scrapers,0.58,TRUE,FFG
+BUL 05,B,BUL 05 B,2-Oct-25,% Scrapers,0.77,TRUE,FFG
+BUL 05,C,BUL 05 C,2-Oct-25,% Scrapers,0.57,TRUE,FFG
+BUL 01,A,BUL 01 A,3-Oct-25,% Macrophyte-Herbivore,0,TRUE,FFG
+BUL 01,B,BUL 01 B,3-Oct-25,% Macrophyte-Herbivore,0,TRUE,FFG
+BUL 01,C,BUL 01 C,3-Oct-25,% Macrophyte-Herbivore,0,TRUE,FFG
+BUL 04,A,BUL 04 A,2-Oct-25,% Macrophyte-Herbivore,0.01,TRUE,FFG
+BUL 04,B,BUL 04 B,2-Oct-25,% Macrophyte-Herbivore,0.02,TRUE,FFG
+BUL 04,C,BUL 04 C,2-Oct-25,% Macrophyte-Herbivore,0,TRUE,FFG
+BUL 05,A,BUL 05 A,28-Sep-25,% Macrophyte-Herbivore,0.01,TRUE,FFG
+BUL 05,B,BUL 05 B,2-Oct-25,% Macrophyte-Herbivore,0.02,TRUE,FFG
+BUL 05,C,BUL 05 C,2-Oct-25,% Macrophyte-Herbivore,0.01,TRUE,FFG
+BUL 01,A,BUL 01 A,3-Oct-25,% Collector-Filterer,2.03,TRUE,FFG
+BUL 01,B,BUL 01 B,3-Oct-25,% Collector-Filterer,1.36,TRUE,FFG
+BUL 01,C,BUL 01 C,3-Oct-25,% Collector-Filterer,1.28,TRUE,FFG
+BUL 04,A,BUL 04 A,2-Oct-25,% Collector-Filterer,0.45,TRUE,FFG
+BUL 04,B,BUL 04 B,2-Oct-25,% Collector-Filterer,0.26,TRUE,FFG
+BUL 04,C,BUL 04 C,2-Oct-25,% Collector-Filterer,0.12,TRUE,FFG
+BUL 05,A,BUL 05 A,28-Sep-25,% Collector-Filterer,0.4,TRUE,FFG
+BUL 05,B,BUL 05 B,2-Oct-25,% Collector-Filterer,0.48,TRUE,FFG
+BUL 05,C,BUL 05 C,2-Oct-25,% Collector-Filterer,0.45,TRUE,FFG
+BUL 01,A,BUL 01 A,3-Oct-25,% Omnivore,0.07,TRUE,FFG
+BUL 01,B,BUL 01 B,3-Oct-25,% Omnivore,0.02,TRUE,FFG
+BUL 01,C,BUL 01 C,3-Oct-25,% Omnivore,0.05,TRUE,FFG
+BUL 04,A,BUL 04 A,2-Oct-25,% Omnivore,0.09,TRUE,FFG
+BUL 04,B,BUL 04 B,2-Oct-25,% Omnivore,0,TRUE,FFG
+BUL 04,C,BUL 04 C,2-Oct-25,% Omnivore,0.07,TRUE,FFG
+BUL 05,A,BUL 05 A,28-Sep-25,% Omnivore,0.03,TRUE,FFG
+BUL 05,B,BUL 05 B,2-Oct-25,% Omnivore,0.01,TRUE,FFG
+BUL 05,C,BUL 05 C,2-Oct-25,% Omnivore,0.02,TRUE,FFG
+BUL 01,A,BUL 01 A,3-Oct-25,% Parasite,0,TRUE,FFG
+BUL 01,B,BUL 01 B,3-Oct-25,% Parasite,0,TRUE,FFG
+BUL 01,C,BUL 01 C,3-Oct-25,% Parasite,0,TRUE,FFG
+BUL 04,A,BUL 04 A,2-Oct-25,% Parasite,0,TRUE,FFG
+BUL 04,B,BUL 04 B,2-Oct-25,% Parasite,0,TRUE,FFG
+BUL 04,C,BUL 04 C,2-Oct-25,% Parasite,0,TRUE,FFG
+BUL 05,A,BUL 05 A,28-Sep-25,% Parasite,0,TRUE,FFG
+BUL 05,B,BUL 05 B,2-Oct-25,% Parasite,0,TRUE,FFG
+BUL 05,C,BUL 05 C,2-Oct-25,% Parasite,0,TRUE,FFG
+BUL 01,A,BUL 01 A,3-Oct-25,% Piercer-Herbivore,0.01,TRUE,FFG
+BUL 01,B,BUL 01 B,3-Oct-25,% Piercer-Herbivore,0,TRUE,FFG
+BUL 01,C,BUL 01 C,3-Oct-25,% Piercer-Herbivore,0,TRUE,FFG
+BUL 04,A,BUL 04 A,2-Oct-25,% Piercer-Herbivore,0.15,TRUE,FFG
+BUL 04,B,BUL 04 B,2-Oct-25,% Piercer-Herbivore,0.05,TRUE,FFG
+BUL 04,C,BUL 04 C,2-Oct-25,% Piercer-Herbivore,0.02,TRUE,FFG
+BUL 05,A,BUL 05 A,28-Sep-25,% Piercer-Herbivore,0.01,TRUE,FFG
+BUL 05,B,BUL 05 B,2-Oct-25,% Piercer-Herbivore,0.01,TRUE,FFG
+BUL 05,C,BUL 05 C,2-Oct-25,% Piercer-Herbivore,0,TRUE,FFG
+BUL 01,A,BUL 01 A,3-Oct-25,% Gatherer,0,TRUE,FFG
+BUL 01,B,BUL 01 B,3-Oct-25,% Gatherer,0,TRUE,FFG
+BUL 01,C,BUL 01 C,3-Oct-25,% Gatherer,0,TRUE,FFG
+BUL 04,A,BUL 04 A,2-Oct-25,% Gatherer,0,TRUE,FFG
+BUL 04,B,BUL 04 B,2-Oct-25,% Gatherer,0,TRUE,FFG
+BUL 04,C,BUL 04 C,2-Oct-25,% Gatherer,0,TRUE,FFG
+BUL 05,A,BUL 05 A,28-Sep-25,% Gatherer,0,TRUE,FFG
+BUL 05,B,BUL 05 B,2-Oct-25,% Gatherer,0,TRUE,FFG
+BUL 05,C,BUL 05 C,2-Oct-25,% Gatherer,0,TRUE,FFG
+BUL 01,A,BUL 01 A,3-Oct-25,% Unclassified,0.08,TRUE,FFG
+BUL 01,B,BUL 01 B,3-Oct-25,% Unclassified,0.03,TRUE,FFG
+BUL 01,C,BUL 01 C,3-Oct-25,% Unclassified,0.08,TRUE,FFG
+BUL 04,A,BUL 04 A,2-Oct-25,% Unclassified,0.03,TRUE,FFG
+BUL 04,B,BUL 04 B,2-Oct-25,% Unclassified,0,TRUE,FFG
+BUL 04,C,BUL 04 C,2-Oct-25,% Unclassified,0.07,TRUE,FFG
+BUL 05,A,BUL 05 A,28-Sep-25,% Unclassified,0.01,TRUE,FFG
+BUL 05,B,BUL 05 B,2-Oct-25,% Unclassified,0.02,TRUE,FFG
+BUL 05,C,BUL 05 C,2-Oct-25,% Unclassified,0.02,TRUE,FFG
+BUL 01,A,BUL 01 A,3-Oct-25,Predators Richness,13,FALSE,Other
+BUL 01,B,BUL 01 B,3-Oct-25,Predators Richness,9,FALSE,Other
+BUL 01,C,BUL 01 C,3-Oct-25,Predators Richness,14,FALSE,Other
+BUL 04,A,BUL 04 A,2-Oct-25,Predators Richness,16,FALSE,Other
+BUL 04,B,BUL 04 B,2-Oct-25,Predators Richness,14,FALSE,Other
+BUL 04,C,BUL 04 C,2-Oct-25,Predators Richness,16,FALSE,Other
+BUL 05,A,BUL 05 A,28-Sep-25,Predators Richness,20,FALSE,Other
+BUL 05,B,BUL 05 B,2-Oct-25,Predators Richness,22,FALSE,Other
+BUL 05,C,BUL 05 C,2-Oct-25,Predators Richness,17,FALSE,Other
+BUL 01,A,BUL 01 A,3-Oct-25,Shredder-Herbivores Richness,1,FALSE,Other
+BUL 01,B,BUL 01 B,3-Oct-25,Shredder-Herbivores Richness,1,FALSE,Other
+BUL 01,C,BUL 01 C,3-Oct-25,Shredder-Herbivores Richness,4,FALSE,Other
+BUL 04,A,BUL 04 A,2-Oct-25,Shredder-Herbivores Richness,4,FALSE,Other
+BUL 04,B,BUL 04 B,2-Oct-25,Shredder-Herbivores Richness,4,FALSE,Other
+BUL 04,C,BUL 04 C,2-Oct-25,Shredder-Herbivores Richness,2,FALSE,Other
+BUL 05,A,BUL 05 A,28-Sep-25,Shredder-Herbivores Richness,3,FALSE,Other
+BUL 05,B,BUL 05 B,2-Oct-25,Shredder-Herbivores Richness,3,FALSE,Other
+BUL 05,C,BUL 05 C,2-Oct-25,Shredder-Herbivores Richness,2,FALSE,Other
+BUL 01,A,BUL 01 A,3-Oct-25,Collector-Gatherers Richness,17,FALSE,Other
+BUL 01,B,BUL 01 B,3-Oct-25,Collector-Gatherers Richness,16,FALSE,Other
+BUL 01,C,BUL 01 C,3-Oct-25,Collector-Gatherers Richness,17,FALSE,Other
+BUL 04,A,BUL 04 A,2-Oct-25,Collector-Gatherers Richness,11,FALSE,Other
+BUL 04,B,BUL 04 B,2-Oct-25,Collector-Gatherers Richness,16,FALSE,Other
+BUL 04,C,BUL 04 C,2-Oct-25,Collector-Gatherers Richness,14,FALSE,Other
+BUL 05,A,BUL 05 A,28-Sep-25,Collector-Gatherers Richness,16,FALSE,Other
+BUL 05,B,BUL 05 B,2-Oct-25,Collector-Gatherers Richness,19,FALSE,Other
+BUL 05,C,BUL 05 C,2-Oct-25,Collector-Gatherers Richness,13,FALSE,Other
+BUL 01,A,BUL 01 A,3-Oct-25,Scrapers Richness,6,FALSE,Other
+BUL 01,B,BUL 01 B,3-Oct-25,Scrapers Richness,5,FALSE,Other
+BUL 01,C,BUL 01 C,3-Oct-25,Scrapers Richness,6,FALSE,Other
+BUL 04,A,BUL 04 A,2-Oct-25,Scrapers Richness,4,FALSE,Other
+BUL 04,B,BUL 04 B,2-Oct-25,Scrapers Richness,4,FALSE,Other
+BUL 04,C,BUL 04 C,2-Oct-25,Scrapers Richness,4,FALSE,Other
+BUL 05,A,BUL 05 A,28-Sep-25,Scrapers Richness,6,FALSE,Other
+BUL 05,B,BUL 05 B,2-Oct-25,Scrapers Richness,6,FALSE,Other
+BUL 05,C,BUL 05 C,2-Oct-25,Scrapers Richness,7,FALSE,Other
+BUL 04,A,BUL 04 A,2-Oct-25,MH Richness,1,FALSE,Other
+BUL 04,B,BUL 04 B,2-Oct-25,MH Richness,1,FALSE,Other
+BUL 05,A,BUL 05 A,28-Sep-25,MH Richness,1,FALSE,Other
+BUL 05,B,BUL 05 B,2-Oct-25,MH Richness,1,FALSE,Other
+BUL 05,C,BUL 05 C,2-Oct-25,MH Richness,1,FALSE,Other
+BUL 01,A,BUL 01 A,3-Oct-25,CF Richness,5,FALSE,Other
+BUL 01,B,BUL 01 B,3-Oct-25,CF Richness,5,FALSE,Other
+BUL 01,C,BUL 01 C,3-Oct-25,CF Richness,5,FALSE,Other
+BUL 04,A,BUL 04 A,2-Oct-25,CF Richness,5,FALSE,Other
+BUL 04,B,BUL 04 B,2-Oct-25,CF Richness,4,FALSE,Other
+BUL 04,C,BUL 04 C,2-Oct-25,CF Richness,3,FALSE,Other
+BUL 05,A,BUL 05 A,28-Sep-25,CF Richness,3,FALSE,Other
+BUL 05,B,BUL 05 B,2-Oct-25,CF Richness,5,FALSE,Other
+BUL 05,C,BUL 05 C,2-Oct-25,CF Richness,3,FALSE,Other
+BUL 01,A,BUL 01 A,3-Oct-25,OM Richness,2,FALSE,Other
+BUL 01,B,BUL 01 B,3-Oct-25,OM Richness,1,FALSE,Other
+BUL 01,C,BUL 01 C,3-Oct-25,OM Richness,2,FALSE,Other
+BUL 04,A,BUL 04 A,2-Oct-25,OM Richness,4,FALSE,Other
+BUL 04,C,BUL 04 C,2-Oct-25,OM Richness,2,FALSE,Other
+BUL 05,A,BUL 05 A,28-Sep-25,OM Richness,3,FALSE,Other
+BUL 05,B,BUL 05 B,2-Oct-25,OM Richness,1,FALSE,Other
+BUL 05,C,BUL 05 C,2-Oct-25,OM Richness,3,FALSE,Other
+BUL 01,A,BUL 01 A,3-Oct-25,Piercer-Herbivore Richness,1,FALSE,Other
+BUL 04,A,BUL 04 A,2-Oct-25,Piercer-Herbivore Richness,1,FALSE,Other
+BUL 04,B,BUL 04 B,2-Oct-25,Piercer-Herbivore Richness,1,FALSE,Other
+BUL 04,C,BUL 04 C,2-Oct-25,Piercer-Herbivore Richness,1,FALSE,Other
+BUL 05,A,BUL 05 A,28-Sep-25,Piercer-Herbivore Richness,1,FALSE,Other
+BUL 05,B,BUL 05 B,2-Oct-25,Piercer-Herbivore Richness,1,FALSE,Other
+BUL 01,A,BUL 01 A,3-Oct-25,Unclassified,3,FALSE,Other
+BUL 01,B,BUL 01 B,3-Oct-25,Unclassified,2,FALSE,Other
+BUL 01,C,BUL 01 C,3-Oct-25,Unclassified,3,FALSE,Other
+BUL 04,A,BUL 04 A,2-Oct-25,Unclassified,3,FALSE,Other
+BUL 04,C,BUL 04 C,2-Oct-25,Unclassified,2,FALSE,Other
+BUL 05,A,BUL 05 A,28-Sep-25,Unclassified,2,FALSE,Other
+BUL 05,B,BUL 05 B,2-Oct-25,Unclassified,2,FALSE,Other
+BUL 05,C,BUL 05 C,2-Oct-25,Unclassified,2,FALSE,Other
+BUL 01,A,BUL 01 A,3-Oct-25,% Univoltine,34.35,TRUE,Voltinism
+BUL 01,B,BUL 01 B,3-Oct-25,% Univoltine,20.91,TRUE,Voltinism
+BUL 01,C,BUL 01 C,3-Oct-25,% Univoltine,21.03,TRUE,Voltinism
+BUL 04,A,BUL 04 A,2-Oct-25,% Univoltine,11.47,TRUE,Voltinism
+BUL 04,B,BUL 04 B,2-Oct-25,% Univoltine,13.23,TRUE,Voltinism
+BUL 04,C,BUL 04 C,2-Oct-25,% Univoltine,19.32,TRUE,Voltinism
+BUL 05,A,BUL 05 A,28-Sep-25,% Univoltine,47.14,TRUE,Voltinism
+BUL 05,B,BUL 05 B,2-Oct-25,% Univoltine,52.72,TRUE,Voltinism
+BUL 05,C,BUL 05 C,2-Oct-25,% Univoltine,57.25,TRUE,Voltinism
+BUL 01,A,BUL 01 A,3-Oct-25,% Semivoltine,4.39,TRUE,Voltinism
+BUL 01,B,BUL 01 B,3-Oct-25,% Semivoltine,3.03,TRUE,Voltinism
+BUL 01,C,BUL 01 C,3-Oct-25,% Semivoltine,2.02,TRUE,Voltinism
+BUL 04,A,BUL 04 A,2-Oct-25,% Semivoltine,3.21,TRUE,Voltinism
+BUL 04,B,BUL 04 B,2-Oct-25,% Semivoltine,2.77,TRUE,Voltinism
+BUL 04,C,BUL 04 C,2-Oct-25,% Semivoltine,4.64,TRUE,Voltinism
+BUL 05,A,BUL 05 A,28-Sep-25,% Semivoltine,4.09,TRUE,Voltinism
+BUL 05,B,BUL 05 B,2-Oct-25,% Semivoltine,2.95,TRUE,Voltinism
+BUL 05,C,BUL 05 C,2-Oct-25,% Semivoltine,2.26,TRUE,Voltinism
+BUL 01,A,BUL 01 A,3-Oct-25,% Multivoltine,0.76,TRUE,Voltinism
+BUL 01,B,BUL 01 B,3-Oct-25,% Multivoltine,0.3,TRUE,Voltinism
+BUL 01,C,BUL 01 C,3-Oct-25,% Multivoltine,0.62,TRUE,Voltinism
+BUL 04,A,BUL 04 A,2-Oct-25,% Multivoltine,2.75,TRUE,Voltinism
+BUL 04,B,BUL 04 B,2-Oct-25,% Multivoltine,1.23,TRUE,Voltinism
+BUL 04,C,BUL 04 C,2-Oct-25,% Multivoltine,1.95,TRUE,Voltinism
+BUL 05,A,BUL 05 A,28-Sep-25,% Multivoltine,3.41,TRUE,Voltinism
+BUL 05,B,BUL 05 B,2-Oct-25,% Multivoltine,1.55,TRUE,Voltinism
+BUL 05,C,BUL 05 C,2-Oct-25,% Multivoltine,1.13,TRUE,Voltinism
+BUL 01,A,BUL 01 A,3-Oct-25,Univoltine,5,FALSE,Voltinism
+BUL 01,B,BUL 01 B,3-Oct-25,Univoltine,4,FALSE,Voltinism
+BUL 01,C,BUL 01 C,3-Oct-25,Univoltine,5,FALSE,Voltinism
+BUL 04,A,BUL 04 A,2-Oct-25,Univoltine,6,FALSE,Voltinism
+BUL 04,B,BUL 04 B,2-Oct-25,Univoltine,8,FALSE,Voltinism
+BUL 04,C,BUL 04 C,2-Oct-25,Univoltine,7,FALSE,Voltinism
+BUL 05,A,BUL 05 A,28-Sep-25,Univoltine,8,FALSE,Voltinism
+BUL 05,B,BUL 05 B,2-Oct-25,Univoltine,9,FALSE,Voltinism
+BUL 05,C,BUL 05 C,2-Oct-25,Univoltine,6,FALSE,Voltinism
+BUL 01,A,BUL 01 A,3-Oct-25,Semivoltine,3,FALSE,Voltinism
+BUL 01,B,BUL 01 B,3-Oct-25,Semivoltine,1,FALSE,Voltinism
+BUL 01,C,BUL 01 C,3-Oct-25,Semivoltine,2,FALSE,Voltinism
+BUL 04,A,BUL 04 A,2-Oct-25,Semivoltine,1,FALSE,Voltinism
+BUL 04,B,BUL 04 B,2-Oct-25,Semivoltine,2,FALSE,Voltinism
+BUL 04,C,BUL 04 C,2-Oct-25,Semivoltine,2,FALSE,Voltinism
+BUL 05,A,BUL 05 A,28-Sep-25,Semivoltine,4,FALSE,Voltinism
+BUL 05,B,BUL 05 B,2-Oct-25,Semivoltine,4,FALSE,Voltinism
+BUL 05,C,BUL 05 C,2-Oct-25,Semivoltine,3,FALSE,Voltinism
+BUL 01,A,BUL 01 A,3-Oct-25,Multivoltine,3,FALSE,Voltinism
+BUL 01,B,BUL 01 B,3-Oct-25,Multivoltine,1,FALSE,Voltinism
+BUL 01,C,BUL 01 C,3-Oct-25,Multivoltine,2,FALSE,Voltinism
+BUL 04,A,BUL 04 A,2-Oct-25,Multivoltine,1,FALSE,Voltinism
+BUL 04,B,BUL 04 B,2-Oct-25,Multivoltine,2,FALSE,Voltinism
+BUL 04,C,BUL 04 C,2-Oct-25,Multivoltine,1,FALSE,Voltinism
+BUL 05,A,BUL 05 A,28-Sep-25,Multivoltine,1,FALSE,Voltinism
+BUL 05,B,BUL 05 B,2-Oct-25,Multivoltine,1,FALSE,Voltinism
+BUL 05,C,BUL 05 C,2-Oct-25,Multivoltine,1,FALSE,Voltinism
+BUL 01,A,BUL 01 A,3-Oct-25,Shannon-Weiner H' (log 10),1.2,FALSE,Diversity
+BUL 01,B,BUL 01 B,3-Oct-25,Shannon-Weiner H' (log 10),1.33,FALSE,Diversity
+BUL 01,C,BUL 01 C,3-Oct-25,Shannon-Weiner H' (log 10),1.37,FALSE,Diversity
+BUL 04,A,BUL 04 A,2-Oct-25,Shannon-Weiner H' (log 10),1.34,FALSE,Diversity
+BUL 04,B,BUL 04 B,2-Oct-25,Shannon-Weiner H' (log 10),1.26,FALSE,Diversity
+BUL 04,C,BUL 04 C,2-Oct-25,Shannon-Weiner H' (log 10),1.17,FALSE,Diversity
+BUL 05,A,BUL 05 A,28-Sep-25,Shannon-Weiner H' (log 10),1.14,FALSE,Diversity
+BUL 05,B,BUL 05 B,2-Oct-25,Shannon-Weiner H' (log 10),1.1,FALSE,Diversity
+BUL 05,C,BUL 05 C,2-Oct-25,Shannon-Weiner H' (log 10),0.99,FALSE,Diversity
+BUL 01,A,BUL 01 A,3-Oct-25,Shannon-Weiner H' (log 2),3.99,FALSE,Diversity
+BUL 01,B,BUL 01 B,3-Oct-25,Shannon-Weiner H' (log 2),4.43,FALSE,Diversity
+BUL 01,C,BUL 01 C,3-Oct-25,Shannon-Weiner H' (log 2),4.54,FALSE,Diversity
+BUL 04,A,BUL 04 A,2-Oct-25,Shannon-Weiner H' (log 2),4.44,FALSE,Diversity
+BUL 04,B,BUL 04 B,2-Oct-25,Shannon-Weiner H' (log 2),4.17,FALSE,Diversity
+BUL 04,C,BUL 04 C,2-Oct-25,Shannon-Weiner H' (log 2),3.9,FALSE,Diversity
+BUL 05,A,BUL 05 A,28-Sep-25,Shannon-Weiner H' (log 2),3.8,FALSE,Diversity
+BUL 05,B,BUL 05 B,2-Oct-25,Shannon-Weiner H' (log 2),3.66,FALSE,Diversity
+BUL 05,C,BUL 05 C,2-Oct-25,Shannon-Weiner H' (log 2),3.3,FALSE,Diversity
+BUL 01,A,BUL 01 A,3-Oct-25,Shannon-Weiner H' (log e),2.77,FALSE,Diversity
+BUL 01,B,BUL 01 B,3-Oct-25,Shannon-Weiner H' (log e),3.07,FALSE,Diversity
+BUL 01,C,BUL 01 C,3-Oct-25,Shannon-Weiner H' (log e),3.15,FALSE,Diversity
+BUL 04,A,BUL 04 A,2-Oct-25,Shannon-Weiner H' (log e),3.08,FALSE,Diversity
+BUL 04,B,BUL 04 B,2-Oct-25,Shannon-Weiner H' (log e),2.89,FALSE,Diversity
+BUL 04,C,BUL 04 C,2-Oct-25,Shannon-Weiner H' (log e),2.7,FALSE,Diversity
+BUL 05,A,BUL 05 A,28-Sep-25,Shannon-Weiner H' (log e),2.64,FALSE,Diversity
+BUL 05,B,BUL 05 B,2-Oct-25,Shannon-Weiner H' (log e),2.54,FALSE,Diversity
+BUL 05,C,BUL 05 C,2-Oct-25,Shannon-Weiner H' (log e),2.29,FALSE,Diversity
+BUL 01,A,BUL 01 A,3-Oct-25,Simpson's Index (D),0.12,FALSE,Diversity
+BUL 01,B,BUL 01 B,3-Oct-25,Simpson's Index (D),0.06,FALSE,Diversity
+BUL 01,C,BUL 01 C,3-Oct-25,Simpson's Index (D),0.06,FALSE,Diversity
+BUL 04,A,BUL 04 A,2-Oct-25,Simpson's Index (D),0.08,FALSE,Diversity
+BUL 04,B,BUL 04 B,2-Oct-25,Simpson's Index (D),0.1,FALSE,Diversity
+BUL 04,C,BUL 04 C,2-Oct-25,Simpson's Index (D),0.15,FALSE,Diversity
+BUL 05,A,BUL 05 A,28-Sep-25,Simpson's Index (D),0.17,FALSE,Diversity
+BUL 05,B,BUL 05 B,2-Oct-25,Simpson's Index (D),0.19,FALSE,Diversity
+BUL 05,C,BUL 05 C,2-Oct-25,Simpson's Index (D),0.24,FALSE,Diversity
+BUL 01,A,BUL 01 A,3-Oct-25,Simpson's Index of Diversity (1 - D),0.88,FALSE,Diversity
+BUL 01,B,BUL 01 B,3-Oct-25,Simpson's Index of Diversity (1 - D),0.94,FALSE,Diversity
+BUL 01,C,BUL 01 C,3-Oct-25,Simpson's Index of Diversity (1 - D),0.94,FALSE,Diversity
+BUL 04,A,BUL 04 A,2-Oct-25,Simpson's Index of Diversity (1 - D),0.92,FALSE,Diversity
+BUL 04,B,BUL 04 B,2-Oct-25,Simpson's Index of Diversity (1 - D),0.9,FALSE,Diversity
+BUL 04,C,BUL 04 C,2-Oct-25,Simpson's Index of Diversity (1 - D),0.85,FALSE,Diversity
+BUL 05,A,BUL 05 A,28-Sep-25,Simpson's Index of Diversity (1 - D),0.83,FALSE,Diversity
+BUL 05,B,BUL 05 B,2-Oct-25,Simpson's Index of Diversity (1 - D),0.81,FALSE,Diversity
+BUL 05,C,BUL 05 C,2-Oct-25,Simpson's Index of Diversity (1 - D),0.76,FALSE,Diversity
+BUL 01,A,BUL 01 A,3-Oct-25,Simpson's Reciprocal Index (1/D),8.07,FALSE,Diversity
+BUL 01,B,BUL 01 B,3-Oct-25,Simpson's Reciprocal Index (1/D),15.48,FALSE,Diversity
+BUL 01,C,BUL 01 C,3-Oct-25,Simpson's Reciprocal Index (1/D),15.6,FALSE,Diversity
+BUL 04,A,BUL 04 A,2-Oct-25,Simpson's Reciprocal Index (1/D),12.73,FALSE,Diversity
+BUL 04,B,BUL 04 B,2-Oct-25,Simpson's Reciprocal Index (1/D),9.87,FALSE,Diversity
+BUL 04,C,BUL 04 C,2-Oct-25,Simpson's Reciprocal Index (1/D),6.9,FALSE,Diversity
+BUL 05,A,BUL 05 A,28-Sep-25,Simpson's Reciprocal Index (1/D),5.83,FALSE,Diversity
+BUL 05,B,BUL 05 B,2-Oct-25,Simpson's Reciprocal Index (1/D),5.36,FALSE,Diversity
+BUL 05,C,BUL 05 C,2-Oct-25,Simpson's Reciprocal Index (1/D),4.17,FALSE,Diversity
+BUL 01,A,BUL 01 A,3-Oct-25,Hilsenhoff Biotic Index,3.91,FALSE,Biotic Index
+BUL 01,B,BUL 01 B,3-Oct-25,Hilsenhoff Biotic Index,4.19,FALSE,Biotic Index
+BUL 01,C,BUL 01 C,3-Oct-25,Hilsenhoff Biotic Index,4.31,FALSE,Biotic Index
+BUL 04,A,BUL 04 A,2-Oct-25,Hilsenhoff Biotic Index,4.57,FALSE,Biotic Index
+BUL 04,B,BUL 04 B,2-Oct-25,Hilsenhoff Biotic Index,3.14,FALSE,Biotic Index
+BUL 04,C,BUL 04 C,2-Oct-25,Hilsenhoff Biotic Index,2.81,FALSE,Biotic Index
+BUL 05,A,BUL 05 A,28-Sep-25,Hilsenhoff Biotic Index,2.72,FALSE,Biotic Index
+BUL 05,B,BUL 05 B,2-Oct-25,Hilsenhoff Biotic Index,2.61,FALSE,Biotic Index
+BUL 05,C,BUL 05 C,2-Oct-25,Hilsenhoff Biotic Index,2.4,FALSE,Biotic Index

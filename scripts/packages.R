@@ -3,31 +3,43 @@ if (!requireNamespace("pak", quietly = TRUE)) {
   install.packages("pak")
 }
 
-# list of packages to install
-pkgs_cran <- c(
+# --- Packages needed for bookdown render ---
+pkgs_render <- c(
   "bookdown",
   "knitr",
   "rmarkdown",
-  "tidyverse",
+  "desc",
   "DT",
   "htmlwidgets",
   "glue",
-  "desc",
-  "devtools"
+  "fs",
+  "stringr"
 )
 
-# loop through the list of packages and install them
+# --- Packages needed for analysis scripts (not required for render) ---
+pkgs_analysis <- c(
+  "tidyverse",
+  "readxl",
+  "janitor",
+  "vegan",
+  "indicspecies",
+  "taxize",
+  "RVAideMemoire"
+)
+
+pkgs_cran <- c(pkgs_render, pkgs_analysis)
+
+# list github packages
+pkgs_gh <- character(0)
+
+pkgs_all <- c(pkgs_cran, pkgs_gh)
+
+# Install missing packages
 for (pkg in pkgs_cran) {
   if (!requireNamespace(pkg, quietly = TRUE)) {
     pak::pkg_install(pkg, ask = FALSE)
   }
 }
-
-# list github packages
-pkgs_gh <- character(0)
-
-pkgs_all <- c(pkgs_cran,
-              pkgs_gh)
 
 if(exists("params") && isTRUE(params$update_packages)){
   for (pkg in pkgs_all) {
@@ -35,9 +47,8 @@ if(exists("params") && isTRUE(params$update_packages)){
   }
 }
 
-# load all the packages
-pkgs_ld <- c(pkgs_cran,
-             basename(pkgs_gh))
+# load all installed packages (skip missing analysis packages gracefully)
+pkgs_ld <- c(pkgs_cran, basename(pkgs_gh))
 
 lapply(pkgs_ld,
        require,

@@ -1,67 +1,73 @@
-Custom template for New Graph Environment Ltd. reporting
+# Neexdzii Kwa Benthic 2025
 
-## Quick Start
+Benthic invertebrate community assessment for the Neexdzii Kwa (Upper Bulkley River), 2025 field season. Prepared for the Office of the Wet'suwet'en.
 
-**Local build:**
+**Report:** [www.newgraphenvironment.com/neexdzii_kwa_benthic_2025](https://www.newgraphenvironment.com/neexdzii_kwa_benthic_2025/)
+
+Three mainstem sites were sampled in triplicate using the CABIN wadeable streams protocol. Samples were processed by Cordillera Consulting Inc. (Summerland, BC). This report presents the full community composition analysis, diversity metrics, ordination, and indicator species results. Key findings are summarized in the companion [Wedzin Kwa Restoration Planning Report](https://github.com/NewGraphEnvironment/restoration_wedzin_kwa_2024).
+
+All data pipelines are scripted from raw source to final output. Processed datasets are version-controlled so the report can be rebuilt without re-downloading sources. Methodological decisions and planned work are tracked as [GitHub Issues](https://github.com/NewGraphEnvironment/neexdzii_kwa_benthic_2025/issues). See [NEWS.md](NEWS.md) for the version history.
+
+## Getting Started
+
+### Prerequisites
+
+- [Git](https://git-scm.com/)
+- [R](https://cran.r-project.org/) (>= 4.4)
+- [RStudio](https://posit.co/download/rstudio-desktop/) (recommended)
+
+### First-time setup
+
+```bash
+git clone https://github.com/NewGraphEnvironment/neexdzii_kwa_benthic_2025.git
+```
+
+1. Open the `.Rproj` file in RStudio
+2. Set `update_packages: TRUE` in `index.Rmd` params for first-time package installation, then build
+
+### Build the report
+
 ```r
-renv::restore()  # First time only - install packages
-Rscript scripts/setup_docs.R build
+source('scripts/run.R')
 ```
 
-**GitHub Actions:** Pushes to `main` auto-build and deploy to GitHub Pages.
+## Data Pipeline
 
-## Dependencies
-
-Managed with [renv](https://rstudio.github.io/renv/). The `renv.lock` file locks all package versions.
-
-```r
-renv::restore()   # Install packages from lockfile
-renv::install()   # Add new packages
-renv::snapshot()  # Update lockfile after changes
+```
+Email (Cordillera Excel workbook)
+  ↓ manual save
+data/raw/cordillera_*.xlsx
+  ↓ scripts/prep_benthic.R
+data/processed/benthic_counts_tidy.csv
+data/processed/benthic_metrics.csv
+  ↓ Rmd chapters
+Report output (docs/)
 ```
 
-## Build Scripts
+## Repository Structure
 
-- `scripts/setup_docs.R clean` - Clear docs/
-- `scripts/setup_docs.R build` - Build the book
-- `scripts/run.R` - Manual build with PDF (requires Zotero for bibliography)
+```
+index.Rmd                 # Master config, YAML params, setup
+0100-intro.Rmd            # Introduction
+0200-background.Rmd       # Watershed context, CABIN protocol
+0300-methods.Rmd          # Sampling, lab processing, analysis
+0400-results.Rmd          # Community composition, diversity
+0500-results-ordination.Rmd  # NMDS, indicator species, PERMANOVA
+0600-discussion.Rmd       # Discussion and recommendations
 
-## Password-Protected Mode
+scripts/
+  run.R                   # Build script
+  setup.R                 # Shared paths and parameters
+  packages.R              # Package management
+  functions.R             # Project-specific helper functions
 
-Set in `index.Rmd`:
-```yaml
-params:
-  password_protected: TRUE
-  password_dir: 'your_secret_hash'
+data/
+  raw/                    # Cordillera Excel workbook(s)
+  processed/              # Analysis-ready datasets
+
+NEWS.md                   # Version history and change log
 ```
 
-Builds report to `docs/<password_dir>/` with landing page at `docs/index.html`.
+## Issues and Planned Work
 
-## Version History
-
-Track changes in [`NEWS.md`](NEWS.md)
-
----
-
-Adapted from [bookdown](https://github.com/rstudio/bookdown). See [Get Started](https://bookdown.org/yihui/bookdown/get-started.html) for more.
-
-So if we want to use this repo to update specific files in existing repos generated from the template we need to can do the following from the production report.  NEED TO TEST A BUNCH.  See https://stackoverflow.com/questions/24815952/git-pull-from-another-repository:
-
-    git remote add upstream https://github.com/NewGraphEnvironment/mybookdown-template.git
-    git config remote.upstream.pushurl "maybe dont push to the template from here bud"
-    git fetch upstream
-    git checkout upstream/master -- path/to/file
-    
-    
-In order to avoid commit huge files run this every once and a while https://stackoverflow.com/questions/4035779/gitignore-by-file-size
-https://stackoverflow.com/questions/37768376/remove-duplicate-lines-and-overwrite-file-in-same-command
-
-    find . -size +50M | sed 's|^\./||g' >> .gitignore; awk '!seen[$0]++' .gitignore | sponge .gitignore
-    
-    
-This is a common move to deal with repeated headers in pagedown knitr table outputs when the page breaks.  If we don't have an extra `<br>`
-
-`r if(params$gitbook_on){knitr::asis_output("<br>")} else knitr::asis_output("\\pagebreak<br>")`
-    
-
-   
+Active issues are tracked at [github.com/NewGraphEnvironment/neexdzii_kwa_benthic_2025/issues](https://github.com/NewGraphEnvironment/neexdzii_kwa_benthic_2025/issues).

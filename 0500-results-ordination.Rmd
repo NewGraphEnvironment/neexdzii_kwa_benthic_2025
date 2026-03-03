@@ -1,0 +1,14 @@
+
+
+# Ordination and Statistical Analysis
+
+```{r setup-0500-results-ordination}
+knitr::opts_chunk$set(fig.path = "fig/0500-results-ordination/", dev = "png")
+```
+
+<!-- NMDS ordination with stress assessment.
+     envfit: environmental variables correlated with community structure.
+     Indicator species analysis (indicspecies::multipatt).
+     PERMANOVA for among-site differences.
+     Betadisper for multivariate dispersion. -->
+

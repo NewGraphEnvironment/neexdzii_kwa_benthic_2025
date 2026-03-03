@@ -5,7 +5,3 @@
 <div id="refs"></div>
 '}`
 
-<br>
-
-Note that this reference was not actually cited in the body of the report but rather in the `index.Rmd` file `yaml` headerj
-under the `no_cite` key.

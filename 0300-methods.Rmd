@@ -1,7 +1,50 @@
 
 
+
+
 # Methods
 
-## Open Source Reporting Framework
+```{r setup-0300-methods}
+knitr::opts_chunk$set(fig.path = "fig/0300-methods/", dev = "png")
+```
 
-This report is produced using open-source tools (R, bookdown) with full version control via git, enabling iterative updates. All code, data, and revision history are publicly accessible in the [project repository](`r params$repo_url`), with ongoing tasks tracked via GitHub [issues](`r paste0(params$repo_url, 'issues')`) and version history maintained in the [project changelog](`r paste0(params$repo_url, 'blob/main/NEWS.md')`).
+## Field Sampling
+
+Benthic invertebrate sampling was conducted following the Canadian Aquatic Biomonitoring Network (CABIN) wadeable streams protocol [@environmentcanada2012Canadianaquatic]. Samples were collected using the traveling kick-net method with a 400 μm mesh net. At each site, a 3-minute timed sample was collected by traversing a zigzag pattern in an upstream direction within the erosional zone (riffle, rapid, or fast-flowing run habitat).
+
+<br>
+
+Concurrent with benthic sampling, standardized habitat and water quality data were collected. Substrate composition was characterized using a 100-pebble count, measuring the intermediate axis of randomly selected particles along transects. Embeddedness—the degree to which particles are buried in fine sediments—was assessed for every 10th particle. Channel slope was measured using a lazer level.
+
+<br>
+
+Water quality parameters recorded at each site included temperature, pH, and conductivity. Instream habitat features documented included macrophyte coverage (percent cover in categories: 0%, 1–25%, 26–50%, 51–75%, 76–100%), periphyton coverage (5-category scale based on slipperiness and thickness), and canopy cover. Channel dimensions including bankfull width, wetted width, and depths were also recorded.
+
+<br>
+
+Three sites were sampled on the Neexdzii Kwa mainstem within known high-value Chinook spawning and rearing habitat (Figure \@ref(fig:map-benthic-sites)). Site locations were selected to assess aquatic health upstream and downstream of potential point-source impacts, allowing comparison of species composition and community health metrics across the watershed. Triplicate kick samples were collected at each site to quantify within-site variability and enable statistical distinction between true site differences and natural spatial heterogeneity.
+
+<br>
+
+```{r map-benthic-sites, fig.cap='Benthic invertebrate sampling locations on the Neexdzii Kwa (Upper Bulkley River), fall 2025.', out.width="100%"}
+knitr::include_graphics("fig/map_benthic-sites.png")
+```
+
+## Laboratory Processing
+
+Samples were preserved in 10% formalin and submitted to Cordillera Consulting Inc. (Summerland, BC) for sorting and taxonomic identification following CABIN protocols [@environmentcanada2012Canadianaquatic]. Subsampling was performed using a Marchant Box to achieve a target count of 300 organisms per sample. Organisms were sorted from debris in gridded Petri dishes under a dissecting microscope, randomly selecting grids until the count target was met. Specimens were identified to genus or species level where possible, with Chironomidae identified using slide-mounted head capsules. Taxonomic determinations followed the CABIN taxonomic manual, SAFIT standard taxonomic effort, and PNAMP protocols. All taxonomists held Society for Freshwater Science (SFS) Level 2 certification.
+
+<br>
+
+Quality assurance procedures included both sorting and taxonomic quality control. Sorting efficiency was evaluated by re-sorting 10% of processed samples, with a 95% efficiency target required by CABIN. Taxonomic quality control involved blind re-identification of 10% or more of samples by an independent taxonomist. All samples met CABIN quality thresholds, with a total misidentification rate of 0.16% and mean sorting efficiency of 96.4%.
+
+## Data Analysis
+
+<!-- Community composition, diversity indices (Shannon, Simpson), richness, EPT.
+     Functional feeding group analysis, Hilsenhoff Biotic Index.
+     NMDS ordination, envfit, indicator species analysis (indicspecies).
+     PERMANOVA for among-site differences. -->
+
+## Data Reproducibility and Reporting Framework
+
+This report is produced using open-source tools (R, bookdown) with full version control via git. All code, data processing scripts, and revision history are accessible in the [project repository](`r params$repo_url`), with ongoing tasks tracked via GitHub [issues](`r paste0(params$repo_url, 'issues')`) and version history maintained in the [project changelog](`r paste0(params$repo_url, 'blob/main/NEWS.md')`).

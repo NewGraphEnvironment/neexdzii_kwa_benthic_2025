@@ -1,41 +1,40 @@
---- 
-title: "My Bookdown Template"
+---
+title: "Benthic Invertebrate Assessment of the Neexdzii Kwa (Upper Bulkley River) — 2025"
 author: |
  |
  | Prepared for
-
+ | Office of the Wet'suwet'en
  |
  |
  | Prepared by
- | Al Irvine, B.Sc., R.P.Bio. and Lucy Schick, B.Sc.
+ | Al Irvine, B.Sc., R.P.Bio.
  | New Graph Environment Ltd.
 
 date: |
  |
- | Version `r desc::desc_get_version()` `r format(Sys.Date(), "%Y-%m-%d")`
+ | Version `r desc::desc_get_version()` DRAFT `r format(Sys.Date(), "%Y-%m-%d")`
  |
  | *Claude Opus 4.6 (Anthropic) assisted with literature synthesis, drafting, and technical writing. All scientific interpretation, data analysis, and conclusions are the responsibility of the authors.*
-toc-title: Table of Contents
+toc-title: Neexdzii Kwa Benthic
 site: bookdown::bookdown_site
 output:
   bookdown::gitbook:
           includes:
             in_header: header.html
 params:
-  repo_url: 'https://github.com/NewGraphEnvironment/mybookdown-template/'
-  report_url: 'https://newgraphenvironment.github.io/mybookdown-template'
+  repo_url: 'https://github.com/NewGraphEnvironment/neexdzii_kwa_benthic_2025/'
+  report_url: 'https://www.newgraphenvironment.com/neexdzii_kwa_benthic_2025/'
   update_packages: FALSE
   update_bib: FALSE
+  update_benthic: FALSE
   gitbook_on: TRUE
   password_protected: TRUE
-  password_dir: 'dc4e2becf638f6d21012603c890b0ffb98bd80f2'
-nocite: |
-  @irvine2024NewGraphEnvironmentfpr
+  password_dir: '68d57a8caa75cde79d75fb9d700d04508c7a1f2a'
 documentclass: book
 bibliography: "`r if (params$update_bib) { rbbt::bbt_write_bib('references.bib', overwrite = TRUE); 'references.bib' } else 'references.bib'`"
 biblio-style: apalike
 link-citations: no
-description: "My Description."
+description: "Benthic invertebrate community assessment for the Neexdzii Kwa (Upper Bulkley River), 2025 field season."
 lof: true
 
 ---
@@ -49,9 +48,8 @@ htmltools::tagList(rmarkdown::html_dependency_jquery())
 
 ```{r setup, echo=identical(params$gitbook_on, TRUE), include = TRUE}
 knitr::opts_chunk$set(echo=identical(params$gitbook_on, TRUE), message=FALSE, warning=FALSE, dpi=60, out.width = "100%", fig.width = 8, fig.height = 6)
-# knitr::knit_hooks$set(webgl = hook_webgl)
 options(scipen=999)
-options(knitr.kable.NA = '--') #'--'
+options(knitr.kable.NA = '--')
 options(knitr.kable.NAN = '--')
 ```
 
@@ -60,6 +58,7 @@ options(knitr.kable.NAN = '--')
 source('scripts/packages.R')
 source('scripts/functions.R')
 source('scripts/staticimports.R')
+source('scripts/setup.R')
 ```
 
 ```{r settings-defaults}
@@ -89,11 +88,9 @@ knitr::write_bib(c(
 
 # Acknowledgement {.front-matter .unnumbered}
 
-At New Graph Environment, we understand our well-being as inseparable from the health of the land and waters we work within. When we care for ecosystems, we care for ourselves and for the communities connected to them.
+We understand our well-being as inseparable from the health of the land and waters we work within. When we care for ecosystems, we care for ourselves.
 
-This work takes place within the territories of [Nations], who have stewarded these lands and waters since time immemorial. [Project-specific connection to territory, governance, species, or watershed.]
-
-[Funding and partner acknowledgements.]
+This work takes place within the Yintah of the Wet'suwet'en people, who have governed these lands and waters through their hereditary chief system for thousands of years. The Neexdzii Kwa (Upper Bulkley River) and its tributaries sustain salmon, steelhead, and the communities connected to them. 
 
 
 ```{js, logo-header, echo = FALSE, eval= T}
