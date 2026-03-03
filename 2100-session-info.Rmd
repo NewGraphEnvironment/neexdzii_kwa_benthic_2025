@@ -5,11 +5,11 @@ Information about the computing environment is important for reproducibility. A 
 is saved to `session_info.csv` that can be viewed and downloaded from `r paste0(params$repo_url, "tree/main/data/session_info.csv")`.
 
 ```{r session-info}
+si <- sessionInfo()
+print(si)
 
-if(params$gitbook_on){
-  devtools::session_info(to_file = 'data/session_info.csv')
-} else {
-  devtools::session_info()
+if (params$gitbook_on) {
+  pkgs <- installed.packages()[names(si$otherPkgs), c("Package", "Version")]
+  write.csv(pkgs, "data/session_info.csv", row.names = FALSE)
 }
-
 ```
