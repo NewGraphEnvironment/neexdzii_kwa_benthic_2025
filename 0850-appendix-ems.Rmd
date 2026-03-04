@@ -1,0 +1,230 @@
+
+
+# Historical Water Quality — EMS
+
+```{r setup-0850-appendix-ems}
+knitr::opts_chunk$set(fig.path = "fig/0850-appendix-ems/", dev = "png")
+```
+
+Historical water quality data from the BC Environmental Monitoring System (EMS) for monitoring stations within the Neexdzii Kwa (Upper Bulkley River) watershed. Stations were identified via a spatial query of BC Data Catalogue EMS monitoring locations ([WHSE_ENVIRONMENTAL_MONITORING.EMS_MONITORING_LOCN_TYPES_SVW](https://catalogue.data.gov.bc.ca/dataset/bc-environmental-monitoring-locations)) intersected with the watershed boundary (1 km buffer). Records were retrieved from the EMS historic database via the `rems` R package.
+
+<br>
+
+```{r map-ems-stations, fig.cap='EMS water quality monitoring stations within the Neexdzii Kwa watershed. Stations are grouped by context and can be toggled on/off using the layer control. Click markers for station details.', out.width="100%"}
+
+ems_stn <- readr::read_csv("data/processed/ems_stations.csv", show_col_types = FALSE) |>
+  dplyr::filter(!is.na(lat) & !is.na(lon))
+
+# Assign stations to map groups matching the plot sections
+houston_stp_ids <- c("0400297", "0400295", "0400296")
+knockholt_ids   <- c("E257276", "E257277")
+mainstem_ids    <- c("E206292", "E307186", "0400201")
+buck_ids        <- c("E207067", "E238622", "E207066", "E219804",
+                     "E238625", "E228317", "E238624")
+mine_ids        <- c("0400765", "0400766", "0400767", "0400764",
+                     "0400763", "0400762", "0400761", "0700081",
+                     "0700108")
+
+ems_stn <- ems_stn |>
+  dplyr::mutate(
+    group = dplyr::case_when(
+      ems_id %in% houston_stp_ids ~ "Houston STP",
+      ems_id %in% knockholt_ids   ~ "Knockholt Landfill",
+      ems_id %in% mainstem_ids    ~ "Neexdzii Kwa Mainstem",
+      ems_id %in% buck_ids        ~ "Buck Creek",
+      ems_id %in% mine_ids        ~ "Equity Silver Mine",
+      location_type == "13"       ~ "Lakes",
+      location_type == "21"       ~ "Other Streams",
+      TRUE                        ~ "Other"
+    )
+  )
+
+group_colours <- c(
+  "Houston STP"           = "#d62728",
+  "Knockholt Landfill"    = "#e6550d",
+  "Neexdzii Kwa Mainstem" = "#2166ac",
+  "Buck Creek"            = "#1b7837",
+  "Equity Silver Mine"    = "#7b3294",
+  "Lakes"                 = "#4393c3",
+  "Other Streams"         = "#878787",
+  "Other"                 = "#bdbdbd"
+)
+
+# Watershed boundary
+neexdzii <- readRDS("data/spatial/neexdzii_kwa.rds")
+
+# Build leaflet
+m <- leaflet::leaflet(width = "100%", height = "500px") |>
+  leaflet::addProviderTiles("Esri.WorldTopoMap", group = "Topo") |>
+  leaflet::addProviderTiles("Esri.WorldImagery", group = "Satellite") |>
+  leaflet::addPolygons(
+    data = neexdzii,
+    fillColor = "#a8c8e0", fillOpacity = 0.15,
+    color = "#2c3e50", weight = 2, opacity = 0.8,
+    group = "Watershed"
+  )
+
+# Add each group as a circle marker layer
+for (grp in names(group_colours)) {
+  d <- ems_stn |> dplyr::filter(group == grp)
+  if (nrow(d) == 0) next
+  m <- m |>
+    leaflet::addCircleMarkers(
+      data = d, lng = ~lon, lat = ~lat,
+      radius = 6, weight = 1,
+      color = "grey30",
+      fillColor = group_colours[grp],
+      fillOpacity = 0.8,
+      group = grp,
+      label = ~paste0(ems_id, ": ", monitoring_location),
+      popup = ~paste0(
+        "<b>", monitoring_location, "</b><br>",
+        "EMS ID: ", ems_id, "<br>",
+        "Records: ", n_records, " | Params: ", n_params, "<br>",
+        "Dates: ", min_date, " to ", max_date, "<br>",
+        "Sampling days: ", n_dates
+      )
+    )
+}
+
+# Layer control — show key groups by default, hide clutter
+m <- m |>
+  leaflet::addLayersControl(
+    baseGroups = c("Topo", "Satellite"),
+    overlayGroups = c("Watershed", "Houston STP", "Knockholt Landfill",
+                      "Neexdzii Kwa Mainstem", "Buck Creek",
+                      "Equity Silver Mine", "Lakes", "Other Streams", "Other"),
+    options = leaflet::layersControlOptions(collapsed = FALSE)
+  ) |>
+  leaflet::hideGroup(c("Lakes", "Other Streams", "Other"))
+
+m
+```
+
+## Station Summary {-}
+
+```{r tab-ems-stations-cap, results="asis"}
+my_caption <<- "Summary of EMS water quality monitoring stations within the Neexdzii Kwa watershed. Stations with historic data in the rems database are shown, ordered by location type and number of records."
+my_tab_caption(tip_flag = FALSE)
+```
+
+```{r tab-ems-stations}
+readr::read_csv("data/processed/ems_stations.csv", show_col_types = FALSE) |>
+  dplyr::select(
+    `EMS ID` = ems_id,
+    Station = monitoring_location,
+    Type = location_type,
+    Records = n_records,
+    Parameters = n_params,
+    Dates = n_dates,
+    `First Sample` = min_date,
+    `Last Sample` = max_date,
+    Lat = lat,
+    Lon = lon
+  ) |>
+  my_dt_table(cols_freeze_left = 2, page_length = 20)
+```
+
+## Point Source Comparisons {-}
+
+### Houston Wastewater Treatment Plant {-}
+
+Three EMS stations bracket the Houston STP outfall: upstream (0400297), immediately downstream (0400295), and 2.4 km further downstream (0400296). Combined records span 1974--2018.
+
+```{r fig-ems-houston-tp, fig.cap='Total phosphorus trends at Houston wastewater treatment plant stations. Loess smoothing curves show long-term trends upstream and downstream of the outfall (1974--2018). Dashed red line indicates CCME trigger value (10 µg/L).', out.width="100%"}
+knitr::include_graphics("fig/ems/houston_stp_tp.png")
+```
+
+<br>
+
+```{r fig-ems-houston-nutr-ts, fig.cap='Nutrient time series at Houston STP stations (upstream, immediately downstream, and 2.4 km downstream of outfall).', out.width="100%"}
+knitr::include_graphics("fig/ems/houston_stp_nutrients_ts.png")
+```
+
+<br>
+
+```{r fig-ems-houston-nutr-box, fig.cap='Nutrient concentrations at Houston STP stations. Box-and-whisker plots summarize all available samples. Dashed red lines indicate BC Water Quality Guidelines (CCME 10 µg/L for total phosphorus, 3 mg/L for nitrate).', out.width="100%"}
+knitr::include_graphics("fig/ems/houston_stp_nutrients_box.png")
+```
+
+### Ammonia Guideline Evaluation {-}
+
+The BC Water Quality Guideline for ammonia is conditional on water temperature and pH — higher temperatures and pH shift the equilibrium toward un-ionized ammonia (NH~3~), the toxic form. The guideline was calculated for each sample using concurrent pH measurements and water temperature where available. For samples lacking temperature data, monthly mean temperatures from ECCC hydrometric station 08EE003 (Bulkley River near Houston, 2017--2025) were substituted.
+
+```{r fig-ems-houston-nh3-wqg, fig.cap='Ammonia concentrations at Houston STP stations relative to sample-specific BC Water Quality Guidelines (dashed red line). Guidelines are calculated from concurrent pH and temperature measurements. Triangles indicate exceedances.', out.width="100%"}
+knitr::include_graphics("fig/ems/houston_stp_ammonia_wqg.png")
+```
+
+<br>
+
+### Knockholt Landfill {-}
+
+Paired upstream/downstream stations (E257276, E257277) sampled 2004--2006.
+
+```{r fig-ems-knockholt, fig.cap='Nutrient concentrations upstream vs downstream of the Knockholt Landfill (2004--2006). Individual samples overlaid on box-and-whisker summaries.', out.width="100%"}
+knitr::include_graphics("fig/ems/knockholt_compare.png")
+```
+
+## Neexdzii Kwa Mainstem {-}
+
+Eight stations span the Neexdzii Kwa from Bulkley Lake downstream through the Houston STP reach, providing an upstream-to-downstream nutrient and water quality gradient. Stations without nutrient data were excluded.
+
+```{r fig-ems-main-p-ts, fig.cap='Phosphorus time series at Neexdzii Kwa mainstem stations (upstream to downstream).', out.width="100%"}
+knitr::include_graphics("fig/ems/mainstem_phosphorus_ts.png")
+```
+
+<br>
+
+```{r fig-ems-main-p-box, fig.cap='Phosphorus concentrations by mainstem station (upstream to downstream).', out.width="100%"}
+knitr::include_graphics("fig/ems/mainstem_phosphorus_box.png")
+```
+
+<br>
+
+```{r fig-ems-main-n-ts, fig.cap='Nitrogen time series at Neexdzii Kwa mainstem stations.', out.width="100%"}
+knitr::include_graphics("fig/ems/mainstem_nitrogen_ts.png")
+```
+
+<br>
+
+```{r fig-ems-main-n-box, fig.cap='Nitrogen concentrations by mainstem station (upstream to downstream).', out.width="100%"}
+knitr::include_graphics("fig/ems/mainstem_nitrogen_box.png")
+```
+
+<br>
+
+```{r fig-ems-main-gen-ts, fig.cap='General water quality parameters (pH, dissolved oxygen, conductivity, TSS) at Neexdzii Kwa mainstem stations. Dashed red lines on pH indicate BC Water Quality Guidelines (6.5--9.0).', out.width="100%"}
+knitr::include_graphics("fig/ems/mainstem_general_ts.png")
+```
+
+<br>
+
+```{r fig-ems-main-gen-box, fig.cap='General water quality parameters by mainstem station (upstream to downstream). Dashed red lines on pH indicate BC Water Quality Guidelines (6.5--9.0).', out.width="100%"}
+knitr::include_graphics("fig/ems/mainstem_general_box.png")
+```
+
+## Buck Creek {-}
+
+Buck Creek is a major tributary entering the Neexdzii Kwa at Houston. Stations include long-term Equity Silver mine monitoring (above Bessemer Creek and at Goosly Lake, 1980--2024) and downstream sites through to the Bulkley River confluence.
+
+```{r fig-ems-buck-p-ts, fig.cap='Phosphorus time series at Buck Creek stations.', out.width="100%"}
+knitr::include_graphics("fig/ems/buck_phosphorus_ts.png")
+```
+
+<br>
+
+```{r fig-ems-buck-p-box, fig.cap='Phosphorus concentrations by Buck Creek station (upstream to downstream).', out.width="100%"}
+knitr::include_graphics("fig/ems/buck_phosphorus_box.png")
+```
+
+<br>
+
+```{r fig-ems-buck-n-ts, fig.cap='Nitrogen time series at Buck Creek stations.', out.width="100%"}
+knitr::include_graphics("fig/ems/buck_nitrogen_ts.png")
+```
+
+<br>
+
+```{r fig-ems-buck-n-box, fig.cap='Nitrogen concentrations by Buck Creek station (upstream to downstream).', out.width="100%"}
+knitr::include_graphics("fig/ems/buck_nitrogen_box.png")
+```
