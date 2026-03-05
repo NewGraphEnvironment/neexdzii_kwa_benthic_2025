@@ -1,0 +1,353 @@
+SiteVisitID,Site,Year,JulianDay,SamplingDevice,KickTime,MeshSize,SampleNumber,SubSample,TotalSample,Status,QA,Taxonomist,Organization,Address,City,Province,Phylum,Class,Order,Family,Genus,Species,Replicate,Count,ITIS_TSN,Valid
+10631,BUL01,2004,254,Kick Net,3,400,1,100,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Heptageniidae,Epeorus,NA,1,205,100626,TRUE
+10631,BUL01,2004,254,Kick Net,3,400,1,100,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Heptageniidae,Rhithrogena,NA,1,149,100572,TRUE
+10631,BUL01,2004,254,Kick Net,3,400,1,100,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Ephemerellidae,Drunella,Drunella doddsii,1,147,698494,TRUE
+10631,BUL01,2004,254,Kick Net,3,400,1,100,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Ameletidae,Ameletus,NA,1,32,100996,TRUE
+10631,BUL01,2004,254,Kick Net,3,400,1,100,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Perlodidae,Megarcys,NA,1,23,103110,TRUE
+10631,BUL01,2004,254,Kick Net,3,400,1,100,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Perlodidae,Skwala,NA,1,2,103102,TRUE
+10631,BUL01,2004,254,Kick Net,3,400,1,100,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Nemouridae,Zapada,NA,1,432,102591,TRUE
+10631,BUL01,2004,254,Kick Net,3,400,1,100,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Capniidae,NA,NA,1,160,102643,TRUE
+10631,BUL01,2004,254,Kick Net,3,400,1,100,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Taeniopterygidae,Taenionema,NA,1,176,102519,TRUE
+10631,BUL01,2004,254,Kick Net,3,400,1,100,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Trichoptera,Hydropsychidae,Parapsyche,NA,1,6,115556,TRUE
+10631,BUL01,2004,254,Kick Net,3,400,1,100,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Trichoptera,Hydropsychidae,Hydropsyche,NA,1,16,115453,TRUE
+10631,BUL01,2004,254,Kick Net,3,400,1,100,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Empididae,Oreogeton,NA,1,3,136377,TRUE
+10631,BUL01,2004,254,Kick Net,3,400,1,100,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Chironomidae,NA,NA,1,680,127917,TRUE
+10631,BUL01,2004,254,Kick Net,3,400,1,100,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Arachnida,Sarcoptiformes,NA,NA,NA,1,16,83538,TRUE
+10631,BUL01,2004,254,Kick Net,3,400,1,100,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Heptageniidae,Cinygmula,NA,1,65,100557,TRUE
+10631,BUL01,2004,254,Kick Net,3,400,1,100,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Heptageniidae,NA,NA,1,528,100504,TRUE
+10631,BUL01,2004,254,Kick Net,3,400,1,100,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Baetidae,Baetis,NA,1,2065,100800,TRUE
+10631,BUL01,2004,254,Kick Net,3,400,1,100,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Trichoptera,Rhyacophilidae,Rhyacophila,NA,1,255,115097,TRUE
+10631,BUL01,2004,254,Kick Net,3,400,1,100,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Trichoptera,Uenoidae,Oligophlebodes,NA,1,80,116039,TRUE
+10631,BUL01,2004,254,Kick Net,3,400,1,100,100,Reference,FALSE,NA,NA,NA,NA,NA,Annelida,Clitellata,NA,Enchytraeidae,NA,NA,1,16,68510,TRUE
+10631,BUL01,2004,254,Kick Net,3,400,1,100,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Ephemerellidae,Ephemerella,NA,1,416,101233,TRUE
+10631,BUL01,2004,254,Kick Net,3,400,1,100,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Ephemerellidae,Caudatella,NA,1,16,101347,TRUE
+10631,BUL01,2004,254,Kick Net,3,400,1,100,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Chloroperlidae,Alloperla,NA,1,176,103203,TRUE
+10631,BUL01,2004,254,Kick Net,3,400,1,100,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Trichoptera,Uenoidae,Neothremma,NA,1,32,116388,TRUE
+21205,BUL01,2010,264,Kick Net,3,400,1,100,100,Reference,FALSE,Sue P. Salter,Cordillera Consulting,"Suite 201, 9901 Main Street",Summerland,BC,Arthropoda,Insecta,Trichoptera,Uenoidae,NA,NA,1,31,568757,TRUE
+21205,BUL01,2010,264,Kick Net,3,400,1,100,100,Reference,FALSE,Sue P. Salter,Cordillera Consulting,"Suite 201, 9901 Main Street",Summerland,BC,Arthropoda,Insecta,Trichoptera,Uenoidae,Neothremma,NA,1,23,116388,TRUE
+21205,BUL01,2010,264,Kick Net,3,400,1,100,100,Reference,FALSE,Sue P. Salter,Cordillera Consulting,"Suite 201, 9901 Main Street",Summerland,BC,Arthropoda,Insecta,Diptera,Chironomidae,NA,NA,1,1362,127917,TRUE
+21205,BUL01,2010,264,Kick Net,3,400,1,100,100,Reference,FALSE,Sue P. Salter,Cordillera Consulting,"Suite 201, 9901 Main Street",Summerland,BC,Arthropoda,Insecta,Plecoptera,Nemouridae,Zapada,Zapada oregonensis,1,1,102597,TRUE
+21205,BUL01,2010,264,Kick Net,3,400,1,100,100,Reference,FALSE,Sue P. Salter,Cordillera Consulting,"Suite 201, 9901 Main Street",Summerland,BC,Arthropoda,Insecta,Plecoptera,Nemouridae,Zapada,NA,1,369,102591,TRUE
+21205,BUL01,2010,264,Kick Net,3,400,1,100,100,Reference,FALSE,Sue P. Salter,Cordillera Consulting,"Suite 201, 9901 Main Street",Summerland,BC,Arthropoda,Insecta,Plecoptera,Perlodidae,NA,NA,1,23,102994,TRUE
+21205,BUL01,2010,264,Kick Net,3,400,1,100,100,Reference,FALSE,Sue P. Salter,Cordillera Consulting,"Suite 201, 9901 Main Street",Summerland,BC,Arthropoda,Insecta,Plecoptera,Perlodidae,Megarcys,NA,1,16,103110,TRUE
+21205,BUL01,2010,264,Kick Net,3,400,1,100,100,Reference,FALSE,Sue P. Salter,Cordillera Consulting,"Suite 201, 9901 Main Street",Summerland,BC,Arthropoda,Insecta,Plecoptera,Taeniopterygidae,NA,NA,1,238,102788,TRUE
+21205,BUL01,2010,264,Kick Net,3,400,1,100,100,Reference,FALSE,Sue P. Salter,Cordillera Consulting,"Suite 201, 9901 Main Street",Summerland,BC,Arthropoda,Insecta,Trichoptera,Glossosomatidae,Glossosoma,NA,1,23,117159,TRUE
+21205,BUL01,2010,264,Kick Net,3,400,1,100,100,Reference,FALSE,Sue P. Salter,Cordillera Consulting,"Suite 201, 9901 Main Street",Summerland,BC,Arthropoda,Insecta,Trichoptera,Hydropsychidae,NA,NA,1,70,115398,TRUE
+21205,BUL01,2010,264,Kick Net,3,400,1,100,100,Reference,FALSE,Sue P. Salter,Cordillera Consulting,"Suite 201, 9901 Main Street",Summerland,BC,Arthropoda,Insecta,Trichoptera,Hydropsychidae,Parapsyche,NA,1,17,115556,TRUE
+21205,BUL01,2010,264,Kick Net,3,400,1,100,100,Reference,FALSE,Sue P. Salter,Cordillera Consulting,"Suite 201, 9901 Main Street",Summerland,BC,Arthropoda,Insecta,Trichoptera,Lepidostomatidae,Lepidostoma,NA,1,15,116794,TRUE
+21205,BUL01,2010,264,Kick Net,3,400,1,100,100,Reference,FALSE,Sue P. Salter,Cordillera Consulting,"Suite 201, 9901 Main Street",Summerland,BC,Arthropoda,Insecta,Trichoptera,Limnephilidae,NA,NA,1,23,115933,TRUE
+21205,BUL01,2010,264,Kick Net,3,400,1,100,100,Reference,FALSE,Sue P. Salter,Cordillera Consulting,"Suite 201, 9901 Main Street",Summerland,BC,Arthropoda,Insecta,Trichoptera,Rhyacophilidae,NA,NA,1,587,115096,TRUE
+21205,BUL01,2010,264,Kick Net,3,400,1,100,100,Reference,FALSE,Sue P. Salter,Cordillera Consulting,"Suite 201, 9901 Main Street",Summerland,BC,Arthropoda,Insecta,Ephemeroptera,Ameletidae,Ameletus,NA,1,93,100996,TRUE
+21205,BUL01,2010,264,Kick Net,3,400,1,100,100,Reference,FALSE,Sue P. Salter,Cordillera Consulting,"Suite 201, 9901 Main Street",Summerland,BC,Arthropoda,Insecta,Ephemeroptera,Baetidae,Baetis,NA,1,2324,100800,TRUE
+21205,BUL01,2010,264,Kick Net,3,400,1,100,100,Reference,FALSE,Sue P. Salter,Cordillera Consulting,"Suite 201, 9901 Main Street",Summerland,BC,Arthropoda,Insecta,Ephemeroptera,Baetidae,Baetis,Baetis tricaudatus,1,8,100817,TRUE
+21205,BUL01,2010,264,Kick Net,3,400,1,100,100,Reference,FALSE,Sue P. Salter,Cordillera Consulting,"Suite 201, 9901 Main Street",Summerland,BC,Arthropoda,Insecta,Plecoptera,Chloroperlidae,Sweltsa,NA,1,1,103273,TRUE
+21205,BUL01,2010,264,Kick Net,3,400,1,100,100,Reference,FALSE,Sue P. Salter,Cordillera Consulting,"Suite 201, 9901 Main Street",Summerland,BC,Arthropoda,Insecta,Plecoptera,Leuctridae,NA,NA,1,18,102840,TRUE
+21205,BUL01,2010,264,Kick Net,3,400,1,100,100,Reference,FALSE,Sue P. Salter,Cordillera Consulting,"Suite 201, 9901 Main Street",Summerland,BC,Arthropoda,Insecta,Plecoptera,Nemouridae,Visoka,Visoka cataractae,1,23,102615,TRUE
+21205,BUL01,2010,264,Kick Net,3,400,1,100,100,Reference,FALSE,Sue P. Salter,Cordillera Consulting,"Suite 201, 9901 Main Street",Summerland,BC,Arthropoda,Insecta,Plecoptera,Nemouridae,Zapada,Zapada columbiana,1,1,102596,TRUE
+21205,BUL01,2010,264,Kick Net,3,400,1,100,100,Reference,FALSE,Sue P. Salter,Cordillera Consulting,"Suite 201, 9901 Main Street",Summerland,BC,Arthropoda,Insecta,Ephemeroptera,Ephemerellidae,NA,NA,1,439,101232,TRUE
+21205,BUL01,2010,264,Kick Net,3,400,1,100,100,Reference,FALSE,Sue P. Salter,Cordillera Consulting,"Suite 201, 9901 Main Street",Summerland,BC,Arthropoda,Insecta,Ephemeroptera,Ephemerellidae,Caudatella,NA,1,38,101347,TRUE
+21205,BUL01,2010,264,Kick Net,3,400,1,100,100,Reference,FALSE,Sue P. Salter,Cordillera Consulting,"Suite 201, 9901 Main Street",Summerland,BC,Arthropoda,Insecta,Ephemeroptera,Ephemerellidae,Drunella,Drunella doddsii,1,180,698494,TRUE
+21205,BUL01,2010,264,Kick Net,3,400,1,100,100,Reference,FALSE,Sue P. Salter,Cordillera Consulting,"Suite 201, 9901 Main Street",Summerland,BC,Arthropoda,Insecta,Ephemeroptera,Heptageniidae,NA,NA,1,1331,100504,TRUE
+21205,BUL01,2010,264,Kick Net,3,400,1,100,100,Reference,FALSE,Sue P. Salter,Cordillera Consulting,"Suite 201, 9901 Main Street",Summerland,BC,Arthropoda,Insecta,Ephemeroptera,Heptageniidae,Cinygmula,NA,1,8,100557,TRUE
+21205,BUL01,2010,264,Kick Net,3,400,1,100,100,Reference,FALSE,Sue P. Salter,Cordillera Consulting,"Suite 201, 9901 Main Street",Summerland,BC,Arthropoda,Insecta,Ephemeroptera,Heptageniidae,Epeorus,NA,1,282,100626,TRUE
+21205,BUL01,2010,264,Kick Net,3,400,1,100,100,Reference,FALSE,Sue P. Salter,Cordillera Consulting,"Suite 201, 9901 Main Street",Summerland,BC,Arthropoda,Insecta,Ephemeroptera,Heptageniidae,Rhithrogena,NA,1,140,100572,TRUE
+21205,BUL01,2010,264,Kick Net,3,400,1,100,100,Reference,FALSE,Sue P. Salter,Cordillera Consulting,"Suite 201, 9901 Main Street",Summerland,BC,Arthropoda,Insecta,Ephemeroptera,Leptophlebiidae,NA,NA,1,15,101095,TRUE
+21205,BUL01,2010,264,Kick Net,3,400,1,100,100,Reference,FALSE,Sue P. Salter,Cordillera Consulting,"Suite 201, 9901 Main Street",Summerland,BC,Arthropoda,Insecta,Plecoptera,NA,NA,NA,1,39,102467,TRUE
+21205,BUL01,2010,264,Kick Net,3,400,1,100,100,Reference,FALSE,Sue P. Salter,Cordillera Consulting,"Suite 201, 9901 Main Street",Summerland,BC,Arthropoda,Insecta,Plecoptera,Capniidae,NA,NA,1,323,102643,TRUE
+21205,BUL01,2010,264,Kick Net,3,400,1,100,100,Reference,FALSE,Sue P. Salter,Cordillera Consulting,"Suite 201, 9901 Main Street",Summerland,BC,Arthropoda,Insecta,Plecoptera,Chloroperlidae,Alloperla,NA,1,72,103203,TRUE
+21205,BUL01,2010,264,Kick Net,3,400,1,100,100,Reference,FALSE,Sue P. Salter,Cordillera Consulting,"Suite 201, 9901 Main Street",Summerland,BC,Arthropoda,Insecta,Plecoptera,Chloroperlidae,Kathroperla,NA,1,1,103236,TRUE
+21205,BUL01,2010,264,Kick Net,3,400,1,100,100,Reference,FALSE,Sue P. Salter,Cordillera Consulting,"Suite 201, 9901 Main Street",Summerland,BC,Arthropoda,Insecta,Plecoptera,Chloroperlidae,Suwallia,NA,1,32,103254,TRUE
+21205,BUL01,2010,264,Kick Net,3,400,1,100,100,Reference,FALSE,Sue P. Salter,Cordillera Consulting,"Suite 201, 9901 Main Street",Summerland,BC,Arthropoda,Insecta,Diptera,Empididae,Chelifera/Metachela,NA,1,15,NA,TRUE
+21205,BUL01,2010,264,Kick Net,3,400,1,100,100,Reference,FALSE,Sue P. Salter,Cordillera Consulting,"Suite 201, 9901 Main Street",Summerland,BC,Arthropoda,Insecta,Diptera,Empididae,Oreogeton,NA,1,10,136377,TRUE
+21205,BUL01,2010,264,Kick Net,3,400,1,100,100,Reference,FALSE,Sue P. Salter,Cordillera Consulting,"Suite 201, 9901 Main Street",Summerland,BC,Arthropoda,Insecta,Diptera,Tipulidae,Dicranota,NA,1,39,121027,TRUE
+21205,BUL01,2010,264,Kick Net,3,400,1,100,100,Reference,FALSE,Sue P. Salter,Cordillera Consulting,"Suite 201, 9901 Main Street",Summerland,BC,Arthropoda,Arachnida,Trombidiformes,Hygrobatidae,Hygrobates,NA,1,8,83297,TRUE
+21205,BUL01,2010,264,Kick Net,3,400,1,100,100,Reference,FALSE,Sue P. Salter,Cordillera Consulting,"Suite 201, 9901 Main Street",Summerland,BC,Arthropoda,Arachnida,Trombidiformes,NA,NA,NA,1,8,82769,TRUE
+31408,BUL01,2016,266,Kick Net,3,400,1,5,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Annelida,Clitellata,NA,Enchytraeidae,Mesenchytraeus,NA,1,20,68544,TRUE
+31408,BUL01,2016,266,Kick Net,3,400,1,5,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Heptageniidae,NA,NA,1,720,100504,TRUE
+31408,BUL01,2016,266,Kick Net,3,400,1,5,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Heptageniidae,Rhithrogena,NA,1,180,100572,TRUE
+31408,BUL01,2016,266,Kick Net,3,400,1,5,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Heptageniidae,Epeorus,NA,1,80,100626,TRUE
+31408,BUL01,2016,266,Kick Net,3,400,1,5,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Baetidae,Baetis,NA,1,2360,100800,TRUE
+31408,BUL01,2016,266,Kick Net,3,400,1,5,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Baetidae,Baetis,Baetis bicaudatus,1,20,100823,TRUE
+31408,BUL01,2016,266,Kick Net,3,400,1,5,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Ameletidae,Ameletus,NA,1,20,100996,TRUE
+31408,BUL01,2016,266,Kick Net,3,400,1,5,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Ephemerellidae,NA,NA,1,480,101232,TRUE
+31408,BUL01,2016,266,Kick Net,3,400,1,5,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Taeniopterygidae,Taenionema,NA,1,380,102519,TRUE
+31408,BUL01,2016,266,Kick Net,3,400,1,5,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Nemouridae,Zapada,NA,1,100,102591,TRUE
+31408,BUL01,2016,266,Kick Net,3,400,1,5,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Nemouridae,Zapada,Zapada columbiana,1,80,102596,TRUE
+31408,BUL01,2016,266,Kick Net,3,400,1,5,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Capniidae,NA,NA,1,220,102643,TRUE
+31408,BUL01,2016,266,Kick Net,3,400,1,5,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Leuctridae,NA,NA,1,40,102840,TRUE
+31408,BUL01,2016,266,Kick Net,3,400,1,5,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Perlodidae,NA,NA,1,120,102994,TRUE
+31408,BUL01,2016,266,Kick Net,3,400,1,5,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Perlodidae,Skwala,NA,1,20,103102,TRUE
+31408,BUL01,2016,266,Kick Net,3,400,1,5,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Chloroperlidae,NA,NA,1,100,103202,TRUE
+31408,BUL01,2016,266,Kick Net,3,400,1,5,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Chloroperlidae,Haploperla,NA,1,60,103260,TRUE
+31408,BUL01,2016,266,Kick Net,3,400,1,5,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Chloroperlidae,Sweltsa,NA,1,20,103273,TRUE
+31408,BUL01,2016,266,Kick Net,3,400,1,5,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Trichoptera,Rhyacophilidae,Rhyacophila,NA,1,300,115097,TRUE
+31408,BUL01,2016,266,Kick Net,3,400,1,5,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Trichoptera,Uenoidae,Oligophlebodes,NA,1,20,116039,TRUE
+31408,BUL01,2016,266,Kick Net,3,400,1,5,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Chironomidae,NA,NA,1,40,127917,TRUE
+31408,BUL01,2016,266,Kick Net,3,400,1,5,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Chironomidae,Pagastia,NA,1,20,128401,TRUE
+31408,BUL01,2016,266,Kick Net,3,400,1,5,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Chironomidae,Brillia,NA,1,20,128477,TRUE
+31408,BUL01,2016,266,Kick Net,3,400,1,5,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Chironomidae,Eukiefferiella,NA,1,600,128689,TRUE
+31408,BUL01,2016,266,Kick Net,3,400,1,5,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Chironomidae,Rheocricotopus,NA,1,20,129086,TRUE
+31408,BUL01,2016,266,Kick Net,3,400,1,5,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Chironomidae,Tvetenia,NA,1,20,129197,TRUE
+31408,BUL01,2016,266,Kick Net,3,400,1,5,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Chironomidae,Micropsectra,NA,1,120,129890,TRUE
+31408,BUL01,2016,266,Kick Net,3,400,1,5,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Empididae,NA,NA,1,20,135830,TRUE
+31408,BUL01,2016,266,Kick Net,3,400,1,5,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Empididae,Oreogeton,NA,1,40,136377,TRUE
+31408,BUL01,2016,266,Kick Net,3,400,1,5,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Ephemerellidae,Drunella,Drunella doddsii,1,20,698494,TRUE
+31408,BUL01,2016,266,Kick Net,3,400,1,5,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Arachnida,Trombidiformes,Lebertiidae,Lebertia,NA,1,20,83034,TRUE
+31408,BUL01,2016,266,Kick Net,3,400,1,5,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Arachnida,Trombidiformes,Hygrobatidae,Atractides,NA,1,20,83282,TRUE
+32702,BUL01,2017,261,Kick Net,3,400,1,12,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Chironomidae,Diamesa,NA,1,8.333333,128355,TRUE
+32702,BUL01,2017,261,Kick Net,3,400,1,12,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Chironomidae,Eukiefferiella,NA,1,33.33333,128689,TRUE
+32702,BUL01,2017,261,Kick Net,3,400,1,12,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Chironomidae,Paraphaenocladius,NA,1,8.333333,128989,TRUE
+32702,BUL01,2017,261,Kick Net,3,400,1,12,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Chironomidae,Microtendipes,NA,1,16.66667,129535,TRUE
+32702,BUL01,2017,261,Kick Net,3,400,1,12,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Chironomidae,Polypedilum,NA,1,16.66667,129657,TRUE
+32702,BUL01,2017,261,Kick Net,3,400,1,12,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Chironomidae,Micropsectra,NA,1,16.66667,129890,TRUE
+32702,BUL01,2017,261,Kick Net,3,400,1,12,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Chironomidae,Stempellinella,NA,1,8.333333,129969,TRUE
+32702,BUL01,2017,261,Kick Net,3,400,1,12,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Ephemerellidae,Drunella,Drunella doddsii,1,133.3333,698494,TRUE
+32702,BUL01,2017,261,Kick Net,3,400,1,12,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Arachnida,Trombidiformes,Sperchontidae,Sperchon,NA,1,8.333333,83006,TRUE
+32702,BUL01,2017,261,Kick Net,3,400,1,12,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Nemouridae,Zapada,NA,1,66.66666,102591,TRUE
+32702,BUL01,2017,261,Kick Net,3,400,1,12,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Nemouridae,Zapada,Zapada columbiana,1,150,102596,TRUE
+32702,BUL01,2017,261,Kick Net,3,400,1,12,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Capniidae,NA,NA,1,16.66667,102643,TRUE
+32702,BUL01,2017,261,Kick Net,3,400,1,12,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Taeniopterygidae,NA,NA,1,83.33334,102788,TRUE
+32702,BUL01,2017,261,Kick Net,3,400,1,12,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Perlodidae,Megarcys,NA,1,25,103110,TRUE
+32702,BUL01,2017,261,Kick Net,3,400,1,12,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Chloroperlidae,NA,NA,1,8.333333,103202,TRUE
+32702,BUL01,2017,261,Kick Net,3,400,1,12,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Chloroperlidae,Suwallia,NA,1,8.333333,103254,TRUE
+32702,BUL01,2017,261,Kick Net,3,400,1,12,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Trichoptera,Rhyacophilidae,Rhyacophila,NA,1,91.66666,115097,TRUE
+32702,BUL01,2017,261,Kick Net,3,400,1,12,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Trichoptera,Rhyacophilidae,Rhyacophila,Rhyacophila narvae,1,16.66667,115155,TRUE
+32702,BUL01,2017,261,Kick Net,3,400,1,12,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Trichoptera,Hydropsychidae,NA,NA,1,16.66667,115398,TRUE
+32702,BUL01,2017,261,Kick Net,3,400,1,12,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Trichoptera,Hydropsychidae,Parapsyche,NA,1,25,115556,TRUE
+32702,BUL01,2017,261,Kick Net,3,400,1,12,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Trichoptera,Hydropsychidae,Parapsyche,Parapsyche elsis,1,8.333333,115560,TRUE
+32702,BUL01,2017,261,Kick Net,3,400,1,12,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Trichoptera,Uenoidae,Oligophlebodes,NA,1,8.333333,116039,TRUE
+32702,BUL01,2017,261,Kick Net,3,400,1,12,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Chironomidae,NA,NA,1,150,127917,TRUE
+32702,BUL01,2017,261,Kick Net,3,400,1,12,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Heptageniidae,NA,NA,1,83.33334,100504,TRUE
+32702,BUL01,2017,261,Kick Net,3,400,1,12,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Heptageniidae,Cinygmula,NA,1,8.333333,100557,TRUE
+32702,BUL01,2017,261,Kick Net,3,400,1,12,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Heptageniidae,Rhithrogena,NA,1,66.66666,100572,TRUE
+32702,BUL01,2017,261,Kick Net,3,400,1,12,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Heptageniidae,Epeorus,NA,1,275,100626,TRUE
+32702,BUL01,2017,261,Kick Net,3,400,1,12,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Baetidae,NA,NA,1,925,100755,TRUE
+32702,BUL01,2017,261,Kick Net,3,400,1,12,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Baetidae,Baetis,NA,1,333.3333,100800,TRUE
+32702,BUL01,2017,261,Kick Net,3,400,1,12,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Leptophlebiidae,NA,NA,1,8.333333,101095,TRUE
+32702,BUL01,2017,261,Kick Net,3,400,1,12,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Ephemerellidae,NA,NA,1,133.3333,101232,TRUE
+32702,BUL01,2017,261,Kick Net,3,400,1,12,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Ephemerellidae,Caudatella,NA,1,66.66666,101347,TRUE
+32702,BUL01,2017,261,Kick Net,3,400,1,12,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Nemouridae,NA,NA,1,8.333333,102517,TRUE
+34280,BUL01,2018,253,Kick Net,3,400,1,16,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Heptageniidae,NA,NA,1,200,100504,TRUE
+34280,BUL01,2018,253,Kick Net,3,400,1,16,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Heptageniidae,Rhithrogena,NA,1,87.5,100572,TRUE
+34280,BUL01,2018,253,Kick Net,3,400,1,16,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Heptageniidae,Epeorus,NA,1,393.75,100626,TRUE
+34280,BUL01,2018,253,Kick Net,3,400,1,16,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Baetidae,NA,NA,1,18.75,100755,TRUE
+34280,BUL01,2018,253,Kick Net,3,400,1,16,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Baetidae,Baetis,NA,1,493.75,100800,TRUE
+34280,BUL01,2018,253,Kick Net,3,400,1,16,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Leptophlebiidae,NA,NA,1,6.25,101095,TRUE
+34280,BUL01,2018,253,Kick Net,3,400,1,16,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Ephemerellidae,NA,NA,1,75,101232,TRUE
+34280,BUL01,2018,253,Kick Net,3,400,1,16,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Ephemerellidae,Caudatella,NA,1,6.25,101347,TRUE
+34280,BUL01,2018,253,Kick Net,3,400,1,16,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,NA,NA,NA,1,18.75,102467,TRUE
+34280,BUL01,2018,253,Kick Net,3,400,1,16,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Nemouridae,NA,NA,1,31.25,102517,TRUE
+34280,BUL01,2018,253,Kick Net,3,400,1,16,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Nemouridae,Zapada,NA,1,18.75,102591,TRUE
+34280,BUL01,2018,253,Kick Net,3,400,1,16,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Nemouridae,Zapada,Zapada columbiana,1,137.5,102596,TRUE
+34280,BUL01,2018,253,Kick Net,3,400,1,16,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Nemouridae,Visoka,Visoka cataractae,1,6.25,102615,TRUE
+34280,BUL01,2018,253,Kick Net,3,400,1,16,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Taeniopterygidae,NA,NA,1,31.25,102788,TRUE
+34280,BUL01,2018,253,Kick Net,3,400,1,16,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Perlodidae,Skwala,NA,1,6.25,103102,TRUE
+34280,BUL01,2018,253,Kick Net,3,400,1,16,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Perlodidae,Megarcys,NA,1,12.5,103110,TRUE
+34280,BUL01,2018,253,Kick Net,3,400,1,16,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Chloroperlidae,NA,NA,1,50,103202,TRUE
+34280,BUL01,2018,253,Kick Net,3,400,1,16,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Chloroperlidae,Paraperla,NA,1,12.5,103233,TRUE
+34280,BUL01,2018,253,Kick Net,3,400,1,16,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Chloroperlidae,Suwallia,NA,1,31.25,103254,TRUE
+34280,BUL01,2018,253,Kick Net,3,400,1,16,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Trichoptera,NA,NA,NA,1,6.25,115095,TRUE
+34280,BUL01,2018,253,Kick Net,3,400,1,16,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Trichoptera,Rhyacophilidae,Rhyacophila,NA,1,93.75,115097,TRUE
+34280,BUL01,2018,253,Kick Net,3,400,1,16,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Trichoptera,Hydropsychidae,NA,NA,1,31.25,115398,TRUE
+34280,BUL01,2018,253,Kick Net,3,400,1,16,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Trichoptera,Hydropsychidae,Parapsyche,NA,1,6.25,115556,TRUE
+34280,BUL01,2018,253,Kick Net,3,400,1,16,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Trichoptera,Hydropsychidae,Parapsyche,Parapsyche elsis,1,18.75,115560,TRUE
+34280,BUL01,2018,253,Kick Net,3,400,1,16,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Trichoptera,Glossosomatidae,NA,NA,1,6.25,117120,TRUE
+34280,BUL01,2018,253,Kick Net,3,400,1,16,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Simuliidae,NA,NA,1,6.25,126640,TRUE
+34280,BUL01,2018,253,Kick Net,3,400,1,16,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Chironomidae,NA,NA,1,37.5,127917,TRUE
+34280,BUL01,2018,253,Kick Net,3,400,1,16,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Chironomidae,Brillia,NA,1,25,128477,TRUE
+34280,BUL01,2018,253,Kick Net,3,400,1,16,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Chironomidae,Eukiefferiella,NA,1,56.25,128689,TRUE
+34280,BUL01,2018,253,Kick Net,3,400,1,16,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Chironomidae,Parorthocladius,NA,1,25,129011,TRUE
+34280,BUL01,2018,253,Kick Net,3,400,1,16,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Chironomidae,Tvetenia,NA,1,6.25,129197,TRUE
+34280,BUL01,2018,253,Kick Net,3,400,1,16,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Chironomidae,Micropsectra,NA,1,6.25,129890,TRUE
+34280,BUL01,2018,253,Kick Net,3,400,1,16,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Empididae,Oreogeton,NA,1,6.25,136377,TRUE
+34280,BUL01,2018,253,Kick Net,3,400,1,16,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Ephemerellidae,Drunella,Drunella doddsii,1,43.75,698494,TRUE
+34280,BUL01,2018,253,Kick Net,3,400,1,16,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Arachnida,Sarcoptiformes,NA,NA,NA,1,12.5,83538,TRUE
+37122,BUL01,2020,232,Kick Net,3,400,1,22,100,Reference,FALSE,NA,NA,NA,NA,NA,Annelida,Clitellata,NA,Enchytraeidae,NA,NA,1,4.545455,68510,TRUE
+37122,BUL01,2020,232,Kick Net,3,400,1,22,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Arachnida,Trombidiformes,NA,NA,NA,1,4.545455,82769,TRUE
+37122,BUL01,2020,232,Kick Net,3,400,1,22,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Chironomidae,Tanytarsus,NA,1,9.090909,129978,TRUE
+37122,BUL01,2020,232,Kick Net,3,400,1,22,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Chironomidae,Brillia,NA,1,22.72727,128477,TRUE
+37122,BUL01,2020,232,Kick Net,3,400,1,22,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Chironomidae,Eukiefferiella,NA,1,59.09091,128689,TRUE
+37122,BUL01,2020,232,Kick Net,3,400,1,22,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Chironomidae,Orthocladiinae,NA,1,9.090909,128457,TRUE
+37122,BUL01,2020,232,Kick Net,3,400,1,22,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Chironomidae,Parorthocladius,NA,1,4.545455,129011,TRUE
+37122,BUL01,2020,232,Kick Net,3,400,1,22,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Chironomidae,Rheocricotopus,NA,1,4.545455,129086,TRUE
+37122,BUL01,2020,232,Kick Net,3,400,1,22,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Chironomidae,Tvetenia,NA,1,127.2727,129197,TRUE
+37122,BUL01,2020,232,Kick Net,3,400,1,22,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Chironomidae,NA,NA,1,18.18182,127917,TRUE
+37122,BUL01,2020,232,Kick Net,3,400,1,22,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Empididae,Neoplasta,NA,1,4.545455,136352,TRUE
+37122,BUL01,2020,232,Kick Net,3,400,1,22,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Empididae,Oreogeton,NA,1,9.090909,136377,TRUE
+37122,BUL01,2020,232,Kick Net,3,400,1,22,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Ameletidae,Ameletus,NA,1,45.45454,100996,TRUE
+37122,BUL01,2020,232,Kick Net,3,400,1,22,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Baetidae,Baetis,NA,1,200,100800,TRUE
+37122,BUL01,2020,232,Kick Net,3,400,1,22,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Ephemerellidae,Drunella,Drunella doddsii,1,100,698494,TRUE
+37122,BUL01,2020,232,Kick Net,3,400,1,22,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Ephemerellidae,Drunella,Drunella coloradensis,1,13.63636,101389,TRUE
+37122,BUL01,2020,232,Kick Net,3,400,1,22,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Ephemerellidae,NA,NA,1,4.545455,101232,TRUE
+37122,BUL01,2020,232,Kick Net,3,400,1,22,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Heptageniidae,Cinygmula,NA,1,9.090909,100557,TRUE
+37122,BUL01,2020,232,Kick Net,3,400,1,22,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Heptageniidae,Epeorus,Epeorus deceptivus,1,31.81818,100632,TRUE
+37122,BUL01,2020,232,Kick Net,3,400,1,22,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Heptageniidae,Epeorus,NA,1,113.6364,100626,TRUE
+37122,BUL01,2020,232,Kick Net,3,400,1,22,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Heptageniidae,NA,NA,1,140.9091,100504,TRUE
+37122,BUL01,2020,232,Kick Net,3,400,1,22,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Heptageniidae,Rhithrogena,NA,1,72.72727,100572,TRUE
+37122,BUL01,2020,232,Kick Net,3,400,1,22,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Capniidae,NA,NA,1,18.18182,102643,TRUE
+37122,BUL01,2020,232,Kick Net,3,400,1,22,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Chloroperlidae,Suwallia,NA,1,22.72727,103254,TRUE
+37122,BUL01,2020,232,Kick Net,3,400,1,22,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Chloroperlidae,Sweltsa,NA,1,4.545455,103273,TRUE
+37122,BUL01,2020,232,Kick Net,3,400,1,22,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Chloroperlidae,Paraperla,NA,1,18.18182,103233,TRUE
+37122,BUL01,2020,232,Kick Net,3,400,1,22,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Chloroperlidae,NA,NA,1,4.545455,103202,TRUE
+37122,BUL01,2020,232,Kick Net,3,400,1,22,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Nemouridae,Zapada,Zapada columbiana,1,177.2727,102596,TRUE
+37122,BUL01,2020,232,Kick Net,3,400,1,22,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Nemouridae,NA,NA,1,4.545455,102517,TRUE
+37122,BUL01,2020,232,Kick Net,3,400,1,22,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Perlodidae,Megarcys,NA,1,4.545455,103110,TRUE
+37122,BUL01,2020,232,Kick Net,3,400,1,22,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Perlodidae,NA,NA,1,4.545455,102994,TRUE
+37122,BUL01,2020,232,Kick Net,3,400,1,22,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Trichoptera,Glossosomatidae,Glossosoma,NA,1,9.090909,117159,TRUE
+37122,BUL01,2020,232,Kick Net,3,400,1,22,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Trichoptera,Hydropsychidae,Parapsyche,NA,1,9.090909,115556,TRUE
+37122,BUL01,2020,232,Kick Net,3,400,1,22,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Trichoptera,Rhyacophilidae,Rhyacophila,NA,1,113.6364,115097,TRUE
+37122,BUL01,2020,232,Kick Net,3,400,1,22,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Trichoptera,NA,NA,NA,1,4.545455,115095,TRUE
+37122,BUL01,2020,232,Kick Net,3,400,1,22,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Chironomidae,Cricotopus/Orthocladius,NA,1,13.64,NA,TRUE
+38264,BUL01,2021,253,Kick Net,3,400,1,17,100,Reference,FALSE,NA,NA,NA,NA,NA,Annelida,Clitellata,NA,Enchytraeidae,NA,NA,1,5.882353,68510,TRUE
+38264,BUL01,2021,253,Kick Net,3,400,1,17,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Arachnida,Trombidiformes,Hygrobatidae,Atractides,NA,1,11.764709999999999,83282,TRUE
+38264,BUL01,2021,253,Kick Net,3,400,1,17,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Chironomidae,Tanytarsus,NA,1,11.764709999999999,129978,TRUE
+38264,BUL01,2021,253,Kick Net,3,400,1,17,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Chironomidae,Brillia,NA,1,105.8824,128477,TRUE
+38264,BUL01,2021,253,Kick Net,3,400,1,17,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Chironomidae,Eukiefferiella,NA,1,5.882353,128689,TRUE
+38264,BUL01,2021,253,Kick Net,3,400,1,17,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Chironomidae,Hydrobaenus,NA,1,5.882353,128750,TRUE
+38264,BUL01,2021,253,Kick Net,3,400,1,17,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Chironomidae,Parorthocladius,NA,1,58.82353,129011,TRUE
+38264,BUL01,2021,253,Kick Net,3,400,1,17,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Chironomidae,NA,NA,1,17.64706,127917,TRUE
+38264,BUL01,2021,253,Kick Net,3,400,1,17,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Ameletidae,Ameletus,NA,1,29.41176,100996,TRUE
+38264,BUL01,2021,253,Kick Net,3,400,1,17,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Baetidae,NA,NA,1,23.52941,100755,TRUE
+38264,BUL01,2021,253,Kick Net,3,400,1,17,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Baetidae,Baetis,NA,1,429.4118,100800,TRUE
+38264,BUL01,2021,253,Kick Net,3,400,1,17,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Ephemerellidae,Drunella,Drunella doddsii,1,52.94118,698494,TRUE
+38264,BUL01,2021,253,Kick Net,3,400,1,17,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Ephemerellidae,NA,NA,1,229.4118,101232,TRUE
+38264,BUL01,2021,253,Kick Net,3,400,1,17,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Heptageniidae,Cinygmula,NA,1,100,100557,TRUE
+38264,BUL01,2021,253,Kick Net,3,400,1,17,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Heptageniidae,Epeorus,Epeorus deceptivus,1,11.764709999999999,100632,TRUE
+38264,BUL01,2021,253,Kick Net,3,400,1,17,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Heptageniidae,Epeorus,NA,1,35.29412,100626,TRUE
+38264,BUL01,2021,253,Kick Net,3,400,1,17,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Heptageniidae,NA,NA,1,82.35294,100504,TRUE
+38264,BUL01,2021,253,Kick Net,3,400,1,17,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Heptageniidae,Rhithrogena,NA,1,52.94118,100572,TRUE
+38264,BUL01,2021,253,Kick Net,3,400,1,17,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,NA,NA,NA,1,17.64706,100502,TRUE
+38264,BUL01,2021,253,Kick Net,3,400,1,17,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Capniidae,NA,NA,1,58.82353,102643,TRUE
+38264,BUL01,2021,253,Kick Net,3,400,1,17,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Chloroperlidae,Sweltsa,NA,1,5.882353,103273,TRUE
+38264,BUL01,2021,253,Kick Net,3,400,1,17,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Chloroperlidae,Suwallia,NA,1,123.5294,103254,TRUE
+38264,BUL01,2021,253,Kick Net,3,400,1,17,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Chloroperlidae,NA,NA,1,11.764709999999999,103202,TRUE
+38264,BUL01,2021,253,Kick Net,3,400,1,17,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Leuctridae,NA,NA,1,17.64706,102840,TRUE
+38264,BUL01,2021,253,Kick Net,3,400,1,17,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Nemouridae,Zapada,Zapada columbiana,1,47.05882,102596,TRUE
+38264,BUL01,2021,253,Kick Net,3,400,1,17,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Nemouridae,Zapada,NA,1,35.29412,102591,TRUE
+38264,BUL01,2021,253,Kick Net,3,400,1,17,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Perlodidae,NA,NA,1,5.882353,102994,TRUE
+38264,BUL01,2021,253,Kick Net,3,400,1,17,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Taeniopterygidae,Taenionema,NA,1,52.94118,102519,TRUE
+38264,BUL01,2021,253,Kick Net,3,400,1,17,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,NA,NA,NA,1,23.52941,102467,TRUE
+38264,BUL01,2021,253,Kick Net,3,400,1,17,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Trichoptera,Rhyacophilidae,Rhyacophila,NA,1,41.17647,115097,TRUE
+38264,BUL01,2021,253,Kick Net,3,400,1,17,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Trichoptera,Uenoidae,Neophylax,NA,1,5.882353,116046,TRUE
+38264,BUL01,2021,253,Kick Net,3,400,1,17,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Trichoptera,Uenoidae,Neothremma,NA,1,5.882353,116388,TRUE
+38264,BUL01,2021,253,Kick Net,3,400,1,17,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Trichoptera,NA,NA,NA,1,76.47059,115095,TRUE
+38264,BUL01,2021,253,Kick Net,3,400,1,17,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Chironomidae,Micropsectra/Tanytarsus,NA,1,5.88,NA,TRUE
+38264,BUL01,2021,253,Kick Net,3,400,1,17,100,Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Chironomidae,Cricotopus/Orthocladius,NA,1,41.18,NA,TRUE
+40153,BUL01,2022,231,Kick Net,3,400,1,31,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Chironomidae,Cricotopus/Orthocladius,NA,1,77.42,NA,TRUE
+40153,BUL01,2022,231,Kick Net,3,400,1,31,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Annelida,Clitellata,NA,Enchytraeidae,NA,NA,1,3.225806,68510,TRUE
+40153,BUL01,2022,231,Kick Net,3,400,1,31,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Arachnida,Trombidiformes,Sperchontidae,Sperchon,NA,1,3.225806,83006,TRUE
+40153,BUL01,2022,231,Kick Net,3,400,1,31,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Arachnida,Trombidiformes,Hygrobatidae,Atractides,NA,1,9.67742,83282,TRUE
+40153,BUL01,2022,231,Kick Net,3,400,1,31,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Arachnida,Sarcoptiformes,NA,NA,NA,1,3.225806,83538,TRUE
+40153,BUL01,2022,231,Kick Net,3,400,1,31,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Heptageniidae,NA,NA,1,83.87096,100504,TRUE
+40153,BUL01,2022,231,Kick Net,3,400,1,31,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Heptageniidae,Cinygmula,NA,1,19.35484,100557,TRUE
+40153,BUL01,2022,231,Kick Net,3,400,1,31,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Heptageniidae,Epeorus,NA,1,22.58064,100626,TRUE
+40153,BUL01,2022,231,Kick Net,3,400,1,31,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Heptageniidae,Epeorus,Epeorus deceptivus,1,6.451613,100632,TRUE
+40153,BUL01,2022,231,Kick Net,3,400,1,31,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Baetidae,NA,NA,1,19.35484,100755,TRUE
+40153,BUL01,2022,231,Kick Net,3,400,1,31,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Baetidae,Baetis,NA,1,29.03226,100800,TRUE
+40153,BUL01,2022,231,Kick Net,3,400,1,31,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Ameletidae,Ameletus,NA,1,135.4839,100996,TRUE
+40153,BUL01,2022,231,Kick Net,3,400,1,31,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Ephemerellidae,NA,NA,1,64.51613,101232,TRUE
+40153,BUL01,2022,231,Kick Net,3,400,1,31,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Ephemerellidae,Drunella,Drunella coloradensis,1,3.225806,101389,TRUE
+40153,BUL01,2022,231,Kick Net,3,400,1,31,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,NA,NA,NA,1,22.58064,102467,TRUE
+40153,BUL01,2022,231,Kick Net,3,400,1,31,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Taeniopterygidae,Taenionema,NA,1,3.225806,102519,TRUE
+40153,BUL01,2022,231,Kick Net,3,400,1,31,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Nemouridae,Zapada,NA,1,9.67742,102591,TRUE
+40153,BUL01,2022,231,Kick Net,3,400,1,31,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Nemouridae,Zapada,Zapada columbiana,1,12.90323,102596,TRUE
+40153,BUL01,2022,231,Kick Net,3,400,1,31,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Capniidae,NA,NA,1,41.93548,102643,TRUE
+40153,BUL01,2022,231,Kick Net,3,400,1,31,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Leuctridae,NA,NA,1,9.67742,102840,TRUE
+40153,BUL01,2022,231,Kick Net,3,400,1,31,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Chloroperlidae,NA,NA,1,9.67742,103202,TRUE
+40153,BUL01,2022,231,Kick Net,3,400,1,31,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Chloroperlidae,Suwallia,NA,1,38.70968,103254,TRUE
+40153,BUL01,2022,231,Kick Net,3,400,1,31,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Chloroperlidae,Sweltsa,NA,1,3.225806,103273,TRUE
+40153,BUL01,2022,231,Kick Net,3,400,1,31,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Trichoptera,NA,NA,NA,1,3.225806,115095,TRUE
+40153,BUL01,2022,231,Kick Net,3,400,1,31,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Trichoptera,Rhyacophilidae,Rhyacophila,NA,1,16.12903,115097,TRUE
+40153,BUL01,2022,231,Kick Net,3,400,1,31,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Trichoptera,Uenoidae,Neothremma,NA,1,3.225806,116388,TRUE
+40153,BUL01,2022,231,Kick Net,3,400,1,31,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Chironomidae,NA,NA,1,12.90323,127917,TRUE
+40153,BUL01,2022,231,Kick Net,3,400,1,31,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Chironomidae,Tanypodinae,NA,1,9.67742,127994,TRUE
+40153,BUL01,2022,231,Kick Net,3,400,1,31,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Chironomidae,Pseudodiamesa,NA,1,3.225806,128416,TRUE
+40153,BUL01,2022,231,Kick Net,3,400,1,31,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Chironomidae,Orthocladiinae,NA,1,6.451613,128457,TRUE
+40153,BUL01,2022,231,Kick Net,3,400,1,31,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Chironomidae,Eukiefferiella,NA,1,38.70968,128689,TRUE
+40153,BUL01,2022,231,Kick Net,3,400,1,31,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Chironomidae,Parametriocnemus,NA,1,3.225806,128978,TRUE
+40153,BUL01,2022,231,Kick Net,3,400,1,31,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Chironomidae,Parorthocladius,NA,1,129.0323,129011,TRUE
+40153,BUL01,2022,231,Kick Net,3,400,1,31,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Chironomidae,Rheocricotopus,NA,1,58.06452,129086,TRUE
+40153,BUL01,2022,231,Kick Net,3,400,1,31,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Chironomidae,Tvetenia,NA,1,6.451613,129197,TRUE
+40153,BUL01,2022,231,Kick Net,3,400,1,31,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Chironomidae,Chironominae,NA,1,3.225806,129228,TRUE
+40153,BUL01,2022,231,Kick Net,3,400,1,31,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Chironomidae,Tanytarsus,NA,1,12.90323,129978,TRUE
+40153,BUL01,2022,231,Kick Net,3,400,1,31,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Empididae,NA,NA,1,3.225806,135830,TRUE
+40153,BUL01,2022,231,Kick Net,3,400,1,31,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Empididae,Clinocera,NA,1,6.451613,135849,TRUE
+40153,BUL01,2022,231,Kick Net,3,400,1,31,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Empididae,Neoplasta,NA,1,3.225806,136352,TRUE
+40153,BUL01,2022,231,Kick Net,3,400,1,31,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Empididae,Oreogeton,NA,1,9.67742,136377,TRUE
+40153,BUL01,2022,231,Kick Net,3,400,1,31,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Arachnida,Sarcoptiformes,Hydrozetidae,Hydrozetes,NA,1,3.225806,553094,TRUE
+40153,BUL01,2022,231,Kick Net,3,400,1,31,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Ephemerellidae,Drunella,Drunella doddsii,1,51.6129,698494,TRUE
+41202,BUL01,2023,230,Kick Net,3,400,1,17,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Ephemerellidae,NA,NA,1,23.52941,101232,TRUE
+41202,BUL01,2023,230,Kick Net,3,400,1,17,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Ephemerellidae,Drunella,NA,1,17.64706,101365,TRUE
+41202,BUL01,2023,230,Kick Net,3,400,1,17,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Ephemerellidae,Drunella,Drunella doddsii,1,17.64706,698494,TRUE
+41202,BUL01,2023,230,Kick Net,3,400,1,17,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Heptageniidae,NA,NA,1,182.3529,100504,TRUE
+41202,BUL01,2023,230,Kick Net,3,400,1,17,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Heptageniidae,Cinygmula,NA,1,35.29412,100557,TRUE
+41202,BUL01,2023,230,Kick Net,3,400,1,17,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Heptageniidae,Epeorus,NA,1,170.5882,100626,TRUE
+41202,BUL01,2023,230,Kick Net,3,400,1,17,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Heptageniidae,Rhithrogena,NA,1,147.0588,100572,TRUE
+41202,BUL01,2023,230,Kick Net,3,400,1,17,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Baetidae,NA,NA,1,29.41176,100755,TRUE
+41202,BUL01,2023,230,Kick Net,3,400,1,17,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Baetidae,Baetis,NA,1,458.8235,100800,TRUE
+41202,BUL01,2023,230,Kick Net,3,400,1,17,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Ameletidae,Ameletus,NA,1,23.52941,100996,TRUE
+41202,BUL01,2023,230,Kick Net,3,400,1,17,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Perlodidae,NA,NA,1,11.764709999999999,102994,TRUE
+41202,BUL01,2023,230,Kick Net,3,400,1,17,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Perlodidae,Megarcys,NA,1,17.64706,103110,TRUE
+41202,BUL01,2023,230,Kick Net,3,400,1,17,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Perlodidae,Kogotus,NA,1,5.882353,103149,TRUE
+41202,BUL01,2023,230,Kick Net,3,400,1,17,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Capniidae,NA,NA,1,5.882353,102643,TRUE
+41202,BUL01,2023,230,Kick Net,3,400,1,17,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Leuctridae,Despaxia,Despaxia augusta,1,5.882353,102842,TRUE
+41202,BUL01,2023,230,Kick Net,3,400,1,17,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Chloroperlidae,NA,NA,1,5.882353,103202,TRUE
+41202,BUL01,2023,230,Kick Net,3,400,1,17,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Chloroperlidae,Plumiperla,NA,1,52.94118,103305,TRUE
+41202,BUL01,2023,230,Kick Net,3,400,1,17,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Nemouridae,Zapada,NA,1,23.52941,102591,TRUE
+41202,BUL01,2023,230,Kick Net,3,400,1,17,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Nemouridae,Zapada,Zapada columbiana,1,35.29412,102596,TRUE
+41202,BUL01,2023,230,Kick Net,3,400,1,17,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Trichoptera,Hydropsychidae,NA,NA,1,29.41176,115398,TRUE
+41202,BUL01,2023,230,Kick Net,3,400,1,17,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Trichoptera,Hydropsychidae,Parapsyche,Parapsyche elsis,1,11.764709999999999,115560,TRUE
+41202,BUL01,2023,230,Kick Net,3,400,1,17,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Trichoptera,Rhyacophilidae,Rhyacophila,NA,1,76.47059,115097,TRUE
+41202,BUL01,2023,230,Kick Net,3,400,1,17,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Trichoptera,Glossosomatidae,NA,NA,1,29.41176,117120,TRUE
+41202,BUL01,2023,230,Kick Net,3,400,1,17,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Trichoptera,Uenoidae,Oligophlebodes,NA,1,11.764709999999999,116039,TRUE
+41202,BUL01,2023,230,Kick Net,3,400,1,17,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Arachnida,Trombidiformes,Sperchontidae,Sperchon,NA,1,5.882353,83006,TRUE
+41202,BUL01,2023,230,Kick Net,3,400,1,17,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Arachnida,Trombidiformes,Hygrobatidae,Atractides,NA,1,5.882353,83282,TRUE
+41202,BUL01,2023,230,Kick Net,3,400,1,17,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Empididae,Clinocera,NA,1,5.882353,135849,TRUE
+41202,BUL01,2023,230,Kick Net,3,400,1,17,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Annelida,Clitellata,NA,Enchytraeidae,Enchytraeus,NA,1,5.882353,68531,TRUE
+41202,BUL01,2023,230,Kick Net,3,400,1,17,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Chironomidae,NA,NA,1,241.1765,127917,TRUE
+41202,BUL01,2023,230,Kick Net,3,400,1,17,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Chironomidae,Eukiefferiella,NA,1,141.1765,128689,TRUE
+41202,BUL01,2023,230,Kick Net,3,400,1,17,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Chironomidae,Micropsectra,NA,1,82.35294,129890,TRUE
+41202,BUL01,2023,230,Kick Net,3,400,1,17,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Chironomidae,Brillia,NA,1,58.82353,128477,TRUE
+41202,BUL01,2023,230,Kick Net,3,400,1,17,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Chironomidae,Tvetenia,NA,1,23.52941,129197,TRUE
+41202,BUL01,2023,230,Kick Net,3,400,1,17,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Chironomidae,Rheocricotopus,NA,1,5.882353,129086,TRUE
+41202,BUL01,2023,230,Kick Net,3,400,1,17,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Chironomidae,Pagastia,NA,1,17.64706,128401,TRUE
+42858,BUL01,2024,213,Kick Net,3,400,1,25,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Trichoptera,Glossosomatidae,NA,NA,1,4,117120,TRUE
+42858,BUL01,2024,213,Kick Net,3,400,1,25,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Trichoptera,Rhyacophilidae,Rhyacophila,NA,1,72,115097,TRUE
+42858,BUL01,2024,213,Kick Net,3,400,1,25,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Trichoptera,Rhyacophilidae,NA,NA,1,4,115096,TRUE
+42858,BUL01,2024,213,Kick Net,3,400,1,25,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Trichoptera,Hydropsychidae,Parapsyche,Parapsyche elsis,1,8,115560,TRUE
+42858,BUL01,2024,213,Kick Net,3,400,1,25,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Ephemerellidae,NA,NA,1,92,101232,TRUE
+42858,BUL01,2024,213,Kick Net,3,400,1,25,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Ephemerellidae,Drunella,Drunella doddsii,1,12,698494,TRUE
+42858,BUL01,2024,213,Kick Net,3,400,1,25,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Ephemerellidae,Drunella,Drunella coloradensis,1,20,101389,TRUE
+42858,BUL01,2024,213,Kick Net,3,400,1,25,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Ameletidae,Ameletus,NA,1,8,100996,TRUE
+42858,BUL01,2024,213,Kick Net,3,400,1,25,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Baetidae,NA,NA,1,56,100755,TRUE
+42858,BUL01,2024,213,Kick Net,3,400,1,25,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Baetidae,Baetis,NA,1,208,100800,TRUE
+42858,BUL01,2024,213,Kick Net,3,400,1,25,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,NA,NA,NA,1,16,102467,TRUE
+42858,BUL01,2024,213,Kick Net,3,400,1,25,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Capniidae,NA,NA,1,4,102643,TRUE
+42858,BUL01,2024,213,Kick Net,3,400,1,25,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Perlodidae,NA,NA,1,8,102994,TRUE
+42858,BUL01,2024,213,Kick Net,3,400,1,25,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Perlodidae,Megarcys,NA,1,4,103110,TRUE
+42858,BUL01,2024,213,Kick Net,3,400,1,25,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Heptageniidae,NA,NA,1,144,100504,TRUE
+42858,BUL01,2024,213,Kick Net,3,400,1,25,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Heptageniidae,Cinygmula,NA,1,24,100557,TRUE
+42858,BUL01,2024,213,Kick Net,3,400,1,25,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Heptageniidae,Epeorus,NA,1,112,100626,TRUE
+42858,BUL01,2024,213,Kick Net,3,400,1,25,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Ephemeroptera,Heptageniidae,Rhithrogena,NA,1,144,100572,TRUE
+42858,BUL01,2024,213,Kick Net,3,400,1,25,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Chloroperlidae,NA,NA,1,4,103202,TRUE
+42858,BUL01,2024,213,Kick Net,3,400,1,25,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Chloroperlidae,Sweltsa,NA,1,4,103273,TRUE
+42858,BUL01,2024,213,Kick Net,3,400,1,25,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Chloroperlidae,Haploperla,NA,1,12,103260,TRUE
+42858,BUL01,2024,213,Kick Net,3,400,1,25,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Chloroperlidae,Plumiperla,NA,1,12,103305,TRUE
+42858,BUL01,2024,213,Kick Net,3,400,1,25,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Nemouridae,NA,NA,1,8,102517,TRUE
+42858,BUL01,2024,213,Kick Net,3,400,1,25,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Nemouridae,Zapada,NA,1,24,102591,TRUE
+42858,BUL01,2024,213,Kick Net,3,400,1,25,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Plecoptera,Nemouridae,Zapada,Zapada columbiana,1,140,102596,TRUE
+42858,BUL01,2024,213,Kick Net,3,400,1,25,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Empididae,Neoplasta,NA,1,4,136352,TRUE
+42858,BUL01,2024,213,Kick Net,3,400,1,25,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Empididae,Clinocera,NA,1,8,135849,TRUE
+42858,BUL01,2024,213,Kick Net,3,400,1,25,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Psychodidae,NA,NA,1,4,125351,TRUE
+42858,BUL01,2024,213,Kick Net,3,400,1,25,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Simuliidae,Simulium,NA,1,4,126774,TRUE
+42858,BUL01,2024,213,Kick Net,3,400,1,25,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Arachnida,Trombidiformes,Sperchontidae,Sperchon,NA,1,8,83006,TRUE
+42858,BUL01,2024,213,Kick Net,3,400,1,25,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Arachnida,Trombidiformes,Hygrobatidae,Atractides,NA,1,8,83282,TRUE
+42858,BUL01,2024,213,Kick Net,3,400,1,25,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Chironomidae,NA,NA,1,68,127917,TRUE
+42858,BUL01,2024,213,Kick Net,3,400,1,25,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Chironomidae,Tvetenia,NA,1,96,129197,TRUE
+42858,BUL01,2024,213,Kick Net,3,400,1,25,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Chironomidae,Pagastia,NA,1,16,128401,TRUE
+42858,BUL01,2024,213,Kick Net,3,400,1,25,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Chironomidae,Rheocricotopus,NA,1,12,129086,TRUE
+42858,BUL01,2024,213,Kick Net,3,400,1,25,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Chironomidae,Brillia,NA,1,12,128477,TRUE
+42858,BUL01,2024,213,Kick Net,3,400,1,25,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Chironomidae,Parametriocnemus,NA,1,12,128978,TRUE
+42858,BUL01,2024,213,Kick Net,3,400,1,25,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Chironomidae,Eukiefferiella,NA,1,24,128689,TRUE
+42858,BUL01,2024,213,Kick Net,3,400,1,25,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Chironomidae,Micropsectra,NA,1,24,129890,TRUE
+42858,BUL01,2024,213,Kick Net,3,400,1,25,100,Potential Reference,FALSE,NA,NA,NA,NA,NA,Arthropoda,Insecta,Diptera,Chironomidae,Stempellinella,NA,1,20,129969,TRUE
