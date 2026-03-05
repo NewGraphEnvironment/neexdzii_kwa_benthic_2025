@@ -1,0 +1,5 @@
+Site Code,Site Visit Date,Season,Protocol,Mesh Size,Kick Time,Site Description,Crew Members,Sampling Device,Latitude Degree,Latitude Minute,Latitude Second,Longitude Degree,Longitude Minute,Longitude Second,Elevation (MASL),GPS Datum,Number Of Reps
+BUL-01,2025-10-03,Fall,CABIN - Wadeable Streams,400,3,NA,NA,Kick Net,NA,NA,NA,NA,NA,NA,NA,"GRS80 (NAD83, WGS84)",3
+BUL-04,2025-10-02,Fall,CABIN - Wadeable Streams,400,3,NA,NA,Kick Net,NA,NA,NA,NA,NA,NA,NA,"GRS80 (NAD83, WGS84)",3
+BUL-05,2025-09-28,Fall,CABIN - Wadeable Streams,400,3,NA,NA,Kick Net,NA,NA,NA,NA,NA,NA,NA,"GRS80 (NAD83, WGS84)",3
+BUL-05,2025-10-02,Fall,CABIN - Wadeable Streams,400,3,NA,NA,Kick Net,NA,NA,NA,NA,NA,NA,NA,"GRS80 (NAD83, WGS84)",3

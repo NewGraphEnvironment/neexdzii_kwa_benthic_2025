@@ -92,6 +92,11 @@ source("scripts/ems_prep.R")
 source("scripts/plot_ems.R")
 ```
 
+```{r update-benthic, eval=params$update_benthic, include=FALSE}
+source("scripts/benthic_prep.R")
+source("scripts/prep_metrics.R")
+```
+
 # Acknowledgement {.front-matter .unnumbered}
 
 We understand our well-being as inseparable from the health of the land and waters we work within. When we care for ecosystems, we care for ourselves.
