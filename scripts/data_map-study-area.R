@@ -40,12 +40,15 @@ bulk <- sf::st_read(conn, query = "
 upstream_confluence <- sf::st_read(conn, query = "
   SELECT ST_Transform(ST_Simplify(geom, 200), 4326) as geom,
          ST_Area(geom) / 1e6 as area_km2
-  FROM fwa_watershedatmeasure(360873822, 166030.4)
+  FROM fwa_watershedatmeasure(360873822, 166080.4)
 ")
 
 neexdzii_kwa <- st_difference(upstream_confluence, morice) |>
   st_make_valid() |>
   mutate(watershed = "Neexdzii Kwa")
+
+saveRDS(neexdzii_kwa, file.path(out, "neexdzii_kwa.rds"))
+message("Saved neexdzii_kwa")
 
 lower_wk <- st_difference(bulk, st_union(neexdzii_kwa)) |>
   st_make_valid() |>

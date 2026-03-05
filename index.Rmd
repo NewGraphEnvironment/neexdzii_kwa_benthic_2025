@@ -27,6 +27,7 @@ params:
   update_packages: FALSE
   update_bib: FALSE
   update_benthic: FALSE
+  update_ems: FALSE
   gitbook_on: TRUE
   password_protected: TRUE
   password_dir: '68d57a8caa75cde79d75fb9d700d04508c7a1f2a'
@@ -84,6 +85,11 @@ font_set <- 9
 knitr::write_bib(c(
   .packages(), 'bookdown', 'knitr', 'rmarkdown'
 ), 'packages.bib')
+```
+
+```{r update-ems, eval=params$update_ems, include=FALSE}
+source("scripts/ems_prep.R")
+source("scripts/plot_ems.R")
 ```
 
 # Acknowledgement {.front-matter .unnumbered}

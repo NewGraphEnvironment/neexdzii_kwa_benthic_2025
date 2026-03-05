@@ -50,9 +50,7 @@ general_labels <- c(
 # Nutrient guideline lines (simple horizontal references)
 wqg_lines <- tribble(
   ~param_abb, ~yintercept, ~label,
-  "tp",       0.01,        "CCME 10 ug/L",
-  "no3no2",   3,           "BC WQG 3 mg/L",
-  "no3",      3,           "BC WQG 3 mg/L"
+  "tp",       0.01,        "CCME trigger 10 ug/L"
 )
 
 # pH guideline bounds
@@ -149,7 +147,8 @@ get_colours <- function(labels) {
 
 # --- Helper: time series --------------------------------------------------
 
-plot_ts <- function(data, params, y_label = "Concentration (mg/L)", ncol = 2) {
+plot_ts <- function(data, params, y_label = "Concentration (mg/L)", ncol = 2,
+                    log_y = FALSE) {
   labels <- levels(data$station)
   cols <- get_colours(labels)
 
@@ -164,7 +163,7 @@ plot_ts <- function(data, params, y_label = "Concentration (mg/L)", ncol = 2) {
     mutate(param_label = param_labels[param_abb],
            param_label = factor(param_label, levels = param_labels[params]))
 
-  ggplot(d, aes(x = date, y = result, colour = station)) +
+  p <- ggplot(d, aes(x = date, y = result, colour = station)) +
     geom_hline(data = gl, aes(yintercept = yintercept),
                linetype = "dashed", colour = "red3", alpha = 0.7, linewidth = 0.5) +
     geom_point(size = 1.5, alpha = 0.7) +
@@ -179,11 +178,15 @@ plot_ts <- function(data, params, y_label = "Concentration (mg/L)", ncol = 2) {
     ) +
     labs(y = y_label) +
     guides(colour = guide_legend(nrow = 3, override.aes = list(size = 3)))
+
+  if (log_y) p <- p + scale_y_log10()
+  p
 }
 
 # --- Helper: box by station -----------------------------------------------
 
-plot_stn_box <- function(data, params, y_label = "Concentration (mg/L)", ncol = 2) {
+plot_stn_box <- function(data, params, y_label = "Concentration (mg/L)", ncol = 2,
+                         log_y = FALSE) {
   labels <- levels(data$station)
   cols <- get_colours(labels)
 
@@ -198,7 +201,7 @@ plot_stn_box <- function(data, params, y_label = "Concentration (mg/L)", ncol = 
     mutate(param_label = param_labels[param_abb],
            param_label = factor(param_label, levels = param_labels[params]))
 
-  ggplot(d, aes(x = station, y = result, fill = station)) +
+  p <- ggplot(d, aes(x = station, y = result, fill = station)) +
     geom_hline(data = gl, aes(yintercept = yintercept),
                linetype = "dashed", colour = "red3", alpha = 0.7, linewidth = 0.5) +
     stat_boxplot(geom = "errorbar", width = 0.4) +
@@ -212,13 +215,16 @@ plot_stn_box <- function(data, params, y_label = "Concentration (mg/L)", ncol = 
       strip.text = element_text(size = 10)
     ) +
     labs(y = y_label)
+
+  if (log_y) p <- p + scale_y_log10()
+  p
 }
 
 # === GROUP 1: Point Source Comparisons ====================================
 
 cat("--- Group 1: Point source comparisons ---\n")
 
-# 1a. Houston STP — TP trends with loess
+# 1a. Houston STP — TP scatter
 houston_tp <- prep_subset(nutrients, houston_stp_ids, houston_stp_labels) |>
   filter(param_abb == "tp")
 
@@ -226,13 +232,12 @@ p <- ggplot(houston_tp, aes(x = date, y = result, colour = station)) +
   geom_hline(yintercept = 0.01, linetype = "dashed", colour = "red3",
              alpha = 0.7, linewidth = 0.5) +
   geom_point(size = 1.5, alpha = 0.7) +
-  geom_smooth(method = "loess", se = FALSE, linewidth = 0.8) +
-  scale_colour_manual(values = get_colours(houston_stp_labels), name = "Station") +
+  facet_wrap(~ station, ncol = 3) +
+  scale_colour_manual(values = get_colours(houston_stp_labels), guide = "none") +
   theme_bw(base_size = 11) +
-  theme(legend.position = "bottom") +
   labs(y = "Total Phosphorus (mg/L)")
 
-ggsave("fig/ems/houston_stp_tp.png", p, width = 9, height = 5, dpi = 200)
+ggsave("fig/ems/houston_stp_tp.png", p, width = 12, height = 4, dpi = 200)
 cat("Saved fig/ems/houston_stp_tp.png\n")
 
 # 1b. Houston STP — all nutrients time series
@@ -285,12 +290,12 @@ ggsave("fig/ems/mainstem_phosphorus_box.png", p, width = 11, height = 7, dpi = 2
 cat("Saved fig/ems/mainstem_phosphorus_box.png\n")
 
 # 2c. Nitrogen time series
-p <- plot_ts(mainstem_nutr, c("nh3", "no3no2", "tkn", "tn"))
+p <- plot_ts(mainstem_nutr, c("nh3", "no3no2", "tkn", "tn"), )
 ggsave("fig/ems/mainstem_nitrogen_ts.png", p, width = 10, height = 8, dpi = 200)
 cat("Saved fig/ems/mainstem_nitrogen_ts.png\n")
 
 # 2d. Nitrogen by station
-p <- plot_stn_box(mainstem_nutr, c("nh3", "no3no2", "tkn", "tn"))
+p <- plot_stn_box(mainstem_nutr, c("nh3", "no3no2", "tkn", "tn"), )
 ggsave("fig/ems/mainstem_nitrogen_box.png", p, width = 11, height = 7, dpi = 200)
 cat("Saved fig/ems/mainstem_nitrogen_box.png\n")
 
@@ -365,12 +370,12 @@ if (nrow(buck_nutr) > 0) {
   cat("Saved fig/ems/buck_phosphorus_box.png\n")
 
   # 3c. Nitrogen time series
-  p <- plot_ts(buck_nutr, c("nh3", "no3no2", "tkn", "tn"))
+  p <- plot_ts(buck_nutr, c("nh3", "no3no2", "tkn", "tn"), )
   ggsave("fig/ems/buck_nitrogen_ts.png", p, width = 10, height = 8, dpi = 200)
   cat("Saved fig/ems/buck_nitrogen_ts.png\n")
 
   # 3d. Nitrogen by station
-  p <- plot_stn_box(buck_nutr, c("nh3", "no3no2", "tkn", "tn"))
+  p <- plot_stn_box(buck_nutr, c("nh3", "no3no2", "tkn", "tn"), )
   ggsave("fig/ems/buck_nitrogen_box.png", p, width = 10, height = 7, dpi = 200)
   cat("Saved fig/ems/buck_nitrogen_box.png\n")
 }
