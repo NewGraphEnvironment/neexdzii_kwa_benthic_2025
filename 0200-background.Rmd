@@ -20,3 +20,38 @@ The Neexdzii Kwa has experienced intensive land-use transformation including agr
 
 Potential point sources of nutrient and contaminant loading include the Houston wastewater treatment plant and the Knockholt Landfill. A spatial query of BC Environmental Monitoring System (EMS) stations within the watershed boundary identified over 100 stations with historical records spanning 1972–2024 (Appendix \@ref(historical-water-quality-ems)). @remington_donas2000Nutrientsalgae recommended a long-term monitoring strategy incorporating water quality, periphyton, and benthic invertebrate bioassessment — the present study represents the first systematic benthic assessment of the Neexdzii Kwa mainstem, addressing that recommendation 25 years later.
 
+## Previous Benthic Monitoring
+
+Benthic invertebrate bioassessment in the Skeena basin has been conducted within the CABIN Reference Condition Approach (RCA) framework. @perrin_etal2007Bioassessmentstreams established the original Skeena RCA model using 86 reference sites and 170 test sites across north-central BC, and @bennett2011revisedpredictive revised the model with an expanded dataset of 145 reference sites classified into four groups using six landscape-level predictor variables (percent ice, January precipitation, percent wetlands, percent intrusive rock, January snowfall, and percent lakes). The revised model achieved 77% classification accuracy and has been applied by the BC Ministry of Environment Skeena Region for impact assessment near landfills, agriculture, mining, and other anthropogenic activities.
+
+<br>
+
+Nine CABIN sites have been sampled within the Neexdzii Kwa watershed, all under the "BC MOE-FSP Skeena Region" and "BC-Wet'suwet'en ESI" studies (Table \@ref(tab:cabin-sites-cap); Figure \@ref(fig:map-benthic-sites)). Most sites are on tributaries and were sampled once in 2004. Of particular relevance, MOR37 ("Upper Bulkley @ Morice") is located on the Neexdzii Kwa mainstem at approximately the same location as our 2025 site BUL-01 — sampled in 2004 and again in 2018 under the Wet'suwet'en Environmental Stewardship Initiative, providing two historical benthic datasets for temporal comparison with the present study. CABIN data were obtained from the [ECCC Open Government Portal](https://open.canada.ca/data/en/dataset/13564ca4-e330-40a5-9521-bfb1be767147).
+
+<br>
+
+```{r cabin-sites-cap, results="asis"}
+my_caption <<- "CABIN benthic monitoring sites within the Neexdzii Kwa watershed. Sites were identified by spatial intersection of all Pacific drainage (MDA 08) CABIN study locations with the watershed boundary. MOR37 corresponds to the 2025 BUL-01 sampling location."
+my_tab_caption(tip_flag = FALSE)
+```
+
+```{r cabin-sites}
+readr::read_csv("data/processed/cabin_opendata_sites_neexdzii.csv",
+                show_col_types = FALSE) |>
+  dplyr::select(
+    Site,
+    `Site Name` = SiteName,
+    `Stream Order` = stream_order,
+    Visits = n_visits,
+    Years = years,
+    Study = studies
+  ) |>
+  my_dt_table(cols_freeze_left = 2, page_length = 10)
+```
+
+<br>
+
+```{r map-benthic-sites, fig.cap='Sampling and monitoring locations within the Neexdzii Kwa watershed. Blue triangles indicate 2025 benthic sampling sites; green circles show CABIN historical sites (Table \\@ref(tab:cabin-sites-cap)); red diamonds mark potential point sources. Grey dots are EMS water quality stations — see Appendix \\@ref(historical-water-quality-ems) for interactive detail.', out.width="100%"}
+knitr::include_graphics("fig/map_benthic-sites.png")
+```
+

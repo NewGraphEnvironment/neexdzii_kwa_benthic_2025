@@ -24,12 +24,6 @@ Water quality parameters recorded at each site included temperature, pH, and con
 
 Three sites were sampled on the Neexdzii Kwa mainstem within known high-value Chinook spawning and rearing habitat (Figure \@ref(fig:map-benthic-sites)). Site locations were selected to assess aquatic health upstream and downstream of potential point-source impacts, allowing comparison of species composition and community health metrics across the watershed. Triplicate kick samples were collected at each site to quantify within-site variability and enable statistical distinction between true site differences and natural spatial heterogeneity.
 
-<br>
-
-```{r map-benthic-sites, fig.cap='Benthic invertebrate sampling locations on the Neexdzii Kwa (Upper Bulkley River), fall 2025.', out.width="100%"}
-knitr::include_graphics("fig/map_benthic-sites.png")
-```
-
 ## Laboratory Processing
 
 Samples were preserved in 10% formalin and submitted to Cordillera Consulting Inc. (Summerland, BC) for sorting and taxonomic identification following CABIN protocols [@environmentcanada2012Canadianaquatic]. Subsampling was performed using a Marchant Box to achieve a target count of 300 organisms per sample. Organisms were sorted from debris in gridded Petri dishes under a dissecting microscope, randomly selecting grids until the count target was met. Specimens were identified to genus or species level where possible, with Chironomidae identified using slide-mounted head capsules. Taxonomic determinations followed the CABIN taxonomic manual, SAFIT standard taxonomic effort, and PNAMP protocols. All taxonomists held Society for Freshwater Science (SFS) Level 2 certification.
