@@ -1,11 +1,27 @@
 
 # (PART) Results {-}
 
-# Community Composition and Diversity
+# Historical Water Quality
 
 ```{r setup-0400-results}
 knitr::opts_chunk$set(fig.path = "fig/0400-results/", dev = "png")
 ```
+
+Historical water quality data from BC's Environmental Monitoring System (EMS) were compiled for stations within the Neexdzii Kwa watershed to characterize baseline nutrient conditions and identify point-source influences relevant to benthic community health. Full station details, time series, and boxplots are presented in Appendix \@ref(historical-water-quality-ems).
+
+<br>
+
+Total phosphorus exceeded the CCME Canadian Guidance Framework trigger value (10 µg/L) at the majority of stations and sampling events across the watershed, consistent with the naturally high soluble phosphorus concentrations in glacial-fluvial soils noted by @remington_donas2000Nutrientsalgae. Median TP concentrations at mainstem stations ranged from 16.5 µg/L upstream of Houston to 51 µg/L at the downstream sewage monitoring station, with the Houston STP reach showing elevated concentrations at both upstream and downstream stations. Nitrogen species (nitrate+nitrite, ammonia, TKN) were consistently well below BC Water Quality Guidelines across all station groups — maximum nitrate+nitrite concentration across all 862 samples was 0.18 mg/L, far below the 3 mg/L aquatic life guideline. Ammonia concentrations at the three Houston STP stations did not exceed sample-specific BC Water Quality Guidelines calculated from concurrent pH and temperature measurements.
+
+<br>
+
+At the Knockholt Landfill, paired upstream/downstream sampling (2004–2006) showed no detectable nutrient enrichment, though the small sample size (n = 3 per station) limits inference. Buck Creek stations had limited nutrient data (1–2 TP samples each), all above the CCME trigger, but insufficient temporal coverage to assess trends. General water quality parameters (pH, dissolved oxygen, conductivity) at mainstem stations were within normal ranges, with pH consistently between the BC WQG bounds of 6.5–9.0.
+
+<br>
+
+These results confirm that the Neexdzii Kwa is a phosphorus-enriched system where background TP concentrations routinely exceed the CCME eutrophication trigger. The Houston STP contributes additional phosphorus loading, but upstream concentrations are already elevated, underscoring the landscape-level nutrient sources identified by @remington_donas2000Nutrientsalgae. This nutrient context is relevant to interpreting benthic community composition, particularly the prevalence of nutrient-tolerant taxa.
+
+# Community Composition and Diversity
 
 <!-- Taxonomic summary: total taxa, major orders.
      Density calculations.

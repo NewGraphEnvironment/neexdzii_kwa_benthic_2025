@@ -131,7 +131,7 @@ readr::read_csv("data/processed/ems_stations.csv", show_col_types = FALSE) |>
 
 Three EMS stations bracket the Houston STP outfall: upstream (0400297), immediately downstream (0400295), and 2.4 km further downstream (0400296). Combined records span 1974--2018.
 
-```{r fig-ems-houston-tp, fig.cap='Total phosphorus at Houston wastewater treatment plant stations (1974--2018). Dashed red line indicates CCME Canadian Guidance Framework trigger value (10 µg/L).', out.width="100%"}
+```{r fig-ems-houston-tp, fig.cap='Total phosphorus at Houston wastewater treatment plant stations (1974--2018). Dashed red line indicates CCME Canadian Guidance Framework trigger value (10 µg/L). TP exceeded the trigger at all three stations across most sampling events, including upstream, indicating landscape-level phosphorus enrichment beyond point-source contributions.', out.width="100%"}
 knitr::include_graphics("fig/ems/houston_stp_tp.png")
 ```
 
@@ -151,7 +151,7 @@ knitr::include_graphics("fig/ems/houston_stp_nutrients_box.png")
 
 The BC Water Quality Guideline for ammonia is conditional on water temperature and pH — higher temperatures and pH shift the equilibrium toward un-ionized ammonia (NH~3~), the toxic form. The guideline was calculated for each sample using concurrent pH measurements and water temperature where available. For samples lacking temperature data, monthly mean temperatures from ECCC hydrometric station 08EE003 (Bulkley River near Houston, 2017--2025) were substituted.
 
-```{r fig-ems-houston-nh3-wqg, fig.cap='Ammonia concentrations at Houston STP stations relative to sample-specific BC Water Quality Guidelines (dashed red line). Guidelines are calculated from concurrent pH and temperature measurements. Triangles indicate exceedances.', out.width="100%"}
+```{r fig-ems-houston-nh3-wqg, fig.cap='Ammonia concentrations at Houston STP stations relative to sample-specific BC Water Quality Guidelines (dashed red line). Guidelines are calculated from concurrent pH and temperature measurements. Triangles indicate exceedances. No exceedances were detected across the monitoring record.', out.width="100%"}
 knitr::include_graphics("fig/ems/houston_stp_ammonia_wqg.png")
 ```
 
@@ -161,7 +161,7 @@ knitr::include_graphics("fig/ems/houston_stp_ammonia_wqg.png")
 
 Paired upstream/downstream stations (E257276, E257277) sampled 2004--2006.
 
-```{r fig-ems-knockholt, fig.cap='Nutrient concentrations upstream vs downstream of the Knockholt Landfill (2004--2006). Individual samples overlaid on box-and-whisker summaries. Dashed red lines indicate BC Water Quality Guidelines where applicable (CCME trigger 10 µg/L for total phosphorus). All nitrate+nitrite concentrations were well below the BC WQG of 3 mg/L (aquatic life).', out.width="100%"}
+```{r fig-ems-knockholt, fig.cap='Nutrient concentrations upstream vs downstream of the Knockholt Landfill (2004--2006). Individual samples overlaid on box-and-whisker summaries. Dashed red lines indicate BC Water Quality Guidelines where applicable (CCME trigger 10 µg/L for total phosphorus). All nitrate+nitrite concentrations were well below the BC WQG of 3 mg/L (aquatic life). No detectable nutrient enrichment downstream, though small sample sizes (n = 3) limit inference.', out.width="100%"}
 knitr::include_graphics("fig/ems/knockholt_compare.png")
 ```
 
@@ -169,7 +169,7 @@ knitr::include_graphics("fig/ems/knockholt_compare.png")
 
 Eight stations span the Neexdzii Kwa from Bulkley Lake downstream through the Houston STP reach, providing an upstream-to-downstream nutrient and water quality gradient. Stations without nutrient data were excluded.
 
-```{r fig-ems-main-p-ts, fig.cap='Phosphorus time series at Neexdzii Kwa mainstem stations (upstream to downstream). Dashed red line indicates CCME Canadian Guidance Framework trigger (10 µg/L) for total phosphorus.', out.width="100%"}
+```{r fig-ems-main-p-ts, fig.cap='Phosphorus time series at Neexdzii Kwa mainstem stations (upstream to downstream). Dashed red line indicates CCME Canadian Guidance Framework trigger (10 µg/L) for total phosphorus. Concentrations exceeded the trigger at most stations and sampling events, with higher median values at downstream stations through the Houston reach.', out.width="100%"}
 knitr::include_graphics("fig/ems/mainstem_phosphorus_ts.png")
 ```
 
