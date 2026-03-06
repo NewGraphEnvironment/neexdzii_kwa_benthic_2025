@@ -156,7 +156,7 @@ temporal |>
 
 <br>
 
-The two historical CABIN samples at MOR37 showed Ephemeroptera-dominated communities with high EPT relative abundance (Figure \@ref(fig:temporal-stacked); Table \@ref(tab:tab-temporal-cap)). The 2025 BUL-01 community showed a notably different structure: lower EPT, substantially higher Trichoptera (dominated by Hydropsychidae collector-filterers), and elevated Chironomidae.
+The two historical CABIN samples at MOR37 showed Ephemeroptera-dominated communities with high EPT (mayflies, stoneflies, and caddisflies) relative abundance (Figure \@ref(fig:temporal-stacked); Table \@ref(tab:tab-temporal-cap)). The 2025 BUL-01 community showed a notably different structure: lower EPT, substantially higher Trichoptera (dominated by Hydropsychidae collector-filterers), and elevated Chironomidae.
 
 <br>
 

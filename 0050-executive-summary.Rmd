@@ -10,7 +10,7 @@ Triplicate kick-net samples were collected at three mainstem sites following the
 
 <br>
 
-- **Ecological condition improves from downstream to upstream.** Indicators of nutrient enrichment (Chironomidae, Hydropsychidae, biotic index scores) decrease moving upstream from Houston, while indicators of stream health (EPT richness, sensitive shredders and scrapers, taxonomic diversity) increase. Multiple independent lines of evidence — taxonomic composition, functional feeding groups, biotic index scores, and multivariate ordination — converged on this pattern.
+- **Ecological condition improves from downstream to upstream.** Indicators of nutrient enrichment (Chironomidae, Hydropsychidae, biotic index scores) decrease moving upstream from Houston, while indicators of stream health (EPT taxa — mayflies, stoneflies, and caddisflies — richness, sensitive shredders and scrapers, taxonomic diversity) increase. Multiple independent lines of evidence — taxonomic composition, functional feeding groups, biotic index scores, and multivariate ordination — converged on this pattern.
 
 - **BUL-01 shows biological signatures of mild nutrient enrichment.** The community near Houston was characterized by elevated Chironomidae (24%), high Hydropsychidae abundance (20% of individuals), and a Hilsenhoff Biotic Index of 4.14 indicating possible slight organic pollution. These patterns are consistent with the elevated phosphorus concentrations documented in the historical water quality record.
 

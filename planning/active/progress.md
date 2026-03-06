@@ -26,6 +26,10 @@
 - Created issues #7 (habitat data) and #8 (CABIN RCA)
 - Expanded monitoring network issue deferred
 
+### EPT definition — all chapters
+- Added "mayflies, stoneflies, and caddisflies" on first EPT use in 0050, 0450, 0500, 0600
+- 0400 already had the definition
+
 ### Remaining
 - Build and verify all citations resolve (Mitchell 1997, Price 2014 now referenced)
 - McQuarrie hydrometric data research (deferred to future session)

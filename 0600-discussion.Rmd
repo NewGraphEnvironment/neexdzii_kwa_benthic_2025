@@ -22,7 +22,7 @@ This biological signal aligns with the historical water quality record. Total ph
 
 <br>
 
-At BUL-05, the upstream site, the community was dominated by *Lepidostoma* (42% of abundance), a shredder-herbivore caddisfly associated with intact riparian function and allochthonous leaf litter inputs. EPT relative abundance (84%), taxonomic richness (45 taxa), and the HBI (2.58, "excellent") all indicate high ecological condition. The high proportion of specialized feeders (shredders 42%, scrapers 13%) at BUL-05 contrasts sharply with the generalist-dominated community at BUL-01 — specialized feeders are considered among the most sensitive indicators of stream health [@barbour_etal1999Rapidbioassessment].
+At BUL-05, the upstream site, the community was dominated by *Lepidostoma* (42% of abundance), a shredder-herbivore caddisfly associated with intact riparian function and allochthonous leaf litter inputs. EPT (mayflies, stoneflies, and caddisflies) relative abundance (84%), taxonomic richness (45 taxa), and the HBI (2.58, "excellent") all indicate high ecological condition. The high proportion of specialized feeders (shredders 42%, scrapers 13%) at BUL-05 contrasts sharply with the generalist-dominated community at BUL-01 — specialized feeders are considered among the most sensitive indicators of stream health [@barbour_etal1999Rapidbioassessment].
 
 ## Diversity and Dominance
 
