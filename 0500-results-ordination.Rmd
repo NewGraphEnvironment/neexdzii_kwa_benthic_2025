@@ -129,6 +129,10 @@ p <- ggplot2::ggplot() +
 p
 ```
 
+<br>
+
+The NMDS ordination revealed clear separation among all three sites, with replicate samples clustering tightly within each site group. BUL-05 replicates formed the tightest cluster, indicating highly consistent community composition across sampling locations at that site. BUL-04 showed the greatest within-site spread, consistent with the high replicate variability observed in univariate metrics (Chironomidae 6–37%, Ephemeroptera 30–63%). BUL-01 replicates clustered together but were well-separated from both BUL-04 and BUL-05, reflecting the distinct Hydropsychidae-dominated community described in the preceding sections.
+
 ## PERMANOVA
 
 Permutational multivariate analysis of variance [PERMANOVA; @anderson2001newmethod] was used to test whether benthic community composition differed significantly among the three sites, using the `adonis2` function in `vegan` with 9999 permutations of Bray-Curtis dissimilarities.
@@ -200,6 +204,10 @@ if (bd_p >= 0.05) {
 
 ## Pairwise Comparisons
 
+Pairwise PERMANOVA with Holm correction for multiple comparisons was used to identify which specific site pairs differed significantly in community composition.
+
+<br>
+
 ```{r pairwise-permanova}
 set.seed(42)
 pw <- RVAideMemoire::pairwise.perm.manova(
@@ -228,6 +236,10 @@ for (i in seq_len(nrow(pairs))) {
              ": ", p_str, sig, "\n"))
 }
 ```
+
+<br>
+
+Together, the multivariate analyses confirm that the three Neexdzii Kwa mainstem sites support statistically distinct benthic communities. The tight clustering of replicates within sites demonstrates that the observed differences are not an artefact of sampling variability — each site consistently produces a characteristic assemblage. The high proportion of variance explained by site identity, combined with homogeneous dispersion, provides strong evidence that the spatial gradient in community composition described in the preceding sections reflects genuine ecological differences among reaches.
 
 <!-- ## Indicator Species Analysis
 

@@ -36,15 +36,15 @@ BUL-04 showed the highest within-site variability in both univariate metrics (Ch
 
 ## Comparison with Historical CABIN Data
 
-The CABIN open data archive contains benthic records from the MOR37 site (corresponding to BUL-01) spanning 2004–2024, providing temporal context for our 2025 results. Across historical sampling events, EPT relative abundance at MOR37 was consistently high (79–91% in most years), with communities dominated by *Baetis* (Ephemeroptera: Baetidae) and low Trichoptera representation (typically 2–10%). The 2025 BUL-01 community showed a notably different structure: lower EPT (63%), much higher Trichoptera (31%, dominated by Hydropsychidae), and elevated Chironomidae (24%).
+The CABIN open data archive contains benthic records from site MOR37 (corresponding to BUL-01) from two sampling events: 2004 (BC MOE-FSP Skeena Region study) and 2018 (BC-Wet'suwet'en ESI study). Both historical samples showed Ephemeroptera-dominated communities with high EPT relative abundance. The 2025 BUL-01 community showed a notably different structure: lower EPT, substantially higher Trichoptera (dominated by Hydropsychidae), and elevated Chironomidae.
 
 <br>
 
-These differences should be interpreted cautiously. The historical and 2025 sampling locations may not be identical — minor differences in reach selection within the same general area can capture different microhabitats. Seasonal timing also varied, with historical samples collected as early as Julian day 254 (September) and our 2025 samples collected in early October. Additionally, the CABIN data use different subsampling and taxonomic resolution protocols across years, and many historical records contain unresolved taxa ("NA" at genus level), complicating direct comparison.
+These differences should be interpreted cautiously. Although all three sampling events were within 49 m of each other (confirming the same reach), seasonal timing varied substantially — from August 13 (2018) to September 10 (2004) to October 3 (2025) — and differences in invertebrate phenology across this window could influence community composition. The two historical samples were collected under different CABIN studies with potentially different subsampling and taxonomic resolution protocols, and each is a single unreplicated sample — limiting the strength of temporal inferences.
 
 <br>
 
-Despite these caveats, the 2025 community composition at BUL-01 — with its high Hydropsychidae abundance and elevated Chironomidae — is consistent with a site experiencing mild nutrient enrichment, and may represent a shift from the *Baetis*-dominated, reference-quality communities documented historically. Whether this reflects a real temporal change in site condition, or simply differences in sampling location and methodology, can only be resolved through continued standardized monitoring at this location.
+Despite these caveats, the 2025 community composition at BUL-01 — with its high Hydropsychidae abundance and elevated Chironomidae — is consistent with a site experiencing mild nutrient enrichment. Whether the compositional differences between years reflect a real temporal change in site condition, interannual variability, or methodological differences can only be resolved through continued standardized monitoring at this location.
 
 ## Implications for Restoration Planning
 

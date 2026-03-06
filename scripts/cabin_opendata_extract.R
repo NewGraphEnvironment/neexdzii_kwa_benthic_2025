@@ -89,7 +89,13 @@ print(visit_summary, n = 60)
 write_csv(bulkley_sites, file.path(out_dir, "cabin_opendata_sites_bulkley.csv"))
 cat("\nWrote", file.path(out_dir, "cabin_opendata_sites_bulkley.csv"), "\n")
 
-# STEP 5 - Read and filter benthic data for BUL01 -----------------------------
+# STEP 5 - Read and filter benthic data for MOR37 (= our BUL-01) --------------
+#
+# IMPORTANT: Our 2025 site BUL-01 corresponds to CABIN site MOR37
+# ("Upper Bulkley @ Morice"), NOT BUL01 ("Little Joe Ck").
+# BUL01 is a small tributary ~50 km north of our mainstem site.
+# MOR37 was sampled in 2004 (BC MOE-FSP Skeena Region) and 2018
+# (BC-Wet'suwet'en ESI) — two studies, same physical location.
 
 benthic <- read_csv(benthic_file, show_col_types = FALSE,
                     locale = locale(encoding = "UTF-16LE"))
@@ -99,33 +105,36 @@ names(benthic) <- str_remove(names(benthic), "/.*$")
 cat("\nBenthic data:", nrow(benthic), "rows\n")
 cat("Columns:", paste(names(benthic), collapse = ", "), "\n")
 
-# Get SiteVisitIDs for BUL01 in Bulkley study
-bul01_visits <- study |>
-  filter(Site == "BUL01", Study == bulkley_study) |>
+# Get SiteVisitIDs for MOR37 across ALL studies (2004 + 2018)
+mor37_visits <- study |>
+  filter(Site == "MOR37") |>
   pull(SiteVisitID)
 
-bul01_benthic <- benthic |>
-  filter(SiteVisitID %in% bul01_visits)
+mor37_benthic <- benthic |>
+  filter(SiteVisitID %in% mor37_visits)
 
-cat("\nBUL01 benthic records:", nrow(bul01_benthic), "\n")
-cat("BUL01 visit IDs:", paste(sort(bul01_visits), collapse = ", "), "\n")
+cat("\nMOR37 benthic records:", nrow(mor37_benthic), "\n")
+cat("MOR37 visit IDs:", paste(sort(mor37_visits), collapse = ", "), "\n")
 
-if (nrow(bul01_benthic) > 0) {
-  cat("Years:", paste(sort(unique(
-    study |> filter(SiteVisitID %in% bul01_visits) |> pull(Year)
-  )), collapse = ", "), "\n")
-  cat("Unique taxa:", n_distinct(paste(bul01_benthic$Genus, bul01_benthic$Species)), "\n")
+if (nrow(mor37_benthic) > 0) {
+  mor37_visit_info <- study |>
+    filter(SiteVisitID %in% mor37_visits) |>
+    distinct(SiteVisitID, Year, Study, SiteName)
+  cat("Visit details:\n")
+  print(mor37_visit_info)
+  cat("Unique taxa:", n_distinct(paste(mor37_benthic$Genus, mor37_benthic$Species)), "\n")
 }
 
-write_csv(bul01_benthic, file.path(out_dir, "cabin_opendata_benthic_bul01.csv"))
+write_csv(mor37_benthic, file.path(out_dir, "cabin_opendata_benthic_bul01.csv"))
 cat("Wrote", file.path(out_dir, "cabin_opendata_benthic_bul01.csv"), "\n")
 
 # STEP 6 - Verification -------------------------------------------------------
 
 cat("\n=== Summary ===\n")
 cat("Bulkley CABIN sites:", nrow(bulkley_sites), "\n")
-cat("BUL01 (Little Joe Ck): ", length(bul01_visits), "visits,",
-    nrow(bul01_benthic), "benthic records\n")
-cat("Our site BUL-01 should use CABIN site code: BUL01\n")
+cat("MOR37 (Upper Bulkley @ Morice = our BUL-01):", length(mor37_visits), "visits,",
+    nrow(mor37_benthic), "benthic records\n")
+cat("Years: 2004 (BC MOE-FSP) + 2018 (Wet'suwet'en ESI)\n")
+cat("NOTE: BUL01 in CABIN = Little Joe Ck (different site, ~50 km north)\n")
 cat("NOTE: BUL04 and BUL05 are new sites — no existing CABIN data\n")
 cat("\nDone.\n")
