@@ -13,7 +13,9 @@ pkgs_render <- c(
   "htmlwidgets",
   "glue",
   "fs",
-  "stringr"
+  "stringr",
+  "leaflet",
+  "sf"
 )
 
 # --- Packages needed for analysis scripts (not required for render) ---
