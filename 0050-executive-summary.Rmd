@@ -1,0 +1,27 @@
+
+
+# Executive Summary {.unnumbered}
+
+This report presents the first spatially explicit benthic invertebrate assessment of the Neexdzii Kwa (Upper Bulkley River) mainstem, conducted in October 2025 on behalf of the Office of the Wet'suwet'en. The Neexdzii Kwa flows through Wet'suwet'en Yintah and sustains salmon, steelhead, and the communities connected to them — understanding the health of its invertebrate communities is fundamental to informed stewardship of this watershed.
+
+<br>
+
+Triplicate kick-net samples were collected at three mainstem sites following the CABIN wadeable streams protocol: BUL-01 just downstream of Houston near the wastewater treatment plant (the most downstream site), BUL-04 approximately 11 km upstream near Knockholt Bridge, and BUL-05 a further 10 km upstream just below the McQuarrie Creek confluence (a cold-water tributary). Key findings:
+
+<br>
+
+- **Ecological condition improves from downstream to upstream.** Indicators of nutrient enrichment (Chironomidae, Hydropsychidae, biotic index scores) decrease moving upstream from Houston, while indicators of stream health (EPT taxa — mayflies, stoneflies, and caddisflies — richness, sensitive shredders and scrapers, taxonomic diversity) increase. Multiple independent lines of evidence — taxonomic composition, functional feeding groups, biotic index scores, and multivariate ordination — converged on this pattern.
+
+- **BUL-01 shows biological signatures of mild nutrient enrichment.** The community near Houston was characterized by elevated Chironomidae (24%), high Hydropsychidae abundance (20% of individuals), and a Hilsenhoff Biotic Index of 4.14 indicating possible slight organic pollution. These patterns are consistent with the elevated phosphorus concentrations documented in the historical water quality record.
+
+- **BUL-05 supports reference-quality conditions.** The upstream site had the highest taxonomic richness (45 taxa), EPT relative abundance of 84%, dominance by the shredder *Lepidostoma* (42%), and an HBI of 2.58 indicating excellent water quality with no apparent organic pollution.
+
+- **BUL-04 is a transitional zone with high variability.** Individual replicates at this mid-reach site ranged from near-reference to moderately impaired composition, suggesting fine-scale habitat heterogeneity characteristic of a gradient boundary.
+
+- **Community composition differs significantly among sites.** PERMANOVA confirmed statistically significant differences, with site identity explaining a large proportion of total variation. Within-site replicates clustered tightly, demonstrating that the observed gradient is robust and not an artefact of sampling variability.
+
+- **Historical comparison at BUL-01 shows compositional change.** The 2025 community differed from CABIN records at the same reach in 2004 and 2018, with lower EPT, higher Trichoptera (Hydropsychidae), and elevated Chironomidae — though seasonal timing differences (August–October) limit temporal inference.
+
+<br>
+
+These results establish a quantitative baseline for benthic community condition across the Neexdzii Kwa mainstem. We recommend submitting 2025 data to CABIN to extend the regional reference condition model, continuing standardized monitoring at these sites with concurrent water quality sampling, and expanding the monitoring network to include upstream mainstem reaches, Buck Creek, and key tributaries with restoration potential.

@@ -10,7 +10,7 @@ knitr::opts_chunk$set(fig.path = "fig/0300-methods/", dev = "png")
 
 ## Field Sampling
 
-Benthic invertebrate sampling was conducted following the Canadian Aquatic Biomonitoring Network (CABIN) wadeable streams protocol [@environmentcanada2012Canadianaquatic]. Samples were collected using the traveling kick-net method with a 400 μm mesh net. At each site, a 3-minute timed sample was collected by traversing a zigzag pattern in an upstream direction within the erosional zone (riffle, rapid, or fast-flowing run habitat).
+Benthic invertebrate sampling was conducted between September 28 and October 3, 2025 by Al Irvine, R.P.Bio. (New Graph Environment Ltd.) and Tieasha Pierre (Wet'suwet'en Treaty Society), following the Canadian Aquatic Biomonitoring Network (CABIN) wadeable streams protocol [@environmentcanada2012Canadianaquatic]. Samples were collected using the traveling kick-net method with a 400 μm mesh net. At each site, a 3-minute timed sample was collected by traversing a zigzag pattern in an upstream direction within the erosional zone (riffle, rapid, or fast-flowing run habitat).
 
 <br>
 
@@ -22,13 +22,17 @@ Water quality parameters recorded at each site included temperature, pH, and con
 
 <br>
 
-Three sites were sampled on the Neexdzii Kwa mainstem within known high-value Chinook spawning and rearing habitat (Figure \@ref(fig:map-benthic-sites)). Site locations were selected to assess aquatic health upstream and downstream of potential point-source impacts, allowing comparison of species composition and community health metrics across the watershed. Triplicate kick samples were collected at each site to quantify within-site variability and enable statistical distinction between true site differences and natural spatial heterogeneity.
+Three sites were sampled on the Neexdzii Kwa mainstem within known high-value Chinook spawning and rearing habitat (Figure \@ref(fig:map-benthic-sites)). Site locations were selected to assess aquatic health upstream and downstream of potential point-source impacts, allowing comparison of species composition and community health metrics across the watershed:
 
 <br>
 
-```{r map-benthic-sites, fig.cap='Benthic invertebrate sampling locations on the Neexdzii Kwa (Upper Bulkley River), fall 2025.', out.width="100%"}
-knitr::include_graphics("fig/map_benthic-sites.png")
-```
+- **BUL-01** — the most downstream site, located just downstream of Houston and immediately upstream of the North Road overpass (Morice River FSR turnoff), adjacent to a public rest area. This reach is approximately 500 m downstream of the Houston wastewater treatment plant outfall and corresponds to CABIN historical site MOR37 ("Upper Bulkley @ Morice"), sampled in 2004 and 2018.
+- **BUL-04** — a mid-reach site approximately 11 km upstream of BUL-01, located just downstream of the Knockholt Bridge and the Knockholt Landfill.
+- **BUL-05** — the most upstream site, approximately 21 km upstream of BUL-01, located just downstream of the McQuarrie Creek confluence. McQuarrie Creek is a recognized cold-water tributary — @westcott2022UpperBulkley placed paired temperature loggers on the Neexdzii Kwa mainstem above and below the confluence specifically to quantify its thermal influence.
+
+<br>
+
+All sites are accessible from public land. Triplicate kick samples were collected at each site to quantify within-site variability and enable statistical distinction between true site differences and natural spatial heterogeneity.
 
 ## Laboratory Processing
 

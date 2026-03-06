@@ -15,6 +15,7 @@ library(tmap)
 library(maptiles)
 library(dplyr)
 library(readr)
+library(stringr)
 library(magick)
 library(bcmaps)
 sf_use_s2(FALSE)
@@ -49,15 +50,32 @@ if (any(is.na(sites_csv$lat) | is.na(sites_csv$lon))) {
 
 sites <- st_as_sf(sites_csv, coords = c("lon", "lat"), crs = 4326)
 
+# --- Load CABIN historical sites (spatially filtered to watershed) ----------
+
+cabin_csv <- read_csv("data/processed/cabin_opendata_sites_neexdzii.csv",
+                      show_col_types = FALSE)
+cabin_sites <- st_as_sf(cabin_csv, coords = c("lon", "lat"), crs = 4326)
+
+# --- Load EMS stations (stream type only, with coords) ---------------------
+
+ems_csv <- read_csv("data/processed/ems_stations.csv", show_col_types = FALSE) |>
+  filter(!is.na(lat), !is.na(lon))
+ems_sf <- st_as_sf(ems_csv, coords = c("lon", "lat"), crs = 4326)
+
+# Clip EMS to watershed extent
+ems_sf <- ems_sf[st_within(ems_sf, st_buffer(st_as_sfc(st_bbox(neexdzii)) |>
+  st_set_crs(4326), 0.01), sparse = FALSE)[,1], ]
+
 # --- Point-source features ------------------------------------------------
 # Manually placed from Google Maps / local knowledge
 
 point_sources <- st_sf(
-  name = c("Knockholt Landfill", "Houston WWTP"),
-  type = c("Landfill", "Wastewater"),
+  name = c("Knockholt Landfill", "Houston WWTP", "Equity Silver Mine"),
+  type = c("Landfill", "Wastewater", "Mine"),
   geometry = st_sfc(
     st_point(c(-126.527192, 54.440469)),
     st_point(c(-126.670421, 54.397655)),
+    st_point(c(-126.268, 54.195)),
     crs = 4326
   )
 )
@@ -159,7 +177,36 @@ m <- tm_shape(basemap_stars, bbox = bbox) +
   tm_shape(roads_dissolved |> filter(route != "16")) +
   tm_lines(col = "#e67e22", lwd = 1.2) +
 
-  # Benthic sampling sites
+  # EMS stations (unlabelled — see appendix for interactive detail)
+  tm_shape(ems_sf) +
+  tm_symbols(
+    fill = "#636363",
+    shape = 21,
+    size = 0.35,
+    col = "#333333",
+    lwd = 0.4,
+    fill_alpha = 0.8
+  ) +
+
+  # CABIN historical sites
+  tm_shape(cabin_sites) +
+  tm_symbols(
+    fill = "#33a02c",
+    shape = 21,
+    size = 0.6,
+    col = "grey20",
+    lwd = 0.5
+  ) +
+  tm_text("Site", size = 0.55, col = "#1a6618",
+          fontface = "bold",
+          options = opt_tm_text(
+            point.label = TRUE,
+            point.label.method = "SANN",
+            point.label.gap = 0.3,
+            shadow = TRUE
+          )) +
+
+  # Benthic sampling sites (2025)
   tm_shape(sites) +
   tm_symbols(
     fill = "#1f78b4",
@@ -211,11 +258,12 @@ m <- tm_shape(basemap_stars, bbox = bbox) +
   # Legend
   tm_add_legend(
     type = "symbols",
-    labels = c("Benthic sampling site", "Potential point source"),
-    fill   = c("#1f78b4", "#e74c3c"),
-    shape  = c(24, 23),
-    size   = c(0.9, 0.8),
-    col    = c("grey20", "grey20")
+    labels = c("2025 benthic site", "CABIN historical site",
+               "EMS station", "Potential point source"),
+    fill   = c("#1f78b4", "#33a02c", "#636363", "#e74c3c"),
+    shape  = c(24, 21, 21, 23),
+    size   = c(0.9, 0.6, 0.35, 0.8),
+    col    = c("grey20", "grey20", "#333333", "grey20")
   ) +
   tm_add_legend(
     type = "lines",
