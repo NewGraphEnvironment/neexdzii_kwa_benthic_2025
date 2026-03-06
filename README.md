@@ -1,6 +1,6 @@
 # Neexdzii Kwa Benthic 2025
 
-Benthic invertebrate community assessment for the Neexdzii Kwa (Upper Bulkley River), 2025 field season. Prepared for the Office of the Wet'suwet'en.
+Benthic invertebrate community assessment for the Neexdzii Kwa (Upper Bulkley River), 2025 field season. Prepared for the Wet'suwet'en Treaty Society.
 
 **Report:** [www.newgraphenvironment.com/neexdzii_kwa_benthic_2025](https://www.newgraphenvironment.com/neexdzii_kwa_benthic_2025/)
 

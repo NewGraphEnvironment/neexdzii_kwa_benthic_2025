@@ -10,7 +10,7 @@ We are biologists and computer programmers that facilitate aquatic ecosystem res
 
 Standalone benthic invertebrate community assessment for the Neexdzii Kwa (Upper Bulkley River), 2025 field season. Companion report to `restoration_wedzin_kwa_2024` — the restoration planning report will cite this for detailed benthic analysis and summarize key findings.
 
-**Client:** Office of the Wet'suwet'en
+**Client:** Wet'suwet'en Treaty Society
 
 **Lab:** Cordillera Consulting Inc. (Summerland, BC) — subsampling and taxonomic identification from kick-net samples.
 
