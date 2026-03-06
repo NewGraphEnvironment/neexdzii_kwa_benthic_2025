@@ -43,6 +43,10 @@ metric_summary <- function(m) {
 
 ## Taxonomic Richness and Abundance
 
+The number of distinct taxa at a site reflects habitat diversity and water quality — sites with more species can support both common and sensitive organisms. EPT taxa (mayflies, stoneflies, and caddisflies) are particularly informative because most require clean, well-oxygenated water to survive.
+
+<br>
+
 A total of 67 taxa were identified across the nine samples, with richness increasing along an upstream gradient from a mean of 37 taxa at BUL-01 to 45 taxa at BUL-05 (Figure \@ref(fig:plot-richness)). EPT (Ephemeroptera, Plecoptera, Trichoptera) richness followed a similar pattern, averaging 17 taxa at BUL-01 and BUL-04 but rising to 24 at BUL-05. Plecoptera and Trichoptera richness drove this difference — BUL-05 averaged 9.3 and 7.7 taxa, respectively, compared to 5.0 and 5.3 at BUL-01.
 
 <br>
@@ -61,6 +65,10 @@ knitr::include_graphics("fig/metrics/richness.png")
 ```
 
 ## Community Composition
+
+Beyond counting species, the relative proportions of different groups tell us about site condition. A healthy stream community is typically dominated by EPT — sensitive insects that need clean water. When pollution-tolerant groups like Chironomidae (midges) and Oligochaeta (worms) start making up a larger share of the community, it signals nutrient enrichment or organic loading.
+
+<br>
 
 Community composition showed a clear gradient across the three sites (Figure \@ref(fig:plot-community-stacked)). EPT relative abundance increased from 63% at BUL-01 to 84% at BUL-05, while Chironomidae decreased from 24% to 3% and Oligochaeta from 7% to <1%. This pattern is consistent with established bioassessment frameworks, in which increasing Chironomidae and Oligochaeta dominance indicates organic enrichment, while high EPT proportions are characteristic of healthy stream communities [@barbour_etal1999Rapidbioassessment; @rosenberg_resh1993Introductionfreshwater].
 
@@ -95,6 +103,8 @@ knitr::include_graphics("fig/metrics/community_pct.png")
 ```
 
 ## Functional Feeding Groups
+
+Invertebrates can also be grouped by how they feed — scrapers graze algae off rocks, shredders break down leaves, collectors filter or gather fine particles from the water. The balance of these feeding strategies reflects what food sources are available and how the stream ecosystem is functioning. Sites with diverse feeding groups, especially shredders and scrapers, typically have intact riparian zones and clean substrates, while communities dominated by generalist collectors often indicate enriched conditions.
 
 ```{r ffg-compute}
 # Compute FFG proportions from tidy counts (more reliable than Cordillera metrics sheet)
@@ -189,6 +199,10 @@ ggplot2::ggplot(
 ```
 
 ## Diversity Indices and Biotic Index
+
+Diversity indices summarize community complexity in a single number — how many species are present and how evenly individuals are distributed among them. The Hilsenhoff Biotic Index (HBI) takes a different approach: each species is assigned a pollution tolerance score, and the community-weighted average produces an overall water quality rating. Together, these metrics complement the compositional patterns above with standardized, comparable scores.
+
+<br>
 
 Shannon diversity (*H'*, log~2~) was moderately high across all sites, ranging from a site mean of 3.59 at BUL-05 to 4.32 at BUL-01 (Figure \@ref(fig:plot-diversity)). Simpson's diversity (1 − *D*) followed the same pattern, with BUL-01 (0.92) slightly exceeding BUL-05 (0.80). The higher diversity at BUL-01 despite its lower taxonomic richness reflects greater evenness in the distribution of individuals across taxa — no single taxon comprised more than 20% of the community. At BUL-05, *Lepidostoma* alone accounted for 42% of total abundance, depressing evenness-weighted diversity indices despite having the highest species richness.
 

@@ -17,11 +17,10 @@
 ### 1a. Executive summary — "first" framing
 - Already well-covered in 0050, 0200, 0600 — no action needed
 
-### 1b. Point sources — add Richfield legacy site + mines
-- `0200-background.Rmd` line ~21: "Potential point sources..." paragraph
-- Add Richfield staging yard / legacy contaminated site (search restoration_wedzin_kwa_2024 for details)
-- Add mines — note they are not on the mainstem
-- **Action:** Search restoration_wedzin_kwa_2024 repo for "Richfield", "staging", "legacy"
+### 1b. Point sources — add Richfield legacy site + mines — DONE
+- Added Richfield Loop concentrate shed site (copper sulphide, near Topley) from Price 2014
+- Added Equity Silver Mine (Bessemer Creek, not mainstem) from Nijman 1996
+- Added degraded tributaries (Richfield, Byman, McQuarrie) from Mitchell 1997
 
 ### 1c. Field sampling attribution — DONE
 - Added Al Irvine RPBio + Tieasha Pierre, dates Sep 28 – Oct 3, 2025
@@ -45,31 +44,25 @@
 
 ## Phase 2: Discussion and Recommendations rework
 
-### 2a. BUL-05 uncertainty — McQuarrie Creek influence
-- BUL-05 is just below McQuarrie confluence — a cold-water, less-developed tributary
-- Question: does McQuarrie's input create locally excellent conditions not representative of upstream mainstem?
-- **Action:** Find hydrometric data for McQuarrie Creek + Bulkley at Houston (ECCC stations)
-- Estimate % freshwater contribution from McQuarrie
-- Add uncertainty caveat to discussion + recommendation for upstream sampling
+### 2a. BUL-05 uncertainty — McQuarrie Creek influence — DONE
+- Added caveat to discussion: McQuarrie's cold-water input may create locally favourable conditions
+- Added recommendation for sampling above McQuarrie confluence
+- Hydrometric data research deferred to future issue
 
-### 2b. Remove "Incorporate field habitat data" recommendation
-- This is about to happen — don't recommend what we're doing
-- Create GitHub issue instead for how habitat data will interleave with existing analysis
+### 2b. Remove "Incorporate field habitat data" recommendation — DONE
+- Removed from recommendations (work is about to happen)
+- GitHub issue creation: pending
 
-### 2c. CABIN RCA — make an issue, not a recommendation
-- Whether we recommend running RCA depends on email response Monday (contact ECCC)
-- For now: create issue, remove from recommendations or soften to conditional
+### 2c. CABIN RCA — softened to conditional — DONE
+- Merged into recommendation #1, conditional on ECCC confirmation
+- GitHub issue creation: pending
 
-### 2d. Water quality coordination — plainer language
-- "Concurrent benthic and water quality sampling would enable direct correlation..." — too jargony
-- Say what should actually happen: collect water samples at the same time as bug samples so we can directly link nutrient levels to community health
+### 2d. Water quality coordination — plainer language — DONE
+- Rewrote as "collect water samples alongside benthic samples" with clear rationale
 
-### 2e. Extend sampling program — new recommendation
-- Buck Creek sites including near the mine — understand aquatic health there
-- Upstream Bulkley mainstem reaches beyond BUL-05
-- Maxhamish (Maxxam?) Creek
-- Key tributaries like Richfield Creek — historic chinook use, restoration could use guidance/context
-- Frame as expanding the monitoring network to capture the full watershed gradient
+### 2e. Extend sampling program — DONE
+- Added recommendation #4: upstream mainstem, Buck Creek/mine, key tribs
+- Named Richfield, Maxan, Byman as priority tributaries
 
 ---
 

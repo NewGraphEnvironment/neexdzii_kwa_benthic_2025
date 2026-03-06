@@ -1,10 +1,17 @@
 # Findings — Report Prose Round 2
 
 ## Richfield Legacy Site
-- **Status:** Not yet researched
-- User confirms it's mentioned in restoration_wedzin_kwa_2024
-- Described as a "staging yard of some sort" — likely a historic contaminated site
-- To search: restoration_wedzin_kwa_2024 repo for "Richfield", "staging", "legacy"
+- **Status:** Partially researched
+- restoration_wedzin_kwa_2024 mentions **Richfield Creek** as a degraded tributary:
+  - Mitchell 1997 ranked it "highly or severely degraded" (agriculture, transportation, grazing, municipal)
+  - SERNBC installed fenceline along Richfield Creek 2021–2022
+  - High priority fish passage site (Highway 16 culvert)
+  - Historic chinook use documented
+- **Richfield Loop concentrate shed site** found in Price 2014 fulltext (Zotero QHXUHDB8):
+  - "A renewed assessment of contaminated soils at the Richfield Loop concentrate shed site adjacent to the upper Bulkley River near Topley to determine whether water quality and associated aquatic life are receiving significant impacts from past deposits of copper sulphide concentrates"
+  - This is the "staging yard" the user recalled — historic copper concentrate storage/staging
+- The Equity Silver Mine is already in 0200 background (Nijman 1996 — acid mine drainage, lime treatment 100+ years)
+- "Maxan" spelling confirmed from restoration report (Mitchell 1997 lists "Maxan Creek")
 
 ## McQuarrie Creek Influence on BUL-05
 - **Status:** Not yet researched
