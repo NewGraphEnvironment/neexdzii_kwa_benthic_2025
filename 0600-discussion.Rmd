@@ -28,11 +28,11 @@ Shannon diversity was higher at BUL-01 (H' = 4.32, log~2~) than at BUL-05 (H' = 
 
 ## Multivariate Community Separation
 
-PERMANOVA confirmed that community composition differed significantly among sites. Multivariate dispersion was homogeneous, supporting the validity of the PERMANOVA result as reflecting true compositional differences rather than differences in within-site variability. The NMDS ordination visually confirmed this separation, with replicate samples clustering tightly within sites and clear separation among site centroids in three-dimensional ordination space.
+PERMANOVA confirmed that community composition differed significantly among sites (Table \@ref(tab:permanova-table)), with homogeneous multivariate dispersion (Table \@ref(tab:betadisper-table)) confirming that this result reflects true compositional differences rather than unequal within-site variability. The NMDS ordination (Figure \@ref(fig:nmds-plot)) visually confirmed this separation, with replicate samples clustering tightly within sites and clear separation among site centroids.
 
 <br>
 
-BUL-04 showed the highest within-site variability in both univariate metrics (Chironomidae 6–37%, Ephemeroptera 30–63%) and multivariate space. This may reflect fine-scale habitat heterogeneity at this mid-reach site — differences in local substrate, velocity, or organic matter availability among replicate sampling locations could produce the observed variation.
+The pattern of within-site variability was itself informative. BUL-05 showed the lowest multivariate dispersion (mean distance to centroid = 0.14), reflecting a stable, uniform habitat where *Lepidostoma* dominated all three replicates similarly. BUL-01 was intermediate (0.21) — the nutrient enrichment signal (Hydropsychidae, Chironomidae) was present in all replicates but varied in relative intensity, suggesting a pervasive but non-uniform influence across the reach. BUL-04 showed the highest within-site variability (0.26), with individual replicates ranging from near-reference (high EPT, low Chironomidae) to moderately impaired composition. This pattern is characteristic of a transitional zone, where fine-scale differences in substrate, velocity, or organic matter availability among kick-net locations produce a mosaic of micro-conditions and correspondingly patchy communities. This contrasts with both ends of the gradient, where conditions are more uniform — consistently enriched at BUL-01, consistently reference-quality at BUL-05.
 
 ## Comparison with Historical CABIN Data
 

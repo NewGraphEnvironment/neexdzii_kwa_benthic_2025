@@ -68,7 +68,7 @@ Although Trichoptera were well-represented at both BUL-01 (31% of individuals) a
 
 <br>
 
-BUL-04 was intermediate in composition but showed high within-site variability, particularly in Chironomidae (6–37% across replicates) and Ephemeroptera (30–63%), suggesting fine-scale habitat heterogeneity at that site.
+BUL-04 was intermediate in composition but showed high within-site variability, particularly in Chironomidae (6–37% across replicates) and Ephemeroptera (30–63%; Figure \@ref(fig:plot-community-pct)), suggesting fine-scale habitat heterogeneity at that site.
 
 <br>
 
@@ -137,7 +137,7 @@ Functional feeding group (FFG) composition reflected the taxonomic gradient, wit
 
 <br>
 
-The high proportion of specialized feeders (shredders, scrapers) at BUL-05 is consistent with healthy stream function. Shredders and scrapers are among the most sensitive functional groups and are associated with intact riparian zones and clean substrates, whereas communities dominated by generalist collectors and filterers indicate greater tolerance to disturbance [@barbour_etal1999Rapidbioassessment]. The elevated collector-filterer abundance at BUL-01 is notable — Hydropsychidae filter fine particulate organic matter and suspended material, and their abundance in nutrient-enriched reaches likely reflects increased food supply from elevated primary productivity and organic inputs associated with the Houston wastewater treatment plant and surrounding agricultural land use.
+The high proportion of specialized feeders (shredders, scrapers) at BUL-05 is consistent with healthy stream function (Figure \@ref(fig:plot-ffg-box)). Shredders and scrapers are among the most sensitive functional groups and are associated with intact riparian zones and clean substrates, whereas communities dominated by generalist collectors and filterers indicate greater tolerance to disturbance [@barbour_etal1999Rapidbioassessment]. The elevated collector-filterer abundance at BUL-01 is notable — Hydropsychidae filter fine particulate organic matter and suspended material, and their abundance in nutrient-enriched reaches likely reflects increased food supply from elevated primary productivity and organic inputs associated with the Houston wastewater treatment plant and surrounding agricultural land use.
 
 <br>
 

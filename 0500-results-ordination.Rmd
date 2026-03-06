@@ -1,5 +1,6 @@
 
 
+
 # Ordination and Statistical Analysis
 
 ```{r setup-0500-results-ordination}
@@ -34,35 +35,11 @@ Non-metric multidimensional scaling (NMDS) was used to visualize community simil
 
 <br>
 
-```{r nmds-run}
+```{r nmds-run, results='hide'}
 set.seed(42)
 nmds <- vegan::metaMDS(sp_mat, k = 2, distance = "bray", trymax = 999,
                        autotransform = TRUE, trace = 0)
-
-cat("NMDS stress:", round(nmds$stress, 4), "\n")
-cat("Converged:", nmds$converged, "\n")
 ```
-
-<br>
-
-```{r nmds-stress-note, results='asis'}
-stress_val <- round(nmds$stress, 3)
-stress_interp <- dplyr::case_when(
-  stress_val < 0.05 ~ "excellent representation",
-  stress_val < 0.10 ~ "good representation",
-  stress_val < 0.20 ~ "adequate representation",
-  TRUE ~ "poor representation; interpret with caution"
-)
-cat(paste0(
-  "The two-dimensional NMDS solution achieved a stress value of ",
-  stress_val, " (", stress_interp,
-  "; @clarke_warwick2001Changemarine). "
-))
-```
-
-Stress measures how well the two-dimensional plot preserves the original dissimilarities among samples — a value below 0.10 means the distances between points on the plot closely reflect the actual differences in community composition. Put simply, samples that appear close together on the ordination really do share similar species, and samples that appear far apart really are compositionally distinct.
-
-<br>
 
 ```{r nmds-plot, fig.cap='Two-dimensional NMDS ordination of benthic invertebrate communities across nine samples (three sites, three replicates). Points are coloured by site with spider lines connecting replicates to group centroids and standard deviation ellipses. Closer points indicate more similar community composition.', fig.width=8, fig.height=6}
 site_factor <- factor(sp_meta$site, levels = c("BUL-01", "BUL-04", "BUL-05"))
@@ -129,23 +106,46 @@ p <- ggplot2::ggplot() +
 p
 ```
 
-<br>
+```{r nmds-stress, include=FALSE}
+stress_val <- round(nmds$stress, 3)
+stress_interp <- dplyr::case_when(
+  stress_val < 0.05 ~ "excellent representation",
+  stress_val < 0.10 ~ "good representation",
+  stress_val < 0.20 ~ "adequate representation",
+  TRUE ~ "poor representation; interpret with caution"
+)
+```
 
-The NMDS ordination revealed clear separation among all three sites, with replicate samples clustering tightly within each site group. BUL-05 replicates formed the tightest cluster, indicating highly consistent community composition across sampling locations at that site. BUL-04 showed the greatest within-site spread, consistent with the high replicate variability observed in univariate metrics (Chironomidae 6–37%, Ephemeroptera 30–63%). BUL-01 replicates clustered together but were well-separated from both BUL-04 and BUL-05, reflecting the distinct Hydropsychidae-dominated community described in the preceding sections.
+The two-dimensional solution achieved a stress value of `r stress_val` (`r stress_interp` of the original dissimilarities; @clarke_warwick2001Changemarine), meaning the distances between points in Figure \@ref(fig:nmds-plot) closely reflect the actual differences in community composition among samples. The ordination revealed clear separation among all three sites, with replicate samples clustering tightly within each site group. BUL-05 replicates formed the tightest cluster (mean distance to centroid = 0.14), indicating highly consistent community composition across sampling locations at that site. BUL-04 showed the greatest within-site spread (mean distance = 0.26), consistent with the high replicate variability observed in univariate metrics (Chironomidae 6–37%, Ephemeroptera 30–63%). BUL-01 was intermediate in dispersion (mean distance = 0.21) — although the three replicates appear spread along the NMDS2 axis in the two-dimensional projection, the formal betadisper measure (which uses the full Bray-Curtis dissimilarity matrix rather than the 2D approximation) places BUL-01 between the other two sites in within-group variability. All BUL-01 replicates were well-separated from both BUL-04 and BUL-05, reflecting the distinct Hydropsychidae-dominated community described in the preceding sections.
 
 ## PERMANOVA
 
-Permutational multivariate analysis of variance [PERMANOVA; @anderson2001newmethod] was used to test whether benthic community composition differed significantly among the three sites, using the `adonis2` function in `vegan` with 9999 permutations of Bray-Curtis dissimilarities.
+Permutational multivariate analysis of variance [PERMANOVA; @anderson2001newmethod] was used to test whether benthic community composition differed significantly among the three sites. The test was run on Bray-Curtis dissimilarities with 9999 permutations using the `adonis2` function in `vegan`.
 
 <br>
 
-```{r permanova}
+```{r permanova, results='hide'}
 set.seed(42)
 perm <- vegan::adonis2(sp_mat ~ site_groups, method = "bray", permutations = 9999)
-perm
 ```
 
-<br>
+```{r permanova-table}
+perm_df <- as.data.frame(perm)
+perm_df$Source <- rownames(perm_df)
+perm_df |>
+  dplyr::filter(Source != "Total") |>
+  dplyr::transmute(
+    Source = dplyr::case_match(Source, "site_groups" ~ "Site", .default = Source),
+    Df,
+    `Sum of Squares` = round(SumOfSqs, 4),
+    R2 = round(R2, 3),
+    F = round(`F`, 2),
+    `p-value` = dplyr::if_else(`Pr(>F)` < 0.001, "< 0.001",
+                                as.character(round(`Pr(>F)`, 3)))
+  ) |>
+  knitr::kable(align = "lrrrrr",
+               caption = "PERMANOVA results testing differences in benthic community composition among three Neexdzii Kwa mainstem sites (9999 permutations, Bray-Curtis dissimilarity).")
+```
 
 ```{r permanova-interp, results='asis'}
 f_val  <- round(perm$F[1], 2)
@@ -155,12 +155,12 @@ p_val  <- perm$`Pr(>F)`[1]
 p_text <- if (p_val < 0.001) "p < 0.001" else paste0("p = ", round(p_val, 3))
 
 cat(paste0(
-  "Site explained ", round(r2_val * 100, 1), "% of the total variation in community composition ",
-  "(F = ", f_val, ", ", p_text, ", 9999 permutations). "
+  "Site identity explained ", round(r2_val * 100, 1), "% of the total variation in community composition ",
+  "(Table \\@ref(tab:permanova-table); F = ", f_val, ", ", p_text, "). "
 ))
 
 if (p_val < 0.05) {
-  cat("Community composition differed significantly among sites.")
+  cat("Community composition differed significantly among sites — the differences visible in the NMDS ordination and univariate metrics are statistically robust, not artefacts of sampling variability.")
 } else {
   cat("Differences among sites were not statistically significant at the 0.05 level.")
 }
@@ -168,19 +168,33 @@ if (p_val < 0.05) {
 
 ## Multivariate Dispersion
 
-The PERMANOVA assumption of homogeneous multivariate dispersion was assessed using `betadisper`, which tests whether group centroids differ in their distance to group members (i.e., whether within-site variability is similar across sites).
+PERMANOVA assumes that within-site variability is similar across groups. If one site's samples were much more spread out than another's, a significant PERMANOVA could reflect that unequal spread rather than a genuine shift in species composition. The `betadisper` test checks this assumption by comparing how far each site's replicates are from their group centroid.
 
 <br>
 
-```{r betadisper}
+```{r betadisper, results='hide'}
 bray_dist <- vegan::vegdist(sp_mat, method = "bray")
 bd <- vegan::betadisper(bray_dist, site_groups)
 set.seed(42)
 bd_perm <- permutest(bd, permutations = 9999)
-bd_perm
 ```
 
-<br>
+```{r betadisper-table}
+bd_tab <- bd_perm$tab
+bd_tab$Source <- rownames(bd_tab)
+bd_tab |>
+  dplyr::transmute(
+    Source,
+    Df,
+    `Sum Sq` = round(`Sum Sq`, 5),
+    `Mean Sq` = round(`Mean Sq`, 5),
+    F = round(F, 3),
+    `p-value` = dplyr::if_else(`Pr(>F)` < 0.001, "< 0.001",
+                                as.character(round(`Pr(>F)`, 3)))
+  ) |>
+  knitr::kable(align = "lrrrrr",
+               caption = "Betadisper test of multivariate homogeneity of group dispersions (9999 permutations).")
+```
 
 ```{r betadisper-interp, results='asis'}
 bd_p <- bd_perm$tab$`Pr(>F)`[1]
@@ -190,13 +204,14 @@ if (bd_p >= 0.05) {
   cat(paste0(
     "Multivariate dispersion did not differ significantly among sites (",
     bd_text,
-    "), supporting the validity of the PERMANOVA result."
+    "; Table \\@ref(tab:betadisper-table)), confirming that the three sites have comparable internal variability. ",
+    "This means the significant PERMANOVA result (Table \\@ref(tab:permanova-table)) reflects genuine differences in which species are present and in what proportions — not simply that one site's replicates happened to be more variable than another's."
   ))
 } else {
   cat(paste0(
     "Multivariate dispersion differed significantly among sites (",
     bd_text,
-    "), suggesting that the PERMANOVA result may be partially driven by differences ",
+    "; Table \\@ref(tab:betadisper-table)), suggesting that the PERMANOVA result may be partially driven by differences ",
     "in within-site variability rather than shifts in community composition alone."
   ))
 }
@@ -204,11 +219,11 @@ if (bd_p >= 0.05) {
 
 ## Pairwise Comparisons
 
-Pairwise PERMANOVA with Holm correction for multiple comparisons was used to identify which specific site pairs differed significantly in community composition.
+Pairwise PERMANOVA with Holm correction for multiple comparisons identified which specific site pairs differed significantly in community composition (Table \@ref(tab:pairwise-table)).
 
 <br>
 
-```{r pairwise-permanova}
+```{r pairwise-permanova, results='hide'}
 set.seed(42)
 pw <- RVAideMemoire::pairwise.perm.manova(
   bray_dist,
@@ -216,30 +231,31 @@ pw <- RVAideMemoire::pairwise.perm.manova(
   nperm = 9999,
   p.method = "holm"
 )
-pw
 ```
 
-<br>
-
-```{r pairwise-interp, results='asis'}
+```{r pairwise-table}
 pw_mat <- pw$p.value
 pairs <- which(!is.na(pw_mat), arr.ind = TRUE)
 
-cat("Pairwise PERMANOVA results (Holm-adjusted):\n\n")
-for (i in seq_len(nrow(pairs))) {
+pw_df <- do.call(rbind, lapply(seq_len(nrow(pairs)), function(i) {
   r <- pairs[i, "row"]
   c_idx <- pairs[i, "col"]
   p <- pw_mat[r, c_idx]
-  p_str <- if (p < 0.001) "p < 0.001" else paste0("p = ", round(p, 3))
-  sig <- if (p < 0.05) " *" else ""
-  cat(paste0("- ", rownames(pw_mat)[r], " vs. ", colnames(pw_mat)[c_idx],
-             ": ", p_str, sig, "\n"))
-}
+  data.frame(
+    Comparison = paste0(rownames(pw_mat)[r], " vs. ", colnames(pw_mat)[c_idx]),
+    `p-value (Holm)` = if (p < 0.001) "< 0.001" else as.character(round(p, 3)),
+    Significant = if (p < 0.05) "Yes" else "No",
+    check.names = FALSE
+  )
+}))
+
+knitr::kable(pw_df, align = "lrl",
+             caption = "Pairwise PERMANOVA comparisons among sites with Holm-corrected p-values (9999 permutations, Bray-Curtis dissimilarity).")
 ```
 
 <br>
 
-Together, the multivariate analyses confirm that the three Neexdzii Kwa mainstem sites support statistically distinct benthic communities. The tight clustering of replicates within sites demonstrates that the observed differences are not an artefact of sampling variability — each site consistently produces a characteristic assemblage. The high proportion of variance explained by site identity, combined with homogeneous dispersion, provides strong evidence that the spatial gradient in community composition described in the preceding sections reflects genuine ecological differences among reaches.
+Together, the multivariate analyses confirm that the three Neexdzii Kwa mainstem sites support statistically distinct benthic communities (Figure \@ref(fig:nmds-plot); Tables \@ref(tab:permanova-table)–\@ref(tab:pairwise-table)). The tight clustering of replicates within sites demonstrates that the observed differences are not an artefact of sampling variability — each site consistently produces a characteristic assemblage. The high proportion of variance explained by site identity, combined with homogeneous dispersion, provides strong evidence that the spatial gradient in community composition described in the preceding sections reflects genuine ecological differences among reaches.
 
 <!-- ## Indicator Species Analysis
 
