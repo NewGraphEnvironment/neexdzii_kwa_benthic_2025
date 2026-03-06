@@ -10,7 +10,7 @@ knitr::opts_chunk$set(fig.path = "fig/0300-methods/", dev = "png")
 
 ## Field Sampling
 
-Benthic invertebrate sampling was conducted following the Canadian Aquatic Biomonitoring Network (CABIN) wadeable streams protocol [@environmentcanada2012Canadianaquatic]. Samples were collected using the traveling kick-net method with a 400 μm mesh net. At each site, a 3-minute timed sample was collected by traversing a zigzag pattern in an upstream direction within the erosional zone (riffle, rapid, or fast-flowing run habitat).
+Benthic invertebrate sampling was conducted between September 28 and October 3, 2025 by Al Irvine, R.P.Bio. (New Graph Environment Ltd.) and Tieasha Pierre (Wet'suwet'en Treaty Society), following the Canadian Aquatic Biomonitoring Network (CABIN) wadeable streams protocol [@environmentcanada2012Canadianaquatic]. Samples were collected using the traveling kick-net method with a 400 μm mesh net. At each site, a 3-minute timed sample was collected by traversing a zigzag pattern in an upstream direction within the erosional zone (riffle, rapid, or fast-flowing run habitat).
 
 <br>
 

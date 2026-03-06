@@ -19,9 +19,11 @@ At the Knockholt Landfill, paired upstream/downstream sampling (2004–2006) sho
 
 <br>
 
-These results confirm that the Neexdzii Kwa is a phosphorus-enriched system where background TP concentrations routinely exceed the CCME eutrophication trigger. The Houston STP contributes additional phosphorus loading, but upstream concentrations are already elevated, underscoring the landscape-level nutrient sources identified by @remington_donas2000Nutrientsalgae. This nutrient context is relevant to interpreting benthic community composition, particularly the prevalence of nutrient-tolerant taxa.
+These results confirm that the Neexdzii Kwa is a phosphorus-enriched system where background TP concentrations routinely exceed the CCME eutrophication trigger. The Houston STP contributes additional phosphorus loading, but upstream concentrations are already elevated, underscoring the landscape-level nutrient sources identified by @remington_donas2000Nutrientsalgae — glacial-fluvial and glacial-lacustrine soils with naturally high soluble phosphorus, compounded by agricultural runoff, septic inputs, and livestock access. This nutrient context is relevant to interpreting benthic community composition, particularly the prevalence of nutrient-tolerant taxa.
 
 # Community Composition and Diversity
+
+The species that live on the streambed reflect the conditions they experience — different insects tolerate different levels of pollution, temperature, and habitat quality. By examining which taxa are present, how abundant they are, and how they feed, we can read the biological signal of stream health at each site. The following sections break this down by taxonomic composition, functional feeding groups, and tolerance-weighted indices, building a multi-metric picture of condition across the three Neexdzii Kwa mainstem sites.
 
 ```{r metrics-load}
 metrics <- readr::read_csv("data/processed/metrics_long.csv", show_col_types = FALSE)

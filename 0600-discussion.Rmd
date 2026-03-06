@@ -6,6 +6,8 @@
 knitr::opts_chunk$set(fig.path = "fig/0600-discussion/", dev = "png")
 ```
 
+The results presented above paint a consistent picture: ecological condition on the Neexdzii Kwa mainstem improves from downstream to upstream, with a clear biological signal of mild nutrient enrichment near Houston that fades with distance upstream. Below, we interpret these patterns in the context of the watershed's land use and water quality history, compare with previous monitoring, and outline recommendations for ongoing stewardship.
+
 ## Site Gradient and Nutrient Enrichment
 
 The three Neexdzii Kwa mainstem sites exhibited a consistent downstream-to-upstream gradient in benthic community condition. Multiple independent lines of evidence — taxonomic composition, functional feeding group structure, tolerance-weighted biotic indices, and multivariate ordination — converged on the same pattern: BUL-01 showed biological signatures of mild organic enrichment, BUL-04 was intermediate with high variability, and BUL-05 supported a community characteristic of excellent water quality.

@@ -23,32 +23,23 @@
 - Add mines — note they are not on the mainstem
 - **Action:** Search restoration_wedzin_kwa_2024 repo for "Richfield", "staging", "legacy"
 
-### 1c. Field sampling attribution
-- `0300-methods.Rmd` — beginning of Field Sampling section
-- Add: sampling conducted by Al Irvine, R.P.Bio. (New Graph Environment Ltd.) and Tieasha Pierre (Wet'suwet'en Treaty Society)
-- Add sampling dates (need to confirm — October 2025, specific dates from field data)
+### 1c. Field sampling attribution — DONE
+- Added Al Irvine RPBio + Tieasha Pierre, dates Sep 28 – Oct 3, 2025
 
-### 1d. Water quality section — restate Remington & Donas sources
-- `0400-results.Rmd` line ~22: "landscape-level nutrient sources identified by Remington and Donas (2000)"
-- Briefly restate: glacial-fluvial/glacial-lacustrine soils with high soluble phosphorus, agriculture, septic, livestock
+### 1d. Water quality — restate Remington & Donas sources — DONE
+- Added: glacial-fluvial/lacustrine soils, agriculture, septic, livestock
 
-### 1e. Community Composition intro
-- `0400-results.Rmd` line ~24 (before "## Taxonomic Richness")
-- Add high-level plain language summary: why we assess community composition, what it tells us, tight refs to subsections coming
+### 1e. Community Composition intro — DONE
+- Added plain language paragraph: what bugs tell us about stream health
 
-### 1f. Temporal comparison — explain phenology timing
-- `0450-results-temporal.Rmd` line ~10
-- "may influence community composition due to differences in life-cycle phenology" — explain HOW
-- Later in season = larger, better-formed insects, more mature communities, easier to ID to species, community structure more stable and representative
-- Dependent on climatic factors (water temp, degree-days) but generally true
+### 1f. Temporal comparison — explain phenology — DONE
+- Explained: later season = larger larvae, more mature communities, easier ID, more representative
 
-### 1g. Ordination chapter intro
-- `0500-results-ordination.Rmd` — before ## NMDS Ordination
-- Consider adding brief plain-language intro: why multivariate analysis, what it shows that univariate metrics can't
-- User says "ok to leave if you think its well captured" — evaluate after other edits
+### 1g. Ordination chapter intro — DONE
+- Added: why multivariate analysis matters, what it shows that single metrics can't
 
-### 1h. Discussion intro sentences
-- `0600-discussion.Rmd` — add introductory paragraph before ## Site Gradient
+### 1h. Discussion intro — DONE
+- Added framing paragraph before ## Site Gradient
 
 ---
 
@@ -98,5 +89,5 @@
 | McQuarrie Creek hydrometric station | ECCC, fwapg | pending |
 | Bulkley River flow at Houston (08EE003) | ECCC | have station ID |
 | McQuarrie watershed area vs Bulkley | FWA/fwapg | pending |
-| Sampling dates (Oct 2025) | field data / session_info.csv | pending |
+| Sampling dates (Oct 2025) | benthic_counts_tidy.csv | **done** — Sep 28, Oct 2–3 |
 | Maxxam Creek — correct spelling | restoration_wedzin_kwa_2024 | pending |

@@ -7,6 +7,7 @@
 knitr::opts_chunk$set(fig.path = "fig/0500-results-ordination/", dev = "png")
 ```
 
+The preceding sections examined individual metrics — richness, EPT proportions, feeding groups, biotic index scores — one at a time. Multivariate analysis takes a different approach: it considers the entire species list simultaneously, asking whether the overall community at one site is more similar to or different from the community at another. This is important because no single metric captures the full picture — two sites can have similar EPT percentages but very different species compositions. The analyses below test whether the site differences we've seen in individual metrics hold up when we look at the communities as a whole.
 
 ```{r ordination-data}
 # Load species matrix
