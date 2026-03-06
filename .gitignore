@@ -13,6 +13,6 @@ renv/
 
 docs/
 libs/
-data/spatial/
+
 data/processed/ems_raw.csv
 data/raw/cabin_*_mda08.csv
