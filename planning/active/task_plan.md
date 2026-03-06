@@ -68,9 +68,9 @@
 
 ## Phase 3: Issues to create
 
-- [ ] Habitat data integration — how envfit/indicspecies interleaves with current report structure
-- [ ] CABIN RCA assessment — conditional on ECCC contact response
-- [ ] Richfield Creek / expanded monitoring network — future sampling design
+- [x] Habitat data integration — #7
+- [x] CABIN RCA assessment — #8
+- [ ] Richfield Creek / expanded monitoring network — future sampling design (deferred)
 
 ---
 
