@@ -6,9 +6,234 @@
 knitr::opts_chunk$set(fig.path = "fig/0500-results-ordination/", dev = "png")
 ```
 
-<!-- NMDS ordination with stress assessment.
-     envfit: environmental variables correlated with community structure.
-     Indicator species analysis (indicspecies::multipatt).
-     PERMANOVA for among-site differences.
-     Betadisper for multivariate dispersion. -->
+
+```{r ordination-data}
+# Load species matrix
+sp_mat_raw <- readr::read_csv("data/processed/benthic_species_matrix.csv",
+                               show_col_types = FALSE)
+
+# Parse site and replicate from sample_id
+sp_meta <- sp_mat_raw |>
+  dplyr::mutate(
+    site = stringr::str_extract(sample_id, "^BUL-\\d+"),
+    replicate = stringr::str_extract(sample_id, "[A-C]$")
+  )
+
+# Community matrix (samples x species, no metadata cols)
+sp_mat <- sp_mat_raw |>
+  tibble::column_to_rownames("sample_id") |>
+  as.matrix()
+
+# Site grouping factor
+site_groups <- sp_meta$site
+```
+
+## NMDS Ordination
+
+Non-metric multidimensional scaling (NMDS) was used to visualize community similarity among the nine benthic samples (three sites, three replicates each). Ordination was performed on Bray-Curtis dissimilarities of the species abundance matrix using the `vegan` package [@oksanen_etal2024veganCommunity], with two dimensions (k = 2).
+
+<br>
+
+```{r nmds-run}
+set.seed(42)
+nmds <- vegan::metaMDS(sp_mat, k = 2, distance = "bray", trymax = 999,
+                       autotransform = TRUE, trace = 0)
+
+cat("NMDS stress:", round(nmds$stress, 4), "\n")
+cat("Converged:", nmds$converged, "\n")
+```
+
+<br>
+
+```{r nmds-stress-note, results='asis'}
+stress_val <- round(nmds$stress, 3)
+stress_interp <- dplyr::case_when(
+  stress_val < 0.05 ~ "excellent representation",
+  stress_val < 0.10 ~ "good representation",
+  stress_val < 0.20 ~ "adequate representation",
+  TRUE ~ "poor representation; interpret with caution"
+)
+cat(paste0(
+  "The two-dimensional NMDS solution achieved a stress value of ",
+  stress_val, " (", stress_interp,
+  "; @clarke_warwick2001Changemarine). "
+))
+```
+
+Stress measures how well the two-dimensional plot preserves the original dissimilarities among samples — a value below 0.10 means the distances between points on the plot closely reflect the actual differences in community composition. Put simply, samples that appear close together on the ordination really do share similar species, and samples that appear far apart really are compositionally distinct.
+
+<br>
+
+```{r nmds-plot, fig.cap='Two-dimensional NMDS ordination of benthic invertebrate communities across nine samples (three sites, three replicates). Points are coloured by site with spider lines connecting replicates to group centroids and standard deviation ellipses. Closer points indicate more similar community composition.', fig.width=8, fig.height=6}
+site_factor <- factor(sp_meta$site, levels = c("BUL-01", "BUL-04", "BUL-05"))
+site_colours <- c("BUL-01" = "#1f78b4", "BUL-04" = "#33a02c", "BUL-05" = "#e31a1c")
+
+# Extract scores
+scores_sites <- as.data.frame(vegan::scores(nmds, display = "sites"))
+scores_sites$site <- sp_meta$site
+scores_sites$sample_id <- sp_mat_raw$sample_id
+
+# Compute centroids
+centroids <- scores_sites |>
+  dplyr::group_by(site) |>
+  dplyr::summarise(NMDS1 = mean(NMDS1), NMDS2 = mean(NMDS2), .groups = "drop")
+
+# Spider segments (replicate to centroid)
+spider_segs <- scores_sites |>
+  dplyr::left_join(centroids, by = "site", suffix = c("", "_c"))
+
+# Plot
+p <- ggplot2::ggplot() +
+  # Spider lines
+  ggplot2::geom_segment(
+    data = spider_segs,
+    ggplot2::aes(x = NMDS1, y = NMDS2, xend = NMDS1_c, yend = NMDS2_c, colour = site),
+    linewidth = 0.4, alpha = 0.5
+  ) +
+  # SD ellipses
+  ggplot2::stat_ellipse(
+    data = scores_sites,
+    ggplot2::aes(x = NMDS1, y = NMDS2, colour = site),
+    type = "norm", level = 0.68, linewidth = 0.8, linetype = "dashed"
+  ) +
+  # Points
+  ggplot2::geom_point(
+    data = scores_sites,
+    ggplot2::aes(x = NMDS1, y = NMDS2, colour = site, shape = site),
+    size = 3.5
+  ) +
+  # Centroid markers
+  ggplot2::geom_point(
+    data = centroids,
+    ggplot2::aes(x = NMDS1, y = NMDS2, fill = site),
+    shape = 23, size = 4, colour = "black", stroke = 0.8
+  ) +
+  # Sample labels
+  ggplot2::geom_text(
+    data = scores_sites,
+    ggplot2::aes(x = NMDS1, y = NMDS2, label = sample_id),
+    size = 2.2, nudge_y = 0.03, alpha = 0.7
+  ) +
+  ggplot2::scale_colour_manual(values = site_colours) +
+  ggplot2::scale_fill_manual(values = site_colours) +
+  ggplot2::coord_equal() +
+  ggplot2::theme_bw(base_size = 11) +
+  ggplot2::labs(
+    x = "NMDS1", y = "NMDS2",
+    caption = paste0("Stress = ", round(nmds$stress, 3))
+  ) +
+  ggplot2::theme(
+    legend.title = ggplot2::element_blank(),
+    legend.position = "right"
+  )
+p
+```
+
+## PERMANOVA
+
+Permutational multivariate analysis of variance [PERMANOVA; @anderson2001newmethod] was used to test whether benthic community composition differed significantly among the three sites, using the `adonis2` function in `vegan` with 9999 permutations of Bray-Curtis dissimilarities.
+
+<br>
+
+```{r permanova}
+set.seed(42)
+perm <- vegan::adonis2(sp_mat ~ site_groups, method = "bray", permutations = 9999)
+perm
+```
+
+<br>
+
+```{r permanova-interp, results='asis'}
+f_val  <- round(perm$F[1], 2)
+r2_val <- round(perm$R2[1], 3)
+p_val  <- perm$`Pr(>F)`[1]
+
+p_text <- if (p_val < 0.001) "p < 0.001" else paste0("p = ", round(p_val, 3))
+
+cat(paste0(
+  "Site explained ", round(r2_val * 100, 1), "% of the total variation in community composition ",
+  "(F = ", f_val, ", ", p_text, ", 9999 permutations). "
+))
+
+if (p_val < 0.05) {
+  cat("Community composition differed significantly among sites.")
+} else {
+  cat("Differences among sites were not statistically significant at the 0.05 level.")
+}
+```
+
+## Multivariate Dispersion
+
+The PERMANOVA assumption of homogeneous multivariate dispersion was assessed using `betadisper`, which tests whether group centroids differ in their distance to group members (i.e., whether within-site variability is similar across sites).
+
+<br>
+
+```{r betadisper}
+bray_dist <- vegan::vegdist(sp_mat, method = "bray")
+bd <- vegan::betadisper(bray_dist, site_groups)
+set.seed(42)
+bd_perm <- permutest(bd, permutations = 9999)
+bd_perm
+```
+
+<br>
+
+```{r betadisper-interp, results='asis'}
+bd_p <- bd_perm$tab$`Pr(>F)`[1]
+bd_text <- if (bd_p < 0.001) "p < 0.001" else paste0("p = ", round(bd_p, 3))
+
+if (bd_p >= 0.05) {
+  cat(paste0(
+    "Multivariate dispersion did not differ significantly among sites (",
+    bd_text,
+    "), supporting the validity of the PERMANOVA result."
+  ))
+} else {
+  cat(paste0(
+    "Multivariate dispersion differed significantly among sites (",
+    bd_text,
+    "), suggesting that the PERMANOVA result may be partially driven by differences ",
+    "in within-site variability rather than shifts in community composition alone."
+  ))
+}
+```
+
+## Pairwise Comparisons
+
+```{r pairwise-permanova}
+set.seed(42)
+pw <- RVAideMemoire::pairwise.perm.manova(
+  bray_dist,
+  site_groups,
+  nperm = 9999,
+  p.method = "holm"
+)
+pw
+```
+
+<br>
+
+```{r pairwise-interp, results='asis'}
+pw_mat <- pw$p.value
+pairs <- which(!is.na(pw_mat), arr.ind = TRUE)
+
+cat("Pairwise PERMANOVA results (Holm-adjusted):\n\n")
+for (i in seq_len(nrow(pairs))) {
+  r <- pairs[i, "row"]
+  c_idx <- pairs[i, "col"]
+  p <- pw_mat[r, c_idx]
+  p_str <- if (p < 0.001) "p < 0.001" else paste0("p = ", round(p, 3))
+  sig <- if (p < 0.05) " *" else ""
+  cat(paste0("- ", rownames(pw_mat)[r], " vs. ", colnames(pw_mat)[c_idx],
+             ": ", p_str, sig, "\n"))
+}
+```
+
+<!-- ## Indicator Species Analysis
+
+Indicator species analysis will be added when environmental/habitat data from field forms is available, enabling `indicspecies::multipatt()` with site groupings informed by environmental gradients. -->
+
+<!-- ## Environmental Correlation (envfit)
+
+Environmental variable correlation with community structure via `envfit()` will be added when habitat data (substrate, embeddedness, water quality parameters) from field forms is incorporated. -->
 

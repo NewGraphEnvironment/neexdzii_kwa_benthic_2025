@@ -1,13 +1,70 @@
 
 
-# Discussion
+# Discussion and Recommendations
 
 ```{r setup-0600-discussion}
 knitr::opts_chunk$set(fig.path = "fig/0600-discussion/", dev = "png")
 ```
 
-<!-- Interpretation of community patterns in context of watershed condition.
-     Comparison to reference conditions and other Upper Bulkley studies.
-     Implications for restoration planning (link to restoration_wedzin_kwa_2024).
-     Recommendations for future monitoring. -->
+## Site Gradient and Nutrient Enrichment
+
+The three Neexdzii Kwa mainstem sites exhibited a consistent downstream-to-upstream gradient in benthic community condition. Multiple independent lines of evidence — taxonomic composition, functional feeding group structure, tolerance-weighted biotic indices, and multivariate ordination — converged on the same pattern: BUL-01 showed biological signatures of mild organic enrichment, BUL-04 was intermediate with high variability, and BUL-05 supported a community characteristic of excellent water quality.
+
+<br>
+
+At BUL-01, near the Houston wastewater treatment plant, the community was characterized by elevated Chironomidae (24%) and Oligochaeta (7%), high relative abundance of collector-filterers (31%, almost entirely Hydropsychidae), and an HBI of 4.14 indicating possible slight organic pollution. These patterns are consistent with increased nutrient loading and fine particulate organic matter availability — Hydropsychidae are net-spinning caddisflies that thrive in nutrient-enriched reaches where suspended food particles are abundant [@barbour_etal1999Rapidbioassessment]. Notably, *Hydropsyche* was the single most abundant taxon at BUL-01 (20% of total abundance), a pattern not observed at the other sites. The co-dominance of *Hydropsyche* with collector-gatherers (chironomids and ephemerellids) and the relatively low representation of sensitive specialists (shredders comprised only 2% of individuals) together suggest a community shifted toward nutrient-tolerant generalists.
+
+<br>
+
+This biological signal aligns with the historical water quality record. Total phosphorus at mainstem stations consistently exceeds the CCME eutrophication trigger, with elevated concentrations at the Houston STP reach. @remington_donas2000Nutrientsalgae documented periphyton biomass near Houston averaging 145 mg/m² chlorophyll-*a* with increasing filamentous green algae — exactly the conditions that would support the filter-feeding Hydropsychidae assemblage observed at BUL-01.
+
+<br>
+
+At BUL-05, the upstream site, the community was dominated by *Lepidostoma* (42% of abundance), a shredder-herbivore caddisfly associated with intact riparian function and allochthonous leaf litter inputs. EPT relative abundance (84%), taxonomic richness (45 taxa), and the HBI (2.58, "excellent") all indicate high ecological condition. The high proportion of specialized feeders (shredders 42%, scrapers 13%) at BUL-05 contrasts sharply with the generalist-dominated community at BUL-01 — specialized feeders are considered among the most sensitive indicators of stream health [@barbour_etal1999Rapidbioassessment].
+
+## Diversity and Dominance
+
+Shannon diversity was higher at BUL-01 (H' = 4.32, log~2~) than at BUL-05 (H' = 3.59), despite BUL-05 having greater taxonomic richness (45 vs 37 taxa). This apparent paradox reflects the strong numerical dominance of *Lepidostoma* at BUL-05, which depressed evenness. High diversity indices at moderately impaired sites are a well-recognized limitation of diversity metrics in bioassessment — a community with many tolerant taxa distributed evenly scores higher than a species-rich community dominated by one or two sensitive taxa [@rosenberg_resh1993Introductionfreshwater]. This underscores the importance of using composition-based metrics (% EPT, % Chironomidae) and tolerance-weighted indices (HBI) alongside diversity measures when assessing ecological condition.
+
+## Multivariate Community Separation
+
+PERMANOVA confirmed that community composition differed significantly among sites. Multivariate dispersion was homogeneous, supporting the validity of the PERMANOVA result as reflecting true compositional differences rather than differences in within-site variability. The NMDS ordination visually confirmed this separation, with replicate samples clustering tightly within sites and clear separation among site centroids in three-dimensional ordination space.
+
+<br>
+
+BUL-04 showed the highest within-site variability in both univariate metrics (Chironomidae 6–37%, Ephemeroptera 30–63%) and multivariate space. This may reflect fine-scale habitat heterogeneity at this mid-reach site — differences in local substrate, velocity, or organic matter availability among replicate sampling locations could produce the observed variation.
+
+## Comparison with Historical CABIN Data
+
+The CABIN open data archive contains benthic records from the MOR37 site (corresponding to BUL-01) spanning 2004–2024, providing temporal context for our 2025 results. Across historical sampling events, EPT relative abundance at MOR37 was consistently high (79–91% in most years), with communities dominated by *Baetis* (Ephemeroptera: Baetidae) and low Trichoptera representation (typically 2–10%). The 2025 BUL-01 community showed a notably different structure: lower EPT (63%), much higher Trichoptera (31%, dominated by Hydropsychidae), and elevated Chironomidae (24%).
+
+<br>
+
+These differences should be interpreted cautiously. The historical and 2025 sampling locations may not be identical — minor differences in reach selection within the same general area can capture different microhabitats. Seasonal timing also varied, with historical samples collected as early as Julian day 254 (September) and our 2025 samples collected in early October. Additionally, the CABIN data use different subsampling and taxonomic resolution protocols across years, and many historical records contain unresolved taxa ("NA" at genus level), complicating direct comparison.
+
+<br>
+
+Despite these caveats, the 2025 community composition at BUL-01 — with its high Hydropsychidae abundance and elevated Chironomidae — is consistent with a site experiencing mild nutrient enrichment, and may represent a shift from the *Baetis*-dominated, reference-quality communities documented historically. Whether this reflects a real temporal change in site condition, or simply differences in sampling location and methodology, can only be resolved through continued standardized monitoring at this location.
+
+## Implications for Restoration Planning
+
+These results provide the first spatially explicit benthic bioassessment of the Neexdzii Kwa mainstem and establish a baseline against which future changes can be measured. The clear site gradient — from mild enrichment at BUL-01 to excellent condition at BUL-05 — provides an empirical framework for prioritizing restoration and monitoring activities. Key implications include:
+
+<br>
+
+- **Point-source influence is detectable but not severe.** BUL-01 shows biological signatures of nutrient enrichment consistent with proximity to the Houston STP, but the community retains high EPT richness and the HBI indicates only "possible slight" organic pollution. This suggests the system is experiencing nutrient subsidy rather than severe impairment.
+- **Upstream reaches are in excellent condition.** BUL-05's community structure — high richness, EPT dominance, shredder prevalence, low HBI — represents a high-quality reference condition for the Neexdzii Kwa mainstem.
+- **Within-site variability at BUL-04 warrants investigation.** The high replicate variability may reflect genuine habitat heterogeneity or could indicate the site is in a transitional zone where small differences in microhabitat produce large differences in community composition.
+
+## Recommendations
+
+1. **Submit 2025 data to CABIN.** Uploading our results under either the "BC-Neexdzi Kwa" study or the existing Wet'suwet'en ESI study would contribute to the regional reference condition model and enable BEAST (BEnthic Assessment of SedimenT) assessments. Adding BUL-01 data to the MOR37 record extends the monitoring time series at that location.
+
+2. **Continue annual or biennial monitoring.** The three-site design established here captures the key nutrient gradient and can detect temporal changes in community condition with relatively modest sampling effort (nine kick-net samples per campaign).
+
+3. **Incorporate field habitat data.** Substrate composition, embeddedness, and canopy cover data collected concurrently with benthic samples have not yet been integrated into this analysis. Environmental correlation via `envfit` and indicator species analysis would strengthen the link between community patterns and physical habitat drivers.
+
+4. **Run CABIN RCA assessment.** Once data are uploaded, the revised Skeena RCA model [@bennett2011revisedpredictive] can be used to formally assess whether observed communities deviate from reference condition predictions based on landscape-level environmental variables, providing a standardized impairment evaluation comparable to other CABIN sites in the basin.
+
+5. **Coordinate with water quality monitoring.** Concurrent benthic and water quality sampling would enable direct correlation between nutrient concentrations and biological response, strengthening the evidence base for nutrient management in the watershed.
 
