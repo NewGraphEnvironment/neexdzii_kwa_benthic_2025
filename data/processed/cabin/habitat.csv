@@ -1,0 +1,147 @@
+Site Code,Site Visit Date,Sample Number,Habitat Type,Parameter,Unit,Value
+BUL-05,2025-09-28,1,Channel,Width-Bankfull,m,48.0
+BUL-05,2025-09-28,1,Channel,Width-Wetted,m,6.0
+BUL-05,2025-09-28,1,Channel,Depth-BankfullMinusWetted,cm,150
+BUL-05,2025-09-28,1,Channel,Slope,m/m,0.002
+BUL-05,2025-09-28,1,Channel,Velocity-Avg,m/s,0.54
+BUL-05,2025-09-28,1,Channel,Reach-%CanopyCoverage,Percentage,1-25
+BUL-05,2025-09-28,1,Channel,Macrophyte,Percentage,0
+BUL-05,2025-09-28,1,Channel,Reach-Riffles,Binary,Y
+BUL-05,2025-09-28,1,Channel,Reach-StraightRun,Binary,Y
+BUL-05,2025-09-28,1,Channel,Veg-Shrubs,Binary,Y
+BUL-05,2025-09-28,1,Channel,Veg-Deciduous,Binary,Y
+BUL-05,2025-09-28,1,Channel,Veg-Coniferous,Binary,Y
+BUL-05,2025-09-28,1,Channel,Reach-DomStreamsideVeg,Category,Deciduous Trees
+BUL-04,2025-10-02,1,Channel,Width-Bankfull,m,110
+BUL-04,2025-10-02,1,Channel,Width-Wetted,m,28
+BUL-04,2025-10-02,1,Channel,Slope,m/m,0.0034
+BUL-04,2025-10-02,1,Channel,Velocity-Avg,m/s,0.54
+BUL-04,2025-10-02,1,Channel,Reach-%CanopyCoverage,Percentage,26-50
+BUL-04,2025-10-02,1,Channel,Macrophyte,Percentage,76-100
+BUL-04,2025-10-02,1,Channel,Reach-Riffles,Binary,Y
+BUL-04,2025-10-02,1,Channel,Reach-Pools,Binary,Y
+BUL-04,2025-10-02,1,Channel,Veg-GrassesFerns,Binary,Y
+BUL-04,2025-10-02,1,Channel,Veg-Shrubs,Binary,Y
+BUL-04,2025-10-02,1,Channel,Veg-Coniferous,Binary,Y
+BUL-04,2025-10-02,1,Channel,Reach-DomStreamsideVeg,Category,Coniferous Trees
+BUL-01,2025-10-03,1,Channel,Width-Bankfull,m,46
+BUL-01,2025-10-03,1,Channel,Width-Wetted,m,14.4
+BUL-01,2025-10-03,1,Channel,Slope,m/m,0.00105
+BUL-01,2025-10-03,1,Channel,Velocity-Avg,m/s,0.32
+BUL-01,2025-10-03,1,Channel,Reach-%CanopyCoverage,Percentage,0
+BUL-01,2025-10-03,1,Channel,Macrophyte,Percentage,76-100
+BUL-01,2025-10-03,1,Channel,Reach-Riffles,Binary,Y
+BUL-01,2025-10-03,1,Channel,Reach-Pools,Binary,Y
+BUL-01,2025-10-03,1,Channel,Reach-StraightRun,Binary,Y
+BUL-01,2025-10-03,1,Channel,Veg-GrassesFerns,Binary,Y
+BUL-01,2025-10-03,1,Channel,Veg-Shrubs,Binary,Y
+BUL-01,2025-10-03,1,Channel,Veg-Coniferous,Binary,Y
+BUL-01,2025-10-03,1,Channel,Veg-Deciduous,Binary,Y
+BUL-01,2025-10-03,1,Channel,Reach-DomStreamsideVeg,Category,Forest
+BUL-05,2025-09-28,1,Channel,XSEC-DistanceFromShore,m,0.5
+BUL-05,2025-09-28,1,Channel,XSEC-DepthChannel,cm,1
+BUL-05,2025-09-28,1,Channel,XSEC-DepthFlowingWater,cm,19.5
+BUL-05,2025-09-28,1,Channel,XSEC-DepthStagnation,cm,17
+BUL-05,2025-09-28,2,Channel,XSEC-DistanceFromShore,m,1
+BUL-05,2025-09-28,2,Channel,XSEC-DepthChannel,cm,2
+BUL-05,2025-09-28,2,Channel,XSEC-DepthFlowingWater,cm,23
+BUL-05,2025-09-28,2,Channel,XSEC-DepthStagnation,cm,18
+BUL-05,2025-09-28,3,Channel,XSEC-DistanceFromShore,m,1.5
+BUL-05,2025-09-28,3,Channel,XSEC-DepthChannel,cm,2
+BUL-05,2025-09-28,3,Channel,XSEC-DepthFlowingWater,cm,21
+BUL-05,2025-09-28,3,Channel,XSEC-DepthStagnation,cm,19
+BUL-05,2025-09-28,4,Channel,XSEC-DistanceFromShore,m,2
+BUL-05,2025-09-28,4,Channel,XSEC-DepthChannel,cm,4
+BUL-05,2025-09-28,4,Channel,XSEC-DepthFlowingWater,cm,14
+BUL-05,2025-09-28,4,Channel,XSEC-DepthStagnation,cm,12
+BUL-05,2025-09-28,5,Channel,XSEC-DistanceFromShore,m,2.5
+BUL-05,2025-09-28,5,Channel,XSEC-DepthChannel,cm,5
+BUL-05,2025-09-28,5,Channel,XSEC-DepthFlowingWater,cm,10.5
+BUL-05,2025-09-28,5,Channel,XSEC-DepthStagnation,cm,10
+BUL-04,2025-10-02,1,Channel,XSEC-DistanceFromShore,m,1.2
+BUL-04,2025-10-02,1,Channel,XSEC-DepthChannel,cm,15.5
+BUL-04,2025-10-02,1,Channel,XSEC-DepthFlowingWater,cm,9.5
+BUL-04,2025-10-02,1,Channel,XSEC-DepthStagnation,cm,13.5
+BUL-04,2025-10-02,1,Channel,XSEC-Velocity,m/s,0.31
+BUL-04,2025-10-02,2,Channel,XSEC-DistanceFromShore,m,2.4
+BUL-04,2025-10-02,2,Channel,XSEC-DepthChannel,cm,11
+BUL-04,2025-10-02,2,Channel,XSEC-DepthFlowingWater,cm,9.5
+BUL-04,2025-10-02,2,Channel,XSEC-DepthStagnation,cm,13.5
+BUL-04,2025-10-02,2,Channel,XSEC-Velocity,m/s,0.31
+BUL-04,2025-10-02,3,Channel,XSEC-DistanceFromShore,m,3.6
+BUL-04,2025-10-02,3,Channel,XSEC-DepthChannel,cm,4.8
+BUL-04,2025-10-02,3,Channel,XSEC-DepthFlowingWater,cm,3.5
+BUL-04,2025-10-02,3,Channel,XSEC-DepthStagnation,cm,4.8
+BUL-04,2025-10-02,3,Channel,XSEC-Velocity,m/s,0.17
+BUL-04,2025-10-02,4,Channel,XSEC-DistanceFromShore,m,4.8
+BUL-04,2025-10-02,4,Channel,XSEC-DepthChannel,cm,13.5
+BUL-04,2025-10-02,4,Channel,XSEC-DepthFlowingWater,cm,13.5
+BUL-04,2025-10-02,4,Channel,XSEC-DepthStagnation,cm,13.5
+BUL-04,2025-10-02,5,Channel,XSEC-DistanceFromShore,m,6.6
+BUL-04,2025-10-02,5,Channel,XSEC-DepthChannel,cm,22
+BUL-04,2025-10-02,5,Channel,XSEC-DepthFlowingWater,cm,15
+BUL-04,2025-10-02,5,Channel,XSEC-DepthStagnation,cm,15
+BUL-04,2025-10-02,6,Channel,XSEC-DepthFlowingWater,cm,25
+BUL-04,2025-10-02,6,Channel,XSEC-DepthStagnation,cm,15
+BUL-01,2025-10-03,1,Channel,XSEC-DistanceFromShore,m,2.4
+BUL-01,2025-10-03,1,Channel,XSEC-DepthChannel,cm,6.5
+BUL-01,2025-10-03,1,Channel,XSEC-DepthFlowingWater,cm,2.1
+BUL-01,2025-10-03,1,Channel,XSEC-DepthStagnation,cm,2.35
+BUL-01,2025-10-03,2,Channel,XSEC-DistanceFromShore,m,4.8
+BUL-01,2025-10-03,2,Channel,XSEC-DepthChannel,cm,14.5
+BUL-01,2025-10-03,2,Channel,XSEC-DepthFlowingWater,cm,16.5
+BUL-01,2025-10-03,2,Channel,XSEC-DepthStagnation,cm,14.5
+BUL-01,2025-10-03,2,Channel,XSEC-Velocity,m/s,0.7
+BUL-01,2025-10-03,3,Channel,XSEC-DistanceFromShore,m,7.2
+BUL-01,2025-10-03,3,Channel,XSEC-DepthChannel,cm,14.5
+BUL-01,2025-10-03,3,Channel,XSEC-DepthFlowingWater,cm,10.5
+BUL-01,2025-10-03,3,Channel,XSEC-DepthStagnation,cm,12.5
+BUL-01,2025-10-03,4,Channel,XSEC-DistanceFromShore,m,9.6
+BUL-01,2025-10-03,4,Channel,XSEC-DepthChannel,cm,10.5
+BUL-01,2025-10-03,4,Channel,XSEC-DepthFlowingWater,cm,18.5
+BUL-01,2025-10-03,4,Channel,XSEC-DepthStagnation,cm,21
+BUL-01,2025-10-03,5,Channel,XSEC-DistanceFromShore,m,12
+BUL-01,2025-10-03,5,Channel,XSEC-DepthChannel,cm,22
+BUL-01,2025-10-03,5,Channel,XSEC-DepthFlowingWater,cm,22
+BUL-01,2025-10-03,5,Channel,XSEC-DepthStagnation,cm,13.5
+BUL-01,2025-10-03,6,Channel,XSEC-DepthChannel,cm,16.5
+BUL-01,2025-10-03,6,Channel,XSEC-Velocity,m/s,0.63
+BUL-05,2025-09-28,1,Substrate Data,D50,cm,7.5
+BUL-05,2025-09-28,1,Substrate Data,Dg,cm,7.84
+BUL-05,2025-09-28,1,Substrate Data,Diameter-Mean,cm,9.53
+BUL-05,2025-09-28,1,Substrate Data,%Silt+Clay,%,0
+BUL-05,2025-09-28,1,Substrate Data,%Sand,%,0
+BUL-05,2025-09-28,1,Substrate Data,%Gravel,%,7
+BUL-05,2025-09-28,1,Substrate Data,%Pebble,%,21
+BUL-05,2025-09-28,1,Substrate Data,%Cobble,%,70
+BUL-05,2025-09-28,1,Substrate Data,%Boulder,%,2
+BUL-05,2025-09-28,1,Substrate Data,Dominant-1st,Category(0-9),6
+BUL-05,2025-09-28,1,Substrate Data,Dominant-2nd,Category(0-9),5
+BUL-05,2025-09-28,1,Substrate Data,Embeddedness,Category(0-4),1
+BUL-05,2025-09-28,1,Substrate Data,PebbleCount,cm,"10,9,6.5,10,3.5,7,4.5,8,5.5,5,17,6,2.5,10,3,14,9.5,4,18,9,13,10,7.5,7,10,7.5,13.5,5,7.5,7.5,12,9,6,7,11.5,3,14.5,3,9,1,7.5,11,13.5,5,7,7.5,10,7,10,67,10,6.5,6.5,4,7,5.5,10.5,6.5,7.5,10,20,4,5,15,10,12,17,10,9,60,2,12,3,4,6.5,10,6,6,5,9,11,13,9,7,7.5,20,4,5,10,12,17,10,9,7,7,6,5,7,7,7.5"
+BUL-04,2025-10-02,1,Substrate Data,D50,cm,3.5
+BUL-04,2025-10-02,1,Substrate Data,Dg,cm,2.91
+BUL-04,2025-10-02,1,Substrate Data,Diameter-Mean,cm,3.28
+BUL-04,2025-10-02,1,Substrate Data,%Silt+Clay,%,5
+BUL-04,2025-10-02,1,Substrate Data,%Sand,%,0
+BUL-04,2025-10-02,1,Substrate Data,%Gravel,%,39
+BUL-04,2025-10-02,1,Substrate Data,%Pebble,%,52
+BUL-04,2025-10-02,1,Substrate Data,%Cobble,%,4
+BUL-04,2025-10-02,1,Substrate Data,%Boulder,%,0
+BUL-04,2025-10-02,1,Substrate Data,Dominant-1st,Category(0-9),5
+BUL-04,2025-10-02,1,Substrate Data,Dominant-2nd,Category(0-9),3
+BUL-04,2025-10-02,1,Substrate Data,Embeddedness,Category(0-4),0
+BUL-04,2025-10-02,1,Substrate Data,PebbleCount,cm,"1.5,1.5,2.5,2.5,2.5,2.5,5.5,5.5,1.5,2.5,2.5,2.5,2.5,0.25,0.5,2.5,20,3.5,3.5,3.5,1.5,1.5,1.5,1.5,1.5,3,1,1.5,5.5,0.5,5,3.5,6,7.5,6,3.5,3,1.5,0,0,3.5,3.5,3.5,1.5,1.5,1.5,1.5,5,6,5,3.5,3.5,5,5.5,5.5,5,5,3.5,3.5,0,3.5,6.5,3.5,2.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,3.5,2.5,0,0,0.5,3.5,5,5,5,3.5,2.5,3.5,6.5,1.5,2.5,2.5,2.5,3.5,3.5,3.5,3.5,3.5,3.5,3,3.5,3.5,2.5"
+BUL-01,2025-10-03,1,Substrate Data,D50,cm,5.5
+BUL-01,2025-10-03,1,Substrate Data,Dg,cm,4.89
+BUL-01,2025-10-03,1,Substrate Data,Diameter-Mean,cm,5.54
+BUL-01,2025-10-03,1,Substrate Data,%Silt+Clay,%,5
+BUL-01,2025-10-03,1,Substrate Data,%Sand,%,0
+BUL-01,2025-10-03,1,Substrate Data,%Gravel,%,15
+BUL-01,2025-10-03,1,Substrate Data,%Pebble,%,46
+BUL-01,2025-10-03,1,Substrate Data,%Cobble,%,34
+BUL-01,2025-10-03,1,Substrate Data,%Boulder,%,0
+BUL-01,2025-10-03,1,Substrate Data,Dominant-1st,Category(0-9),5
+BUL-01,2025-10-03,1,Substrate Data,Dominant-2nd,Category(0-9),6
+BUL-01,2025-10-03,1,Substrate Data,Embeddedness,Category(0-4),0
+BUL-01,2025-10-03,1,Substrate Data,PebbleCount,cm,"6,8,5,5,1.5,5.5,5.5,5.5,6.5,4.5,10,6.5,10,5,15,5.5,5.5,5,12,1,2,8,12,2,8,3.5,6.5,7,1.5,8.5,0.5,5.5,3.5,6,7.5,4,5.5,7,11,6,1.5,3.5,4,4,7.5,6,6,11,12,3,5,4.5,9.5,5,5,5,5.5,2.5,3.5,5.5,5.5,7.5,6,5,7,4.5,3,3.5,10.5,7,0.5,5,5.5,11,7,4.5,7,8.5,5.5,5,5.5,2.5,3.5,5.5,5,10,0,0,4.5,9,0.5,0.5,9.5,0,1.5,10,7,7,0,0"
