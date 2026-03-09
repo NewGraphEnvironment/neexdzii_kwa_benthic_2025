@@ -7,7 +7,7 @@ This report assesses the health of the Neexdzii Kwa (Upper Bulkley River) mainst
 
 <br>
 
-We collected samples at three sites along the mainstem, moving upstream from Houston: BUL-01 just below town near the wastewater treatment plant, BUL-04 approximately 11 km upstream near Knockholt Bridge, and BUL-05 a further 10 km upstream below the McQuarrie Creek confluence. At each site, three replicate kick-net samples were collected following the CABIN wadeable streams protocol. Key findings:
+We collected samples at three sites along the mainstem, moving upstream from Houston: BUL-01 just below town near the wastewater treatment plant, BUL-04 approximately 11 km upstream near Knockholt Bridge on McKilligan Road leading to the Knockholt Landfill, and BUL-05 a further 10 km upstream below the McQuarrie Creek confluence. At each site, three replicate kick-net samples were collected following the CABIN wadeable streams protocol. Key findings:
 
 <br>
 
@@ -15,7 +15,7 @@ We collected samples at three sites along the mainstem, moving upstream from Hou
 
 - **BUL-01 (near Houston) shows signs of mild nutrient enrichment.** Midges made up 24% of the community and net-spinning caddisflies another 20%. The Hilsenhoff Biotic Index (HBI) — a score that weights each species by its pollution tolerance — was 4.14, indicating "possible slight organic pollution." These patterns are consistent with the elevated phosphorus documented in the historical water quality record for this reach.
 
-- **BUL-04 (mid-reach, near Knockholt Bridge) is a transitional zone.** Individual samples at this site ranged from near-reference condition to moderately impaired, suggesting it sits at the boundary where Houston's influence fades and upstream conditions begin.
+- **BUL-04 (mid-reach, Knockholt Bridge on McKilligan Road) is a transitional zone.** Individual samples at this site ranged from near-reference condition to moderately impaired, suggesting it sits at the boundary where Houston's influence fades and upstream conditions begin.
 
 - **BUL-05 (upstream, below McQuarrie Creek confluence) supports reference-quality conditions** — meaning the community looks like what we would expect in a healthy, minimally disturbed stream. This site had the most species (45 taxa), with 84% of individuals belonging to sensitive EPT groups. The community was dominated by *Lepidostoma* (42%), a shredder caddisfly that feeds on leaf litter and is associated with intact riparian habitat. The HBI score of 2.58 indicates excellent water quality with no apparent organic pollution. These conditions make BUL-05 a potential reference site — the benchmark against which impacted sites can be compared.
 

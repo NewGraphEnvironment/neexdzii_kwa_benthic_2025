@@ -76,20 +76,18 @@ my_tab_caption(tip_flag = FALSE)
 ```{r tab-proposed-sites}
 tibble::tribble(
   ~Stream, ~Reach, ~Rationale,
-  "Neexdzii Kwa mainstem", "Above McQuarrie confluence", "Test whether reference-quality conditions persist beyond cold-water tributary influence",
   "Buck Creek", "Below Bessemer confluence", "Mine drainage — south side of Equity Silver divide; chinook-bearing reach",
   "Buck Creek", "Lower reach near Bulkley confluence", "Chinook spawning and rearing habitat; integrates upstream influences",
   "Foxy Creek", "Upper reach near mine", "Mine drainage — north side of Equity Silver divide",
   "Maxan Creek", "Near Bulkley Lake", "Forestry and agricultural land use influences",
-  "Richfield Creek", "Near Highway 16", "Legacy concentrate shed site; documented chinook use; fish passage concerns",
-  "Byman Creek", "Lower reach", "Documented degradation from agriculture and transportation"
+  "Neexdzii Kwa mainstem", "Below Richfield Creek confluence", "Legacy concentrate shed site; documented chinook use; fish passage concerns"
 ) |>
   my_dt_table(cols_freeze_left = 0, page_length = 10)
 ```
 
 <br>
 
-```{r map-proposed-sites, fig.cap='Proposed monitoring sites for expanded benthic assessment of the Neexdzii Kwa watershed. Blue triangles indicate existing 2025 sampling sites; orange stars show proposed expansion sites. Site rationale is summarized in Table \\\\@ref(tab:tab-proposed-sites-cap).', out.width="100%", eval=FALSE}
+```{r map-proposed-sites, fig.cap='Proposed monitoring sites for expanded benthic assessment of the Neexdzii Kwa watershed. Blue triangles indicate existing 2025 sampling sites; red circles show proposed expansion sites. Site rationale is summarized in Table \\\\@ref(tab:tab-proposed-sites-cap).', out.width="100%", eval=FALSE}
 knitr::include_graphics("fig/map_proposed-sites.png")
 ```
 
