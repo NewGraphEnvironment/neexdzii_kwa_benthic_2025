@@ -31,48 +31,27 @@ railway    <- readRDS(file.path(cache, "railway.rds"))
 
 neexdzii <- watersheds |> filter(watershed == "Neexdzii Kwa")
 
-# --- Subbasins -------------------------------------------------------------
+# --- Subbasins + site color xref -------------------------------------------
 
-subbasins_src  <- "/Users/airvine/Projects/repo/restoration_wedzin_kwa_2024/data/lulc/subbasins.gpkg"
-subbasins_local <- file.path(cache, "subbasins.gpkg")
-file.copy(subbasins_src, subbasins_local, overwrite = TRUE)
+xref <- read_csv("data/raw/subbasins_xref.csv", show_col_types = FALSE)
 
-subbasins <- st_read(subbasins_local, quiet = TRUE) |>
+subbasins <- st_read("data/spatial/subbasins.gpkg", quiet = TRUE) |>
   st_transform(4326) |>
-  mutate(label = paste0(str_extract(gnis_name, "^\\w+"), " ", break_id))
+  left_join(xref |> select(break_id, label, color), by = "break_id")
 
-# --- Existing 2025 sites -------------------------------------------------
+# Named color vector for subbasin fills (keyed by label)
+sub_colors <- setNames(xref$color, xref$label)
 
-sites_csv <- read_csv("data/raw/sites_benthic.csv", show_col_types = FALSE)
-sites <- st_as_sf(sites_csv, coords = c("lon", "lat"), crs = 4326)
+# --- Monitoring sites (existing + proposed) --------------------------------
+# Single source of truth: data/raw/sites_monitoring.csv
 
-# --- Proposed expansion sites ---------------------------------------------
-# Coordinates derived from BC Freshwater Atlas (fwapg) stream network
+sites_all <- read_csv("data/raw/sites_monitoring.csv", show_col_types = FALSE) |>
+  filter(!is.na(site_id)) |>
+  st_as_sf(coords = c("lon", "lat"), crs = 4326) |>
+  left_join(xref |> select(site_id, site_color), by = "site_id")
 
-proposed <- st_sf(
-  site = c(
-    "Buck Cr below\nBessemer",
-    "Lower Buck Cr",
-    "Upper Foxy Cr\n(mine side)",
-    "Maxan Cr near\nBulkley Lake",
-    "Mainstem below\nRichfield confluence"
-  ),
-  rationale = c(
-    "Mine drainage — south side of divide",
-    "Chinook spawning/rearing; integrates upstream",
-    "Mine drainage — north side of divide",
-    "Forestry and agricultural influences",
-    "Legacy concentrate shed; chinook; fish passage"
-  ),
-  geometry = st_sfc(
-    st_point(c(-126.3164, 54.1607)),  # Buck Cr at Bessemer mouth (FWA BLK 360844271)
-    st_point(c(-126.6540, 54.4019)),  # Buck Cr ~500m above Bulkley mouth (FWA BLK 360886221)
-    st_point(c(-126.3262, 54.2214)),  # Foxy Cr upper reach near mine (FWA BLK 360877225)
-    st_point(c(-126.1233, 54.3830)),  # Maxan Cr mouth (FWA BLK 360881038)
-    st_point(c(-126.3441, 54.5076)),  # Bulkley mainstem below Richfield (FWA measure 217489)
-    crs = 4326
-  )
-)
+sites    <- sites_all |> filter(status == "Existing")
+proposed <- sites_all |> filter(status == "Proposed")
 
 # --- Point sources --------------------------------------------------------
 
@@ -146,12 +125,12 @@ m <- tm_shape(basemap_stars, bbox = bbox) +
   tm_polygons(fill = "#a8c8e0", fill_alpha = 0.25,
               col = "#2c3e50", lwd = 2.0) +
 
-  # Subbasins
+  # Subbasins — color matched to monitoring sites via xref
   tm_shape(subbasins) +
   tm_polygons(
-    fill = "gnis_name",
-    fill.scale = tm_scale_categorical(values = "BrBG"),
-    fill_alpha = 0.3,
+    fill = "label",
+    fill.scale = tm_scale_categorical(values = sub_colors),
+    fill_alpha = 0.35,
     col = "#5d4037",
     lwd = 1.0,
     fill.legend = tm_legend(show = FALSE)
@@ -204,16 +183,18 @@ m <- tm_shape(basemap_stars, bbox = bbox) +
             shadow = TRUE
           )) +
 
-  # Existing 2025 benthic sites
+  # Monitoring sites — color matched to subbasins, shape by status
+  # Existing = triangle (24), Proposed = circle (21)
   tm_shape(sites) +
   tm_symbols(
-    fill = "#1f78b4",
+    fill = "site_color",
+    fill.scale = tm_scale_asis(),
     shape = 24,
-    size = 0.9,
+    size = 1.0,
     col = "grey20",
-    lwd = 0.5
+    lwd = 0.8
   ) +
-  tm_text("site", size = 0.65, col = "grey20",
+  tm_text("site_id", size = 0.65, col = "grey20",
           fontface = "bold",
           options = opt_tm_text(
             point.label = TRUE,
@@ -222,16 +203,16 @@ m <- tm_shape(basemap_stars, bbox = bbox) +
             shadow = TRUE
           )) +
 
-  # Proposed expansion sites
   tm_shape(proposed) +
   tm_symbols(
-    fill = "#c0392b",
+    fill = "site_color",
+    fill.scale = tm_scale_asis(),
     shape = 21,
-    size = 0.9,
+    size = 1.0,
     col = "grey20",
-    lwd = 0.5
+    lwd = 0.8
   ) +
-  tm_text("site", size = 0.55, col = "#8b0000",
+  tm_text("site_id", size = 0.60, col = "grey20",
           fontface = "bold",
           options = opt_tm_text(
             point.label = TRUE,
@@ -256,9 +237,9 @@ m <- tm_shape(basemap_stars, bbox = bbox) +
   # Legend
   tm_add_legend(
     type = "symbols",
-    labels = c("2025 benthic site", "Proposed expansion site",
+    labels = c("Existing site (2025)", "Proposed site",
                "Potential point source"),
-    fill   = c("#1f78b4", "#c0392b", "#e74c3c"),
+    fill   = c("grey60", "grey60", "#e74c3c"),
     shape  = c(24, 21, 23),
     size   = c(0.9, 0.9, 0.8),
     col    = c("grey20", "grey20", "grey20")
@@ -307,7 +288,7 @@ keymap_img <- image_read(keymap_tmp) |>
 info   <- image_info(main_img)
 km_inf <- image_info(keymap_img)
 
-margin_px <- 25
+margin_px <- 45
 ox <- info$width  - km_inf$width  - margin_px
 oy <- info$height - km_inf$height - margin_px
 

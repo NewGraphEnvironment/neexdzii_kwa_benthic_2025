@@ -1,0 +1,7 @@
+id,lon,lat,blk,drm,gnis_name,dist_m,site_id,stream,description,rationale,status
+1,-126.464154,54.51243,360873822,206127.1647,Bulkley River,3.5,BUL-05,Neexdzii Kwa mainstem,Below McQuarrie Creek confluence,Cold-water tributary influence. Upstream of Knockholt Landfill,Existing
+2,-126.561352,54.444516,360873822,188491.8933,Bulkley River,20.3,BUL-04,Neexdzii Kwa mainstem,Immediately downstream of Knockholt Bridge (McKilligan Rd),Mid-reach transitional zone; downstream of Knockholt Landfill.,Existing
+3,-126.715354,54.397644,360873822,169137.4274,Bulkley River,19,BUL-01,Neexdzii Kwa mainstem,Just upstream of the North Road overpass downstream of Houston adjacent to rest stop.,Urban/nutrient influence; matches CABIN historical site MOR37,Existing
+5,-126.654,54.4019,360886221,501.217786,Buck Creek,0.2,BUC-01,Buck Creek,Lowest reach near Bulkley confluence,Captures lower reaches of Buck Creek. Utilized chinook spawning and rearing habitat.,Proposed
+8,-126.346209,54.50704,360873822,217534.9159,Bulkley River,14.1,BUL-06,Neexdzii Kwa mainstem,Below Richfield Creek confluence,Downstream of legacy concentrate shed site,Proposed
+9,-126.1348674,54.3784303,360881038,1112.906848,Maxan Creek,3.3,MAX-01,Maxan Creek,Upstream of Bulkley Lake.,Forestry and agricultural land use influences,Proposed

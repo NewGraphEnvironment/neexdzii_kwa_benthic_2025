@@ -64,30 +64,30 @@ These results provide a spatially explicit benthic bioassessment of the Neexdzii
 
 2. **Establish a routine water quality monitoring program.** The biological patterns documented here point to nutrient enrichment, but the existing water quality record is sparse and inconsistent. A structured sampling program — collecting nutrient concentrations (phosphorus, nitrogen species), temperature, pH, dissolved oxygen, and conductivity at a minimum biweekly frequency with additional sampling during high and low flow events — would provide the chemical context needed to interpret benthic community condition and track changes over time. BC Water Quality Guidelines specify a minimum of five samples within 30 days to evaluate long-term chronic guideline compliance [@wlrs2024BritishColumbia], making consistent sampling effort essential.
 
-3. **Expand the monitoring network.** The current three-site design covers the mainstem nutrient gradient between Houston and McQuarrie Creek but leaves gaps in our understanding of the broader watershed. The Equity Silver Mine straddles the drainage divide between Foxy Creek (flowing north into Maxan Creek) and Bessemer Creek (flowing south into Buck Creek) [@nijman1996Waterquality], and both drainage paths warrant monitoring. Proposed expansion sites are summarized in Table \@ref(tab:tab-proposed-sites-cap) and shown in Figure \@ref(fig:map-proposed-sites).
+3. **Expand the monitoring network.** The current three-site design covers the mainstem nutrient gradient between Houston and McQuarrie Creek but leaves gaps in our understanding of the broader watershed. The Equity Silver Mine straddles the drainage divide between Foxy Creek (flowing north into Maxan Creek) and Bessemer Creek (flowing south into Buck Creek) [@nijman1996Waterquality], and both drainage paths warrant monitoring. Existing and proposed monitoring sites are summarized in Table \@ref(tab:tab-proposed-sites-cap) and shown in Figure \@ref(fig:map-proposed-sites).
 
 <br>
 
 ```{r tab-proposed-sites-cap, results="asis"}
-my_caption <<- "Proposed monitoring sites for expanded benthic assessment of the Neexdzii Kwa watershed. Sites are designed to capture mine drainage, forestry and agricultural influences, point-source impacts, and chinook-bearing reaches."
+my_caption <<- "Monitoring sites for benthic assessment of the Neexdzii Kwa watershed. Existing sites were sampled in 2025; proposed sites are designed to capture mine drainage, forestry and agricultural influences, point-source impacts, and chinook-bearing reaches."
 my_tab_caption(tip_flag = FALSE)
 ```
 
 ```{r tab-proposed-sites}
-tibble::tribble(
-  ~Stream, ~Reach, ~Rationale,
-  "Buck Creek", "Below Bessemer confluence", "Mine drainage — south side of Equity Silver divide; chinook-bearing reach",
-  "Buck Creek", "Lower reach near Bulkley confluence", "Chinook spawning and rearing habitat; integrates upstream influences",
-  "Foxy Creek", "Upper reach near mine", "Mine drainage — north side of Equity Silver divide",
-  "Maxan Creek", "Near Bulkley Lake", "Forestry and agricultural land use influences",
-  "Neexdzii Kwa mainstem", "Below Richfield Creek confluence", "Legacy concentrate shed site; documented chinook use; fish passage concerns"
-) |>
-  my_dt_table(cols_freeze_left = 0, page_length = 10)
+sites_monitoring <- readr::read_csv("data/raw/sites_monitoring.csv", show_col_types = FALSE) |>
+  dplyr::filter(!is.na(site_id))
+
+sites_monitoring |>
+  dplyr::mutate(reach = paste0(site_id, " \u2014 ", description)) |>
+  dplyr::select(Status = status, Stream = stream, Reach = reach, Rationale = rationale) |>
+  knitr::kable(booktabs = TRUE) |>
+  kableExtra::kable_styling(full_width = TRUE) |>
+  kableExtra::row_spec(which(sites_monitoring$status == "Existing"), background = "#f0f0f0")
 ```
 
 <br>
 
-```{r map-proposed-sites, fig.cap='Proposed monitoring sites for expanded benthic assessment of the Neexdzii Kwa watershed. Blue triangles indicate existing 2025 sampling sites; red circles show proposed expansion sites. Site rationale is summarized in Table \\\\@ref(tab:tab-proposed-sites-cap).', out.width="100%", eval=FALSE}
+```{r map-proposed-sites, fig.cap='Proposed monitoring sites for expanded benthic assessment of the Neexdzii Kwa watershed. Triangles indicate existing 2025 sampling sites; circles show proposed expansion sites. Monitoring site marker colors correspond to the upstream sub-watershed area from which each station receives inputs.', out.width="100%", eval=TRUE}
 knitr::include_graphics("fig/map_proposed-sites.png")
 ```
 

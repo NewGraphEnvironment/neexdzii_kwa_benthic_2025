@@ -7,7 +7,7 @@ This report assesses the health of the Neexdzii Kwa (Upper Bulkley River) mainst
 
 <br>
 
-We collected samples at three sites along the mainstem, moving upstream from Houston: BUL-01 just below town near the wastewater treatment plant, BUL-04 approximately 11 km upstream near Knockholt Bridge on McKilligan Road leading to the Knockholt Landfill, and BUL-05 a further 10 km upstream below the McQuarrie Creek confluence. At each site, three replicate kick-net samples were collected following the CABIN wadeable streams protocol. Key findings:
+We collected samples at three sites along the mainstem, moving upstream from Houston: BUL-01 just downstream of Houston immediately upstream of the North Road overpass (Morice River FSR turnoff) and approximately 500 m downstream of the wastewater treatment plant outfall, BUL-04 approximately 11 km upstream just downstream of Knockholt Bridge on McKilligan Road leading to the Knockholt Landfill, and BUL-05 a further 10 km upstream below the McQuarrie Creek confluence. At each site, three replicate kick-net samples were collected following the CABIN wadeable streams protocol. Key findings:
 
 <br>
 
@@ -25,4 +25,4 @@ We collected samples at three sites along the mainstem, moving upstream from Hou
 
 <br>
 
-These results establish a baseline for benthic community condition across the Neexdzii Kwa mainstem. We recommend continuing standardized monitoring at these sites with concurrent water quality sampling, and expanding the monitoring network across the greater watershed — including tributaries draining the Equity Silver Mine, reaches with known chinook use such as lower Buck Creek, and streams adjacent to other identified point sources. A proposed sampling design with specific site locations is presented in Section \@ref(recommendations).
+These results establish a baseline for benthic community condition across the Neexdzii Kwa mainstem. We recommend continuing standardized monitoring at these sites with concurrent water quality sampling, and expanding the monitoring network across the greater watershed. A proposed sampling design with specific site locations is presented in Section \@ref(recommendations).

@@ -28,6 +28,7 @@ params:
   update_bib: FALSE
   update_benthic: FALSE
   update_ems: FALSE
+  update_gis: FALSE
   gitbook_on: TRUE
   password_protected: TRUE
   password_dir: '68d57a8caa75cde79d75fb9d700d04508c7a1f2a'
@@ -95,6 +96,10 @@ source("scripts/plot_ems.R")
 ```{r update-benthic, eval=params$update_benthic, include=FALSE}
 source("scripts/benthic_prep.R")
 source("scripts/prep_metrics.R")
+```
+
+```{r update-gis, eval=params$update_gis, include=FALSE}
+source("scripts/map_proposed-sites.R")
 ```
 
 # Acknowledgement {.front-matter .unnumbered}

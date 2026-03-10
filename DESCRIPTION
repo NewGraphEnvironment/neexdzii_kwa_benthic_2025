@@ -1,7 +1,7 @@
 Package: placeholder
 Type: Book
 Title: Benthic Invertebrate Assessment of the Neexdzii Kwa
-Version: 0.1.0
+Version: 0.2.0
 Imports:
     bookdown,
     knitr,
