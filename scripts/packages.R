@@ -14,6 +14,7 @@ pkgs_render <- c(
   "glue",
   "fs",
   "stringr",
+  "kableExtra",
   "leaflet",
   "sf"
 )
