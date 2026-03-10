@@ -5,8 +5,7 @@
 # the full three-zone system).
 #
 # Run data_map-study-area.R first (requires DB) to populate data/spatial/ cache.
-# Site coordinates come from data/raw/sites_benthic.csv — fill in lat/lon from
-# GPS waypoints before running.
+# Site coordinates from data/raw/sites_monitoring.csv (existing sites only).
 #
 # Usage: Rscript scripts/map_benthic-sites.R
 
@@ -36,17 +35,9 @@ neexdzii <- watersheds |> filter(watershed == "Neexdzii Kwa")
 
 # --- Load site locations --------------------------------------------------
 
-sites_csv <- read_csv("data/raw/sites_benthic.csv", show_col_types = FALSE)
-
-# Check coordinates are populated
-if (any(is.na(sites_csv$lat) | is.na(sites_csv$lon))) {
-  stop(
-    "Missing coordinates in data/raw/sites_benthic.csv.\n",
-    "Fill in lat/lon from GPS waypoints before running this script.\n",
-    "Sites missing coords: ",
-    paste(sites_csv$site[is.na(sites_csv$lat)], collapse = ", ")
-  )
-}
+sites_csv <- read_csv("data/raw/sites_monitoring.csv", show_col_types = FALSE) |>
+  filter(status == "Existing", !is.na(site_id)) |>
+  rename(site = site_id)
 
 sites <- st_as_sf(sites_csv, coords = c("lon", "lat"), crs = 4326)
 

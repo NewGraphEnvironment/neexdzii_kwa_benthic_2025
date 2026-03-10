@@ -38,10 +38,7 @@ cat("Wrote sites.csv\n")
 # STEP 2 — Visits sheet ------------------------------------------------------
 # =============================================================================
 
-# Coordinates from field notes and sites_benthic.csv:
-# BUL-05: WP235, UTM 9N 0664158 6043496
-# BUL-04: from sites_benthic.csv
-# BUL-01: UTM 9U 0648314 6030170
+# Coordinates from data/raw/sites_monitoring.csv (single source of truth)
 
 dd_to_dms <- function(dd) {
   dd <- abs(dd)
