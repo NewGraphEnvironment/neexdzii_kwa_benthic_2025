@@ -1,3 +1,6 @@
+# neexdzii_kwa_benthic_2025 0.2.1 (2026-03-10)
+- Add BUC-02 (CABIN MOR33) proposed site for temporal comparison with 2004 baseline
+
 # neexdzii_kwa_benthic_2025 0.2.0 (2026-03-10)
 - Add proposed monitoring network map and site recommendations
 - Update background with Equity Silver Mine and Richfield Loop detail

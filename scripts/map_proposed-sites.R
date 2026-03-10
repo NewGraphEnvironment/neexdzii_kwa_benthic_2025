@@ -189,6 +189,7 @@ m <- tm_shape(basemap_stars, bbox = bbox) +
   tm_symbols(
     fill = "site_color",
     fill.scale = tm_scale_asis(),
+    fill_alpha = 0.7,
     shape = 24,
     size = 1.0,
     col = "grey20",
@@ -207,6 +208,7 @@ m <- tm_shape(basemap_stars, bbox = bbox) +
   tm_symbols(
     fill = "site_color",
     fill.scale = tm_scale_asis(),
+    fill_alpha = 0.7,
     shape = 21,
     size = 1.0,
     col = "grey20",
