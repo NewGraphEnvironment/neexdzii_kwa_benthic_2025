@@ -2,6 +2,7 @@ break_id,gnis_name,label,site_id,color,site_color
 1,Bulkley River,BUL-06,BUL-06,#8c510a,#80cdc1
 2,Bulkley River,BUL-05,BUL-05,#bf812d,#8c510a
 3,Bulkley River,BUL-04,BUL-04,#dfc27d,#bf812d
-5,Buck Creek,BUC-01,BUC-01,#35978f,#35978f
-8,Bulkley River,,BUL-01,#80cdc1,#dfc27d
-9,Maxan Creek,MAX-01,MAX-01,#01665e,#01665e
+4,Buck Creek,BUC-01,BUC-01,#35978f,#1a5e2a
+5,Bulkley River,,BUL-01,#80cdc1,#dfc27d
+6,Maxan Creek,MAX-01,MAX-01,#01665e,#01665e
+7,Buck Creek,BUC-02,BUC-02,#1a5e2a,#1a5e2a
