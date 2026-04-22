@@ -30,7 +30,7 @@ params:
   update_ems: FALSE
   update_gis: FALSE
   gitbook_on: TRUE
-  password_protected: TRUE
+  password_protected: FALSE
   password_dir: '68d57a8caa75cde79d75fb9d700d04508c7a1f2a'
 documentclass: book
 bibliography: "`r if (params$update_bib) { rbbt::bbt_write_bib('references.bib', overwrite = TRUE); 'references.bib' } else 'references.bib'`"

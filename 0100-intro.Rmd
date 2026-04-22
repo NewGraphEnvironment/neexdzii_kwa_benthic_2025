@@ -15,7 +15,7 @@ Benthic invertebrate communities are widely used as indicators of stream ecosyst
 
 <br>
 
-This report presents a benthic invertebrate community assessment of three mainstem sites on the Neexdzii Kwa, sampled in triplicate during the 2025 field season. Analysis includes community composition, diversity metrics, functional feeding group analysis, and multivariate ordination to characterize aquatic ecosystem health and detect differences among sites. This work is a companion to the Neexdzii Kwa restoration planning report [@irvine_schick2026NeexdziiKwah], which summarizes key findings from this assessment in the context of broader watershed restoration objectives.
+This report presents a benthic invertebrate community assessment of three mainstem sites on the Neexdzii Kwa, sampled in triplicate during the 2025 field season. Analysis includes community composition, diversity metrics, functional feeding group analysis, and multivariate ordination to characterize aquatic ecosystem health and detect differences among sites. This work is a companion to the Neexdzii Kwa restoration planning report [@irvine_schick2026NeexdziiKwah], which summarizes key findings from this assessment in the context of broader watershed restoration objectives. The assessment was undertaken to fill a data gap identified during the restoration planning research, which found limited recent characterization of benthic community condition on the Neexdzii Kwa mainstem.
 
 
 ```{r map-study-area, fig.cap = "Study area — the Neexdzii Kwa (Upper Bulkley River) within the broader Wedzin Kwa (Bulkley-Morice) watershed in northwestern British Columbia.", eval = TRUE, echo = FALSE}
