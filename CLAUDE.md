@@ -122,27 +122,6 @@ Reference: `Sheep/R/functions.R`. Key functions to adapt:
 
 <\!-- BEGIN SOUL CONVENTIONS — DO NOT EDIT BELOW THIS LINE -->
 
-# Agent Teams
-
-When to use Claude Code agent teams vs subagents, and key constraints.
-
-**Source:** [code.claude.com/docs/en/agent-teams](https://code.claude.com/docs/en/agent-teams)
-
-## When to Use Teams (vs. Subagents)
-
-Use agent teams when teammates need to **talk to each other** — research debates, competing hypotheses, cross-layer coordination. Use subagents when you just need focused workers that report back results.
-
-**Good fit:** parallel code review, investigating competing bug hypotheses, new modules that don't share files, research from multiple angles.
-
-**Bad fit:** sequential tasks, edits to the same file, simple work where coordination overhead exceeds benefit.
-
-## Key Rules
-
-- **Give enough context in the spawn prompt** — teammates don't inherit the lead's conversation history
-- **Ensure teammates own different files** — two teammates editing the same file leads to overwrites
-- **Shut down all teammates before cleanup** — cleanup fails if teammates are still running
-- **Always clean up via the lead** — teammates should never run cleanup
-- **No session resumption** — after `/resume`, spawn new teammates
 
 # Bookdown Conventions
 
@@ -435,6 +414,7 @@ Production repos (2024-2025) have drifted from templates in these areas. When wo
 - **`staticimports::import()` call** — some repos skip it and source `staticimports.R` directly.
 - **Hardcoded vs parameterized years** — older repos hardcode years in file paths; newer repos use `params$project_year`. Prefer parameterized.
 
+
 # Cartography
 
 ## Style Registry
@@ -523,6 +503,7 @@ drift::dft_map_interactive(classified, aoi = aoi)
 - For production COGs on S3, `dft_map_interactive()` serves tiles via titiler — set `options(drift.titiler_url = "...")`
 - See the [drift vignette](https://www.newgraphenvironment.com/drift/articles/neexdzii-kwa.html) for a worked example (Neexdzii Kwa floodplain, 2017-2023)
 
+
 # Code Check Conventions
 
 Structured checklist for reviewing diffs before commit. Used by `/code-check`.
@@ -606,71 +587,64 @@ Add new checks here when a bug class is discovered — they compound over time.
 
 ## General
 
+### Adopting Existing Config
+
+When importing config from one location into a canonical one (legacy `~/.bash_profile` → dotfiles repo, old script's env → repo, another project's `settings.json` → soul):
+
+- **Verify every referenced path/binary exists.** Dead PATH exports, missing interpreters, stale env vars should be cut, not codified.
+  Shell paths: `for p in $(echo "$PATH" | tr ':' ' '); do [ -d "$p" ] || echo "DEAD: $p"; done`
+- **Ask before dropping a reference** — it may be something the user forgot to reinstall on this machine, not something to delete.
+- **Curated subset, not verbatim copy.** The diff should reflect what you verified, not the whole source.
+
 ### Documentation Staleness
 - Moving/renaming scripts: update CLAUDE.md, READMEs, usage comments
 - New variables: update .tfvars.example
 - New workflows: update relevant README
 
-# Communications Conventions
 
-Standards for external communications across New Graph Environment.
+# Comms Conventions
 
-[compost](https://github.com/NewGraphEnvironment/compost) is the working repo for email drafts, scripts, contact management, and Gmail utilities. These conventions capture the universal principles; compost has the implementation details.
+This repo has a `comms/` directory — you're in the cross-repo Claude-to-Claude messaging system. Full protocol in `comms/README.md`. Load-bearing behaviors below.
 
-## Tone
+## On Session Start
 
-Three levels. Default to casual unless context dictates otherwise.
+1. **Inbound scan.** `<this-repo>/comms/*/` — files with `status: open` and mtime newer than your last `comms/` commit are mail for you.
+2. **Outbound scan.** For each peer below, check `<peer>/comms/<this-repo>/*.md` — files with `from: <this-repo>, status: open` are your un-answered sent mail.
 
-| Level | When | Style |
-|-------|------|-------|
-| **Casual** | Established working relationships | Professional but warm. Direct, concise. No slang. |
-| **Very casual** | Close collaborators with rapport | Colloquial OK. Light humor. Slang acceptable. |
-| **Formal** | New contacts, senior officials, formal requests | Full sentences, no contractions, state purpose early. |
+If either surfaces open threads, raise to the user before starting other work.
 
-**Collaborative, not directive.** Acknowledge their constraints:
+## Peers
 
-- **Avoid:** "Work these in as makes sense for your lab"
-- **Better:** "If you're able to work these in when it fits your schedule that would be really helpful"
+Repos with active `comms/` directories (update when new repos adopt):
 
-## Email Workflow
+- rtj
+- kdot
+- soul
+- fresh
+- link
 
-Draft in markdown, convert to HTML at send time via gmailr. See compost for script templates, OAuth setup, and `search_gmail.R`.
+## Commit Prefix
 
-**File naming:** `YYYYMMDD_recipient_topic_draft.md` + `YYYYMMDD_recipient_topic.R`
+- `comms(→peer):` — you committed a file in peer's repo (outbound)
+- `comms(←peer):` — you committed a file in your own repo (inbound reply)
+- `comms:` — meta (close, reopen, rename, README update)
 
-**Key gotchas** (documented in detail in compost):
-- Gmail strips `<style>` blocks — use inline styles for tables
-- `gm_create_draft()` does NOT support `thread_id` — only `gm_send_message()` can reply into threads. Drafts land outside the conversation.
-- Always use `test_mode` and `create_draft` variables for safe workflows
+Arrow points to the repo whose `comms/` contains the file you committed.
 
-## Data in Emails
+## Non-negotiables
 
-- **Never manually type data into tables** — generate programmatically from source files
-- **Link to canonical sources** (GitHub repos, public reports) rather than embedding raw data
-- **Provide both CSV and Excel** when sharing tabular data
-- **Document ID codes** — when using compressed IDs (e.g., `id_lab`), include a reference sheet so recipients can decode
+- One commit per appended message.
+- **Push immediately.** Un-pushed comms is invisible to the other Claude.
+- Code + comms = separate commits.
+- Status flips bundle with the triggering message.
+- **Use `git commit --only <file>`** for any commit in a peer's repo (thread files). Immune to index races from parallel sessions — commits only the named path regardless of what else is staged.
 
-## What Not to Expose Externally
+## Propagation: soul publishes, peers pull
 
-- Internal QA info (blanks, control samples, calibration data)
-- Internal tracking codes or SRED references
-- Draft status or revision history
-- Internal project management details
+Soul is the source of truth for `comms/README.md`. Peers sync by running `/comms-init` in their own repo, from their own Claude session. **Do not push README updates into a peer's repo from another session** — cross-session index races can bundle unrelated staged files into misleading commits.
 
-Keep client-facing communications focused on deliverables and technical content.
+Within your own session, the only things you commit into a peer's repo are **thread files** (hosted in the receiver's repo per the receiver-hosts rule). Everything else — README syncs, infra — the peer-Claude pulls itself.
 
-## Signature
-
-```
-Al Irvine B.Sc., R.P.Bio.
-New Graph Environment Ltd.
-
-Cell: 250-777-1518
-Email: al@newgraphenvironment.com
-Website: www.newgraphenvironment.com
-```
-
-In HTML emails, use `<br>` tags between lines.
 
 # LLM Behavioral Guidelines
 
@@ -739,9 +713,9 @@ For multi-step tasks, state a brief plan:
 
 Strong success criteria let you loop independently. Weak criteria ("make it work") require constant clarification.
 
----
 
 **These guidelines are working if:** fewer unnecessary changes in diffs, fewer rewrites due to overcomplication, and clarifying questions come before implementation rather than after mistakes.
+
 
 # New Graph Environment Conventions
 
@@ -761,7 +735,7 @@ Five repos form the governance and operations layer across all New Graph Environ
 
 **Adaptive management:** Conventions evolve from real project work, not theory. When a pattern is learned or refined during project work, propagate it back to soul so all projects benefit. The `/claude-md-init` skill builds each project's `CLAUDE.md` from soul conventions.
 
-**Cross-references:** [sred-2025-2026](https://github.com/NewGraphEnvironment/sred-2025-2026) tracks R&D activities across repos. Compost cross-cuts all projects as the centralized communications workflow — email drafts, contact registry, and tone guidelines live there and are copied to individual project `communications/` folders as needed.
+**Cross-references:** [sred-2025-2026](https://github.com/NewGraphEnvironment/sred-2025-2026) tracks R&D activities across repos. Compost is the centralized communications workflow — all email drafts, contact registry, and external outreach are authored there, not in individual project repos.
 
 ## Issue Workflow
 
@@ -887,238 +861,103 @@ Scripts and logs live together: `scripts/<module>/logs/`
 | Restoration planning | **Aquatic Restoration Planning (#5)** |
 | QGIS, Mergin, field forms | **Collaborative GIS (#3)** |
 
-# R Package Development Conventions
 
-Standards for R package development across New Graph Environment repositories.
-Based on [R Packages (2e)](https://r-pkgs.org/) by Hadley Wickham and Jenny Bryan.
+# Planning Conventions
 
-**Reference packages:** When starting a new package, study these existing
-packages for patterns: `flooded`, `gq`. They demonstrate the conventions below
-in practice (DESCRIPTION fields, README layout, NEWS.md style, pkgdown setup,
-test structure, hex sticker, etc.).
+How Claude manages structured planning for complex tasks using planning-with-files (PWF).
 
-## Style
+## When to Plan
 
-- tidyverse style guide: snake_case, pipe operators (`|>` or `%>%`)
-- Match existing patterns in each codebase
-- Use `pak` for package installation (not `install.packages`)
-- Prefix column name vectors with `cols_` for discoverability in the
-  environment pane: `cols_all`, `cols_carry`, `cols_split`, `cols_writable`.
-  Same principle for other grouped vectors (`params_`, `tbl_`, etc.)
+Use PWF when a task has multiple phases, requires research, or involves more than ~5 tool calls. Triggers:
+- User says "let's plan this", "plan mode", "use planning", or invokes `/planning-init`
+- Complex issue work begins (multi-step, uncertain approach)
+- Claude judges the task warrants structured tracking
 
-## Package Structure
+Skip planning for single-file edits, quick fixes, or tasks with obvious next steps.
 
-Follow R Packages (2e) conventions:
-- `R/` for functions, `tests/testthat/` for tests, `man/` for docs
-- `DESCRIPTION` with proper fields (Title, Description, Authors@R)
-- `DESCRIPTION` URL field: include both the GitHub repo and the pkgdown site
-  so pkgdown links correctly (e.g., `URL: https://github.com/OWNER/PKG,
-  https://owner.github.io/PKG/`)
-- `NAMESPACE` managed by roxygen2 (`#' @export`, `#' @import`, `#' @importFrom`)
-- Never edit `NAMESPACE` or `man/` by hand
+## The Workflow
 
-## One Function, One File
+1. **Explore first** — Enter plan mode (read-only). Read code, trace paths, understand the problem before proposing anything.
+2. **Plan to files** — Write the plan into 3 files in `planning/active/`:
+   - `task_plan.md` — Phases with checkbox tasks
+   - `findings.md` — Research, discoveries, technical analysis
+   - `progress.md` — Session log with timestamps and commit refs
+3. **Commit the plan** — Commit the planning files before starting implementation. This is the baseline.
+4. **Work in atomic commits** — Each commit bundles code changes WITH checkbox updates in the planning files. The diff shows both what was done and the checkbox marking it done.
+5. **Code check before commit** — Run `/code-check` on staged diffs before committing. Don't mark a task done until the diff passes review.
+6. **Archive when complete** — Move `planning/active/` to `planning/archive/` via `/planning-archive`. Write a README.md in the archive directory with a one-paragraph outcome summary and closing commit/PR ref — future sessions scan these to catch up fast.
 
-Each exported function gets its own R file and its own test file:
-- `R/fl_mask.R` → `tests/testthat/test-fl_mask.R`
-- Commit the function and its tests together
-- Use `Fixes #N` in the commit message to close the corresponding issue
+## Atomic Commits (Critical)
 
-## GitHub Issues and SRED Tracking
+Every commit that completes a planned task MUST include:
+- The code/script changes
+- The checkbox update in `task_plan.md` (`- [ ]` -> `- [x]`)
+- A progress entry in `progress.md` if meaningful
 
-### Issue-per-function workflow
+This creates a git audit trail where `git log -- planning/` tells the full story. Each commit is self-documenting — you can backtrack with git and understand everything that happened.
 
-File a GitHub issue for each function before building it. This creates a
-traceable record of what was planned, built, and verified.
+## File Formats
 
-### Branching for SRED
+### task_plan.md
 
-For new packages or major features, work on a branch and merge via PR:
+Phases with checkboxes. This is the core tracking file.
 
-```
-main ← scaffold-branch (PR closes with "Relates to NewGraphEnvironment/sred-2025-2026#N")
-```
+```markdown
+# Task Plan
 
-This gives one PR that contains all commits — a single SRED cross-reference
-covers the entire body of work. Individual commits within the branch close
-their respective function issues with `Fixes #N`.
+## Phase 1: [Name]
+- [ ] Task description
+- [ ] Another task
 
-### Closing issues
-
-Close function issues via commit messages — see Closing Issues in newgraph conventions.
-
-## Testing
-
-- Use testthat 3e (`Config/testthat/edition: 3` in DESCRIPTION)
-- Run `devtools::test()` before committing
-- Test files mirror source: `R/utils.R` -> `tests/testthat/test-utils.R`
-- Test for edge cases and potential failures, not just happy paths
-- Tests must pass before closing the function's issue
-- Always grep for errors in the same command as the test run to avoid
-  running twice:
-  ```bash
-  Rscript -e 'devtools::test()' 2>&1 | grep -E "(FAIL|ERROR|PASS)" | tail -5
-  ```
-  For error context: `grep -E "(ERROR:|FAIL )" -A 10 | head -25`
-
-## Examples and Vignettes
-
-### Runnable examples on every exported function
-
-Examples are how users discover what a function does. They must:
-- **Actually run** — no `\dontrun{}` unless external resources are required
-- **Use bundled test data** via `system.file()` so they work for anyone
-- **Show why the function is useful** — not just that it runs, but what it
-  produces and why you'd use it
-- **Use qualified names** for non-exported dependencies (`terra::rast()`,
-  `sf::st_read()`) since examples run in the user's environment
-
-### Vignettes
-
-At least one vignette showing the full pipeline on real data:
-- Demonstrates the package solving an actual problem end-to-end
-- Uses bundled test data (committed to `inst/testdata/`)
-- Hosted on pkgdown so users can read it without installing
-
-**Output format:** Use `bookdown::html_vignette2` (not
-`rmarkdown::html_vignette`) for figure numbering and cross-references.
-Requires `bookdown` in Suggests and chunks must have `fig.cap` for
-numbered figures. Cross-reference with `Figure \@ref(fig:chunk-name)`.
-
-**Vignettes that need external resources (DB, API, STAC):** Do NOT use
-the `.Rmd.orig` pre-knit pattern — it breaks `bookdown` figure numbering
-because knitr evaluates chunks during pre-knit and emits `![](path)`
-markdown that bookdown can't number.
-
-Instead, separate data generation from presentation:
-1. `data-raw/vignette_data.R` — runs the queries, saves results as `.rds`
-   to `inst/testdata/` (or `inst/vignette-data/`)
-2. Vignette loads `.rds` files, all chunks run live during pkgdown build
-3. Note at top of vignette: "Data generated by `data-raw/script.R`"
-4. bookdown controls all chunks — figure numbers, cross-refs work
-
-This is the same pattern as test data: `data-raw/` documents how the data
-was produced, committed artifacts make vignettes reproducible without the
-external resource.
-
-### Test data
-
-- Created via a script in `data-raw/` that documents exactly how the data
-  was produced (database queries, spatial crops, etc.)
-- Committed to `inst/testdata/` — small enough to ship with the package
-- Used by tests, examples, and vignettes — one dataset, three purposes
-
-## Documentation
-
-- roxygen2 for all exported functions
-- `@import` or `@importFrom` in the package-level doc (`R/<pkg>-package.R`)
-  to populate NAMESPACE — don't rely on `::` everywhere in function bodies
-- pkgdown site for public packages with `_pkgdown.yml` (bootstrap 5)
-- GitHub Action for pkgdown (`usethis::use_github_action("pkgdown")`)
-
-## lintr
-
-Run `lintr::lint_package()` before committing R package code. Fix all warnings — every lint should be worth fixing.
-
-### Recommended .lintr config
-
-```r
-linters: linters_with_defaults(
-    line_length_linter(120),
-    object_name_linter(styles = c("snake_case", "dotted.case")),
-    commented_code_linter = NULL
-  )
-exclusions: list(
-    "renv" = list(linters = "all")
-  )
+## Phase 2: [Name]
+- [ ] Task description
 ```
 
-- 120 char line length (default 80 is too strict for data pipelines)
-- Allow dotted.case (common in base R and legacy code)
-- Suppress commented code lints (exploratory R scripts often have commented alternatives)
-- Exclude renv directory entirely
+Mark tasks done as they're completed: `- [x] Task description`
 
-## Dependencies
+### findings.md
 
-- Minimize Imports — use `Suggests` for packages only needed in tests/vignettes
-- Pin versions only when breaking changes are known
-- Prefer packages already in the tidyverse ecosystem
+Append-only research log. Discoveries, technical analysis, things learned.
 
-## Releasing
+```markdown
+# Findings
 
-1. Update `NEWS.md` — keep it concise:
-   - First release: one line (e.g., "Initial release. Brief description.")
-   - Later releases: describe what changed and why, not function-by-function.
-     Link to the pkgdown reference page for details — don't duplicate it.
-   - Don't list every function; the pkgdown reference page is the single
-     source of truth for what's in the package.
-2. Bump version in `DESCRIPTION` (e.g., `0.0.0.9000` → `0.1.0`)
-3. Commit as "Release vX.Y.Z"
-4. Tag: `git tag vX.Y.Z && git push && git push --tags`
-
-## Repository Setup
-
-### Branch protection
-
-Protect main from deletion and force pushes:
-
-```bash
-gh api repos/OWNER/REPO/rulesets --method POST --input - <<'EOF'
-{
-  "name": "Protect main",
-  "target": "branch",
-  "enforcement": "active",
-  "bypass_actors": [
-    { "actor_id": 5, "actor_type": "RepositoryRole", "bypass_mode": "always" }
-  ],
-  "conditions": { "ref_name": { "include": ["refs/heads/main"], "exclude": [] } },
-  "rules": [ { "type": "deletion" }, { "type": "non_fast_forward" } ]
-}
-EOF
+## [Topic]
+[What was found, with source/date]
 ```
 
-### Scaffold checklist
+### progress.md
 
-- `usethis::create_package(".")`
-- `usethis::use_mit_license("New Graph Environment Ltd.")`
-- `usethis::use_testthat(edition = 3)`
-- `usethis::use_pkgdown()`
-- `usethis::use_github_action("pkgdown")`
-- `usethis::use_directory("dev")` — reproducible setup script
-- `usethis::use_directory("data-raw")` — data generation scripts
-- Hex sticker via `hexSticker` (see `data-raw/make_hexsticker.R`)
-- Set GitHub Pages to serve from `gh-pages` branch
+Session entries with commit references.
 
-### dev/dev.R
+```markdown
+# Progress
 
-Keep a `dev/dev.R` file that documents every setup step. Not idempotent —
-run interactively. This is the reproducible recipe for the package scaffold.
+## Session YYYY-MM-DD
+- Completed: [items]
+- Commits: [refs]
+- Next: [items]
+```
 
-## README
+## Directory Structure
 
-Keep the README lean:
-- Hex sticker, one-line description, install, example showing *why* it's
-  useful
-- Link to pkgdown vignette and function reference — don't duplicate them
-- Don't maintain a function table — it's just another thing to keep updated
-  and pkgdown's reference page is the single source of truth
+```
+planning/
+  active/          <- Current work (3 PWF files)
+  archive/         <- Completed issues
+    YYYY-MM-issue-N-slug/
+```
 
-## LLM Workflow
+If `planning/` doesn't exist in the repo, run `/planning-init` first.
 
-When an LLM assistant modifies R package code:
-1. Run `lintr::lint_package()` — fix issues before committing
-2. Run `devtools::test()` with error grep — ensure tests pass in one call:
-   ```bash
-   Rscript -e 'devtools::test()' 2>&1 | grep -E "(FAIL|ERROR|PASS)" | tail -5
-   ```
-3. Run `devtools::document()` and grep for results:
-   ```bash
-   Rscript -e 'devtools::document()' 2>&1 | grep -E "(Writing|Updating|warning)" | tail -10
-   ```
-4. Check `devtools::check()` passes for releases — capture results in one call:
-   ```bash
-   Rscript -e 'devtools::check()' 2>&1 | grep -E "(ERROR|WARNING|NOTE|errors|warnings|notes)" | tail -10
-   ```
+## Skills
+
+| Skill | When to use |
+|-------|-------------|
+| `/planning-init` | First time in a repo — creates directory structure |
+| `/planning-update` | Mid-session — sync checkboxes and progress |
+| `/planning-archive` | Issue complete — archive and create fresh active/ |
+
 
 # Reference Management Conventions
 
@@ -1244,6 +1083,7 @@ Always verify downloads: `file paper.pdf` should say "PDF document", not HTML.
 - NEVER write abstracts manually — if CrossRef has no abstract, leave blank
 - NEVER cite specific numbers without verifying from the source PDF via ragnar search
 - NEVER paraphrase equations — copy exact notation and cite page/section
+
 
 # SRED Conventions
 
