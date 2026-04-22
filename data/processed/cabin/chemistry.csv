@@ -1,15 +1,15 @@
 Site Code,Sample Number,Site Visit Date,Chemistry Type,Parameter,Unit,MDL,Value
 BUL-05,1,2025-09-28,Water Chemistry,General-AirTemperature,Degrees C,NA,6
 BUL-05,1,2025-09-28,Water Chemistry,General-WaterTemperature,Degrees C,NA,5.4
-BUL-05,1,2025-09-28,Water Chemistry,General-pH,pH,NA,7.02
-BUL-05,1,2025-09-28,Water Chemistry,General-Conductivity,uS/cm,NA,270.1
-BUL-05,1,2025-09-28,Water Chemistry,General-Turbidity,NTU,NA,0.2
-BUL-04,1,2025-10-02,Water Chemistry,General-AirTemperature,Degrees C,NA,8
-BUL-04,1,2025-10-02,Water Chemistry,General-WaterTemperature,Degrees C,NA,7.11
-BUL-04,1,2025-10-02,Water Chemistry,General-pH,pH,NA,7.21
-BUL-04,1,2025-10-02,Water Chemistry,General-Turbidity,NTU,NA,1.21
+BUL-05,1,2025-09-28,Water Chemistry,General-pH,pH,NA,7.2
+BUL-05,1,2025-09-28,Water Chemistry,General-Conductivity,uS/cm,NA,279
+BUL-05,1,2025-09-28,Water Chemistry,General-Turbidity,NTU,NA,1.05
+BUL-04,1,2025-10-02,Water Chemistry,General-WaterTemperature,Degrees C,NA,8
+BUL-04,1,2025-10-02,Water Chemistry,General-pH,pH,NA,7.11
+BUL-04,1,2025-10-02,Water Chemistry,General-Turbidity,NTU,NA,1.31
+BUL-04,1,2025-10-02,Water Chemistry,General-Conductivity,uS/cm,NA,2.56
 BUL-01,1,2025-10-03,Water Chemistry,General-AirTemperature,Degrees C,NA,7
 BUL-01,1,2025-10-03,Water Chemistry,General-WaterTemperature,Degrees C,NA,7.7
 BUL-01,1,2025-10-03,Water Chemistry,General-pH,pH,NA,7.5
-BUL-01,1,2025-10-03,Water Chemistry,General-Conductivity,uS/cm,NA,241
+BUL-01,1,2025-10-03,Water Chemistry,General-Conductivity,uS/cm,NA,261
 BUL-01,1,2025-10-03,Water Chemistry,General-Turbidity,NTU,NA,1.46
