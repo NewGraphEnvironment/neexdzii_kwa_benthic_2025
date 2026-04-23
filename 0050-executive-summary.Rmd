@@ -3,7 +3,9 @@
 
 # Executive Summary {.unnumbered}
 
-This report assesses the health of the Neexdzii Kwa (Upper Bulkley River) mainstem by examining the small invertebrates — insects, worms, and crustaceans — that live on the streambed. These benthic communities are widely used as biological indicators because different species thrive under different conditions: some tolerate pollution, while others require clean, well-oxygenated water. By identifying what lives where, we can read the river's condition without relying solely on water chemistry snapshots. This work was conducted in October 2025 on behalf of the Wet'suwet'en Treaty Society, with three replicate kick-net samples collected at each of three mainstem sites following the CABIN wadeable streams protocol. The assessment was undertaken to fill a data gap identified during companion restoration planning research on the watershed [@irvine_schick2026NeexdziiKwah].
+[📄 Executive Summary (PDF)](executive_summary.pdf)
+
+This report assesses the health of the Neexdzii Kwa (Upper Bulkley River) mainstem by examining the small invertebrates — insects, worms, and crustaceans — that live on the streambed. These benthic communities are widely used as biological indicators because different species thrive under different conditions: some tolerate pollution, while others require clean, well-oxygenated water. By identifying what lives where, we can read the river's condition without relying solely on water chemistry snapshots. This work was conducted in October 2025 on behalf of the Wet'suwet'en Treaty Society, with three replicate kick-net samples collected at each of three mainstem sites following the CABIN wadeable streams protocol. The assessment was undertaken to fill a data gap identified during [companion restoration planning research](https://www.newgraphenvironment.com/restoration_wedzin_kwa_2024/) on the watershed.
 
 <br>
 

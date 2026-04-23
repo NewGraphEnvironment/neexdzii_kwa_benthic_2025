@@ -83,6 +83,15 @@ jobs:
         run: |
           Rscript scripts/setup_docs.R build
 
+      - name: Copy pre-built executive summary PDF into docs
+        run: |
+          if [ -f pdf/executive_summary.pdf ]; then
+            cp pdf/executive_summary.pdf docs/executive_summary.pdf
+            echo "Copied pdf/executive_summary.pdf -> docs/executive_summary.pdf"
+          else
+            echo "WARNING: pdf/executive_summary.pdf not found — run scripts/build_exec_pdf.R locally and commit"
+          fi
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
