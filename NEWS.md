@@ -1,3 +1,6 @@
+# neexdzii_kwa_benthic_2025 0.3.1 (2026-04-22)
+- Title page now acknowledges the Society for Ecosystem Restoration in Northern British Columbia and displays the SERN logo
+
 # neexdzii_kwa_benthic_2025 0.3.0 (2026-04-22)
 - Report now publicly accessible at the project URL
 - Executive summary restructured with a headline finding and the McQuarrie Creek caveat on BUL-05 surfaced

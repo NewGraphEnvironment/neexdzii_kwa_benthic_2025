@@ -9,12 +9,14 @@ author: |
  | Prepared by
  | Al Irvine, B.Sc., R.P.Bio.
  | New Graph Environment Ltd.
+ | on behalf of
+ | Society for Ecosystem Restoration in Northern British Columbia
 
 date: |
  |
  | Version `r desc::desc_get_version()` DRAFT `r format(Sys.Date(), "%Y-%m-%d")`
  |
- | *Claude Opus 4.6 (Anthropic) assisted with literature synthesis, drafting, and technical writing. All scientific interpretation, data analysis, and conclusions are the responsibility of the authors.*
+ | *Claude Opus 4.6 and 4.7 (Anthropic) assisted with literature synthesis, drafting, and technical writing. All scientific interpretation, data analysis, and conclusions are the responsibility of the authors.*
 toc-title: Neexdzii Kwa Benthic
 site: bookdown::bookdown_site
 output:
@@ -111,6 +113,6 @@ This work takes place within the Yintah of the Wet'suwet'en people, who have gov
 
 ```{js, logo-header, echo = FALSE, eval= T}
 title=document.getElementById('header');
-title.innerHTML = '<div style="text-align:center"><img src="fig/logo_newgraph/BLACK/PNG/nge-full_black.png" alt="NewGraph" width="750px"></div>' + title.innerHTML
+title.innerHTML = '<div style="text-align:center"><img src="fig/logo_sern/SERNbc-Logo-HALF.jpg" alt="SERNbc" width="750px"></div>' + title.innerHTML
 ```
 
