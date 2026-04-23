@@ -19,7 +19,7 @@
 "leaflet","2.2.3"
 "kableExtra","1.4.0"
 "stringr","1.6.0"
-"fs","2.0.1"
+"fs","2.1.0"
 "glue","1.8.1"
 "htmlwidgets","1.6.4"
 "DT","0.34.0"

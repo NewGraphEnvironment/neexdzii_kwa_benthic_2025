@@ -1,3 +1,7 @@
+# neexdzii_kwa_benthic_2025 0.3.2 (2026-04-23)
+- Executive Summary now available as a standalone PDF (linked from the Executive Summary chapter of the online report)
+- Introduction and Executive Summary now link directly to the companion restoration planning report
+
 # neexdzii_kwa_benthic_2025 0.3.1 (2026-04-22)
 - Title page now acknowledges the Society for Ecosystem Restoration in Northern British Columbia and displays the SERN logo
 
