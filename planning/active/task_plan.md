@@ -1,112 +1,116 @@
-# Exec Summary Restructure, Adaptive Monitoring, Password Removal
+# Standalone Executive Summary PDF (Issue #19)
 
-**Branch:** `16-exec-summary-and-monitoring`
-**Issues:** #16, #17, #18 (Phase 1); #19 (Phase 2, PWF-planned)
-**Goal:** Restructure exec summary to be headline-first with McQuarrie caveat; reframe BUL-06 as staged Phase 1 test of upstream-mainstem condition; remove security-through-obscurity password gating. Standalone exec summary PDF (#19) planned and scoped here, implemented after Phase 1 lands.
+**Goal:** Produce a standalone executive summary PDF for this report matching the pattern established in `restoration_wedzin_kwa_2024`, integrated into the GitHub Actions CI/deploy pipeline, with portability to `mybookdown-template` (and later `fish_passage_template_reporting`) as a first-class design constraint.
 
-## Phase 1 — Content + flag flip (this branch)
+**Status:** Pass 1 (research + design) — no code edits in this repo until research questions resolved and design is scoped.
 
-### Milestone 1: Password removal (#18)
-- [ ] Flip `password_protected: TRUE` → `FALSE` in `index.Rmd`
-- [ ] Verify no other files reference the password_dir hash beyond the `params` entry
-- [ ] `setup_docs.R` logic unchanged (boolean gates everything)
+## Propagation order (agreed with user, 2026-04-23)
 
-### Milestone 2: Exec summary restructure (#16)
-- [ ] Draft restructured `0050-executive-summary.Rmd`:
-  - Opening paragraph (why bugs + who/what/where) — largely unchanged
-  - Lede paragraph: headline gradient finding, WWTP named as plausible driver at BUL-01
-  - BUL-05 reference-baseline paragraph with McQuarrie caveat and pointer to BUL-06 as test
-  - Temporal paragraph leading with robust directional shift; seasonal variability as reason for continued consistent-timing monitoring
-  - Closing paragraph: expansion recommendation with brief hint at scope
-- [ ] Keep `<br>` spacers for gitbook rendering; preserve `\@ref(recommendations)` cross-ref
-- [ ] Word count ~400 words (no expansion)
+1. **Phase A — this repo.** Implement, CI-integrate, deploy, iterate to robust.
+2. **Phase B — mybookdown-template.** Port the proven pattern so new bookdown repos inherit it.
+3. **Phase C — fish_passage_template_reporting.** Adapt for fish-passage template (has project-specific extensions).
 
-### Milestone 3: Adaptive monitoring design (#17)
-- [ ] Update BUL-06 rationale in `data/raw/sites_monitoring.csv` to capture dual purpose (Richfield concentrate shed + Phase 1 test of McQuarrie-dilution hypothesis)
-- [ ] Discussion `0600-discussion.Rmd`:
-  - Replace vague "additional sampling above the McQuarrie confluence" with staged Phase 1/Phase 2 decision rule
-  - Acknowledge Phase 1's interpretive limits (neither outcome fully disambiguates; "dirty" is the actionable trigger)
-  - Short mention of Mitchell 1997 (McQuarrie as "highly or severely degraded") vs Westcott 2022 (cold-water thermal influence) — tension motivates Phase 2 tributary test
+Template-first is the wrong order — risks embedding immature patterns.
 
-### Milestone 4: Consistency QA
-- [ ] Cross-check site numbers, positions, rationales across:
-  - `data/raw/sites_monitoring.csv` (source of truth)
-  - `0050-executive-summary.Rmd` (site descriptions)
-  - `0300-methods.Rmd` (site descriptions)
-  - `0600-discussion.Rmd` (site-by-site interpretation)
-  - Any proposed-sites tables rendered from the CSV
-- [ ] Cross-check metrics cited in exec summary vs results chapters:
-  - BUL-01: 24% midges, 20% Hydropsychidae, HBI 4.14
-  - BUL-05: 45 taxa, 84% EPT, HBI 2.58, *Lepidostoma* 42%
-  - All PERMANOVA / stat claims
-- [ ] McQuarrie framing consistent: exec summary caveat ↔ Discussion staged design ↔ sites_monitoring.csv rationale
+## Pass 1 research questions (to answer before code)
 
-### Milestone 5: Version bump + build (first round) ✅
-- [x] Bump version (0.2.1 → 0.3.0)
-- [x] NEWS.md entry
-- [x] Build gitbook locally
-- [x] User reviewed build — surfaced follow-up items (see Milestone 6+)
+Each of these needs an answer before implementation planning:
 
-### Milestone 6: Widen BUL-01 driver attribution (in #16/#17 scope)
+1. **RWK2024 artifact audit.**
+   - Inspect `_executive_summary_pdf.Rmd` in detail — what chunks, YAML, CSS, front-matter blocks?
+   - List all CSS files referenced (`default-fonts`, `default-page`, `default`, `style-pagedown.css`)
+   - Identify which assets exist in RWK2024 and which are in default R packages (pagedown's shipped CSS)
+   - Document RWK2024 build mechanism (Travis / `_build.sh`) vs. what CI integration we need here
 
-User raised: attributing BUL-01 signal to WWTP alone narrows the causal story and misses the ag/rangeland education opportunity. Fold into current branch:
+2. **Pagedown + CI compatibility.**
+   - Does pagedown's `html_paged` require Chromium on the runner?
+   - Answer: almost certainly yes (pagedown uses `chrome_print` which drives headless Chrome). Confirm.
+   - What system dependencies does ubuntu-latest need? (Likely `chromium-browser` apt package plus environment setup)
+   - Is there a cleaner alternative (weasyprint, wkhtmltopdf) with fewer dependencies? Evaluate trade-offs.
+   - Will the existing `r-lib/actions/setup-r` workflow step handle this, or do we need explicit Chromium install?
 
-- [ ] Exec summary — widen BUL-01 attribution from just-WWTP to: agricultural + cattle rangeland through the valley, Knockholt Landfill, and the Houston WWTP (proximate driver for incremental BUL-04 → BUL-01 step-change)
-- [ ] Discussion (`0600-discussion.Rmd:57` "Point-source influence" bullet) — similar widening; acknowledge BUL-01 is an integrator, not a point-source attribution
+3. **Content source strategy.**
+   - Child-include `0050-executive-summary.Rmd` via `child:` chunk (single-source, no drift) vs. duplicate content (drift risk but simpler).
+   - Does pagedown's front matter tolerate a bookdown-chapter child include cleanly?
+   - If child-include breaks, is there a scripted extract pattern (e.g., pandoc AST manipulation)?
 
-### Milestone 7: HBI ranges + de-emphasize category labels (NEW ISSUE A, in scope for this branch)
+4. **Credit block and logo for this report.**
+   - RWK2024 credit: "Prepared for the Wet'suwet'en Treaty Office Society / Prepared by Al Irvine, R.P.Bio — New Graph Environment Ltd. / on behalf of the Society for Ecosystem Restoration in Northern British Columbia"
+   - This report: mirror structure, use same SERN logo (`fig/logo_sern/SERNbc-Logo-FULL.jpg`) we just added.
+   - Footer links: Full report URL, source code, changelog, latest PDF — all parameterized from `index.Rmd` params? (yes, same pattern as RWK2024)
 
-User raised: BUL-04 HBI range 2.81–4.57 spans three interpretation categories (Excellent / Very good / Good); reporting mean alone misleads. Also we're citing Hilsenhoff 1987 as secondary via Barbour 1999, and the primary is not locatable (user tried hard). De-emphasize category labels and lean on multi-metric convergence.
+5. **Versioning consistency.**
+   - RWK2024 pulls via `desc::desc_get_version()` — does our DESCRIPTION already support this? (Yes, we've been using it in the main index.Rmd.)
+   - Reproduce the same approach so the standalone PDF always matches the main report version.
 
-- [ ] Create Issue A: "HBI: report range alongside mean; de-emphasize category labels pending primary source" (note unsuccessful attempts to obtain Hilsenhoff 1987)
-- [ ] Edits in this branch:
-  - Results — report HBI as `mean (min–max)` throughout
-  - Exec summary — lead BUL-01 with compositional shift (EPT, Chironomidae, *Hydropsyche*), cite HBI as supporting not headline
-  - Discussion — report BUL-04 range explicitly and note within-site variability is part of the story
-  - Exec summary and Discussion — use full category name "Very good — possible slight organic pollution" rather than truncating to "possible slight organic pollution"
+6. **Discoverability — where does the PDF link from the gitbook?**
+   - Options: title block; top of exec summary chapter; nav sidebar; footer.
+   - RWK2024 pattern: checks.
 
-### Milestone 8: Cross-reference + project-motivation framing (NEW ISSUE B, in scope for this branch)
+7. **Portability hooks.**
+   - What pieces are project-specific vs. reusable?
+   - Reusable: CSS, Rmd scaffold, workflow render step, gitbook link pattern, versioning hook
+   - Project-specific: credit block content, logo choice, title, report URL
+   - Design so the reusable pieces can be cleanly copied into mybookdown-template with parameterization (YAML `params` for credit block?).
 
-User raised: this project was not assigned by the client; it was initiated because benthic community data were identified as a limiting gap during restoration planning research. Intro only briefly mentions companion report; motivation is missing.
+## Pass 2 (implementation in this repo, after Pass 1 design reviewed)
 
-- [ ] Create Issue B: "Surface project motivation: benthic gap identified during restoration planning"
-- [ ] Edits in this branch:
-  - Intro — one honest sentence on origin of the work
-  - Exec summary — optional brief nod
+- [ ] Create `_executive_summary_pdf.Rmd` adapted from RWK2024
+- [ ] Port CSS assets (`default-fonts.css`, `style-pagedown.css` etc.)
+- [ ] Adapt credit block for this report (SERN credit mirrors what we just added to main title)
+- [ ] Test local build (`rmarkdown::render()` with pagedown output)
+- [ ] Verify PDF renders correctly with embedded fonts, figures, citations
+- [ ] Add gitbook nav / page link to the PDF
+- [ ] Version bump (patch or minor — TBD based on scope when shipping)
 
-### Milestone 9: Marine-derived nutrients context (NEW ISSUE C, fold into #17 scope this branch)
+## Pass 3 (CI integration)
 
-User raised: historical salmon returns delivered marine-derived nutrients (MDN); declining salmon means BUL-05's "reference" baseline is lower than historical. "A bit of nutrient enrichment is not necessarily bad on its own" — and anthropogenic enrichment at BUL-01 is partly replacing a lost natural flow but differs in source, form, and co-contaminants.
+- [ ] Add pagedown render step to `.github/workflows/bookdown-build.yml`
+- [ ] Install Chromium (or alternative) in workflow
+- [ ] Verify artifact uploads `docs/executive_summary.pdf` alongside main gitbook
+- [ ] Test deploy end-to-end
 
-- [ ] Verify Cederholm et al. 1999 (*Fisheries* 24(10), "Pacific salmon carcasses") and/or Naiman et al. 2002 (*Ecosystems* 5(4)) are in Zotero NewGraphEnvironment library; add if missing
-- [ ] Discussion — one short paragraph between the "Point-source influence" bullet and the "Upstream reaches" caveat, acknowledging MDN historical role, salmon decline, and the biogeochemical difference between MDN and anthropogenic enrichment
-- [ ] Exec summary — one contextualizing sentence
-- [ ] Create Issue C for audit trail; fold implementation into this branch
+## Pass 4 (portability — mybookdown-template)
 
-### Milestone 10: Version re-bump + rebuild after Milestones 6–9 land
+Only after Pass 3 is shipped and stable in this repo:
 
-- [ ] Update NEWS.md entry with widened attribution + MDN context + HBI ranges + project-origin framing
-- [ ] Rebuild gitbook
-- [ ] User reviews before PR
+- [ ] Port CSS assets to `mybookdown-template/fig/` (or wherever assets live)
+- [ ] Add template `_executive_summary_pdf.Rmd` with parameterized credit block
+- [ ] Add documented GitHub Actions fragment for the render step
+- [ ] Update `mybookdown-template/CLAUDE.md` or README
+- [ ] Document in `soul/conventions/bookdown.md` so all repos' CLAUDE.md pick up the pattern via `/claude-md-init`
 
-### Milestone 11: Commit, push, PR
+## Pass 5 (portability — fish_passage_template_reporting)
 
-- [ ] Atomic commits per concern (password, exec summary, monitoring, HBI, MDN, project-motivation — or grouped sensibly)
-- [ ] Push branch
-- [ ] Open PR with SRED cross-link in PR body (`Relates to NewGraphEnvironment/sred-2025-2026#N`) per workflow preference — not in issues
-- [ ] PR closes #16, #17, #18, Issue A, Issue B, Issue C via commit messages
+Only after Pass 4:
 
-## Phase 2 — Standalone exec summary PDF (#19, PWF-planned)
-
-Separate planning pass after Phase 1 lands. Key questions captured in `findings.md`:
-- Content source (child chunk of `0050-executive-summary.Rmd` vs duplicate)
-- Pagedown CI integration (Chromium on runner)
-- CSS asset porting from `restoration_wedzin_kwa_2024`
-- Credit block adaptation (Wet'suwet'en Treaty Society, NGE — not SERN)
-- Link from gitbook to PDF
+- [ ] Apply the same pattern, accounting for fish-passage-template's project-specific extensions
+- [ ] Reconcile with any existing executive summary structure in fish passage reports
 
 ## Out of scope
 
-- Field data entry / photo appendix work — tracked in existing issues #7, #10, #11
-- CABIN submission + RCA — tracked in #8
-- Single-source-of-truth refactor for site descriptions — tracked in #11
+- Field data / CABIN submission (issues #7, #8, #10, #11)
+- Any changes to the six just-shipped concerns (issues #16–#22)
+
+## Dependencies and blockers
+
+- Pass 1 outputs gate Pass 2 (can't implement without knowing content-source and CI design)
+- Pass 2 complete in local dev gates Pass 3 (CI)
+- Pass 3 shipped and stable gates Pass 4 (template)
+- Pass 4 stable gates Pass 5 (fish passage)
+
+## Known uncertainties (take-with-grain-of-salt items from user)
+
+User noted they "forget how it all works" — items to verify rather than trust:
+
+- How RWK2024's build mechanism translates to GitHub Actions (RWK2024 uses Travis, older pattern)
+- Whether pagedown renders reliably in headless CI without login-session quirks
+- Whether existing `fig/logo_sern/` assets render at PDF-quality resolution (may need re-export)
+
+## Success criteria for v1
+
+- [ ] Standalone `docs/executive_summary.pdf` auto-builds and deploys with every push to main
+- [ ] PDF matches RWK2024 format visually (SERN logo, credit block, footer links)
+- [ ] PDF version string matches main report version (no drift)
+- [ ] Gitbook links to the PDF prominently
+- [ ] Pattern documented clearly enough that porting to mybookdown-template is a copy-paste-and-parameterize exercise, not a re-architecture
