@@ -20,9 +20,9 @@ Standalone benthic invertebrate community assessment for the Neexdzii Kwa (Upper
 
 | Repo | Relationship |
 |------|--------------|
-| `mybookdown-template` | Upstream bookdown template |
+| internal bookdown template | Upstream bookdown template |
 | `restoration_wedzin_kwa_2024` | Parent restoration report — cites this for benthic findings |
-| `Sheep` | Reference: Cordillera Excel parsing, taxonomy resolution, vegan community analysis |
+| earlier internal benthic project | Reference: Cordillera Excel parsing, taxonomy resolution, vegan community analysis |
 | `sred-2025-2026` | SRED tracking — cross-reference issues |
 
 ## SRED Tracking
@@ -86,20 +86,20 @@ CABIN database upload
 
 **Template guide:** `data/templates/templateGuide.xls` — authoritative for all valid field names, units, and alt value codes. Parameter names must match exactly (e.g. `XSEC- DepthStagnation` with space after dash).
 
-**Prep script pattern:** Use STEP comments with trailing dashes for RStudio outline. Verification blocks with cat() output at each stage. See `nrp-nutrient-loading-2025/scripts/prep_fert.R` for canonical example.
+**Prep script pattern:** Use STEP comments with trailing dashes for RStudio outline. Verification blocks with cat() output at each stage. See `scripts/benthic_prep.R` for an example.
 
 ## Key Technical Patterns
 
 ### Cordillera Excel Parsing
 
-Reference: `Sheep/R/01b_load_invert.R`. Cordillera exports vary by year — expect pivot structures, transposed layouts, or flat "Subsample - Flat" sheets. Key patterns:
+Reference: the Cordillera loader from an earlier internal benthic project. Cordillera exports vary by year — expect pivot structures, transposed layouts, or flat "Subsample - Flat" sheets. Key patterns:
 - Extract sheet-specific metadata (site, date, replicate)
 - Adjust counts by percent_sampled where applicable
 - Standardize taxonomy strings (strip rank prefixes, maturity labels, special chars)
 
 ### Taxonomy Resolution (taxize)
 
-Resolution chain: `gnr_resolve()` → `tol_resolve()` → `get_ids()` → `classification()`. Known edge cases from Sheep:
+Resolution chain: `gnr_resolve()` → `tol_resolve()` → `get_ids()` → `classification()`. Known edge cases from that earlier project:
 - `Neoleptophlebia` → `Paraleptophlebia` (genus not in ITIS)
 - `Oribatei` → `Oribatida`
 - `Oligochaeta` → `Clitellata`
@@ -112,7 +112,7 @@ Sources: SAFIT database (primary) and EPA Appendix B (Barbour et al.) for fallba
 
 ### Community Analysis (vegan)
 
-Reference: `Sheep/R/functions.R`. Key functions to adapt:
+Reference: the same earlier project's community-analysis functions. Key functions to adapt:
 - `make_matrix()` — long → wide species matrix
 - `metaMDS(k=3, trymax=999)` with fixed seed for reproducibility
 - `envfit()` for environmental correlation
