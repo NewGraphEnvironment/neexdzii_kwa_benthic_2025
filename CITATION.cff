@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: If you cite this report, please cite it as below.
+title: Benthic Invertebrate Assessment of the Neexdzii Kwa — 2025
+authors:
+- family-names: Irvine
+  given-names: Allan
+  orcid: https://orcid.org/0000-0002-3495-2128
+date-released: '2026-10-21'
+url: https://www.newgraphenvironment.com/neexdzii_kwa_benthic_2025/
+repository-code: https://github.com/NewGraphEnvironment/neexdzii_kwa_benthic_2025
+preferred-citation:
+  type: report
+  title: Benthic Invertebrate Assessment of the Neexdzii Kwa — 2025
+  authors:
+  - family-names: Irvine
+    given-names: Allan
+    orcid: https://orcid.org/0000-0002-3495-2128
+  institution:
+    name: New Graph Environment Ltd.
+  year: 2026
+  date-published: '2026-10-21'
+  url: https://www.newgraphenvironment.com/neexdzii_kwa_benthic_2025/
+  repository-code: https://github.com/NewGraphEnvironment/neexdzii_kwa_benthic_2025
+
