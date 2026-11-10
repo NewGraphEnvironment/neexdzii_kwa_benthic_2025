@@ -2,7 +2,7 @@
 
 **Issue:** #75 - Move to GitHub Actions builds with password-protected deployment
 **Branch:** `75-github-actions-build`
-**SRED Link:** https://github.com/NewGraphEnvironment/sred-2025-2026/issues/3
+**SRED Link:** an internal issue
 
 ## Goal
 

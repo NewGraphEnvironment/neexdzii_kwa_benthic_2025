@@ -43,7 +43,7 @@ Writing a cross-repo message requires having the other repo cloned locally. All 
 
 ## Propagation: soul publishes, peers pull
 
-The canonical `comms/README.md` lives in soul. When it updates, each peer-Claude runs `/comms-init` in their own repo to sync — soul-Claude does **not** push README updates into peer repos. This isolates cross-session index state and avoids races (incident 2026-04-22: soul#35).
+The canonical `comms/README.md` lives in soul. When it updates, each peer-Claude runs `/comms-init` in their own repo to sync — soul-Claude does **not** push README updates into peer repos. This isolates cross-session index state and avoids races (incident 2026-04-22: an internal issue).
 
 Within your own session, the only things you commit into a peer's repo are **thread files** (inherent to the receiver-hosts-thread model). Everything else, the peer-Claude pulls itself. When committing into a peer's repo (thread file), always use `git commit --only <file>` to avoid sweeping up other staged changes.
 
